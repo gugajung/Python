@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+{% block tituloPagina %} - Filmes de {{ genero }} {% endblock %}
+
+{% block conteudo %}
+	{% if lista_filmes %}
+		{% if lista_filmes|length == 0 %}
+			<div class="linksuteis"><h2>Nenhum filme foi encontrado nessa categoria!</h2></div>
+			{{lista_filmes|length}}
+		{% else %}
+			<h2>Lista dos filmes de: <strong>{{ genero.nome }}</strong></h2>
+			<hr class="divisoria" />
+			
+			<small>Total de Filmes: {{ genero.num_filmes }}</small>
+			
+			<table border="0" width="750px" cellspacing="0" cellpadding="3" class="table-list">
+			<tr align="center">
+				<td><h3>Código</h3></td>
+				<td><h3>Nome do Filme</h3></td>
+				<td><h3>Ano de Lançamento</h3></td>
+			</tr>
+			{% for filme in lista_filmes %}
+				<tr align="center">
+					<td><a href="javascript:void(0);" onclick="infoVideo({{filme.id}})">{{ filme.codigo }}</a></td>
+					<td><a href="javascript:void(0);" onclick="infoVideo({{filme.id}})">{{ filme.titulo }}</a></td>
+					<td>{{filme.ano}}</td>
+				</tr>
+			{% endfor %}
+			</table>
+				<div class="paginacao">
+					{% if filmes.has_previous %}
+						<a href="?pagina={{ filmes.previous_page_number }}">&laquo; Anteriores</a>
+					{% endif %}
+					<span class="pagina-atual">
+						Página {{ filmes.number }} de {{ filmes.paginator.num_pages }}
+					</span>
+					{% if filmes.has_next %}
+						<a href="?pagina={{ filmes.next_page_number }}">&raquo; Próximos</a>
+					{% endif %}
+				</div>
+		{% endif %}
+		<br />
+		<br />
+		<a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+	{% else %}
+		<p>Nenhum filme foi encontrado com o gênero <strong>{{genero.nome}}</strong></p>
+		<hr class="divisoria" />
+		<br />
+		<br />
+		<a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+	{% endif %}
+{% endblock %}

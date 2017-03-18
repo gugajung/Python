@@ -1,0 +1,376 @@
+body{
+	background:#dedede;
+	font-family: Arial;
+	margin: 0;
+	padding: 0;
+}
+
+p{font-size: 12px;margin:10px;}
+
+a.relacionado{
+	text-decoration:none;
+	font:bold 12px arial;
+	margin:5px 20px 20px 20px;
+	color:#3e4095;
+}
+
+#moldura{
+	width: 769px;
+	position: relative;
+	left: 50%;
+	margin-left: -385px;
+	background: white;
+}
+
+#moldura #topo{
+	width: 769px;
+	height: 337px;
+	/*background: url(../imgs/topo.jpg) no-repeat top;*/
+}
+
+#moldura #rodape{
+	background: #3e4095 url(../imgs/rodape.jpg) no-repeat bottom;
+	width: 100%;
+	height: 55px;
+	position: relative;
+	color: white;
+	font: bold italic 12px "Trebuchet MS";
+	text-align: center;
+	clear: both;
+}
+
+#moldura #rodape div {
+	padding-top: 5px;
+}
+
+#moldura #conteudo {
+	width: 100%;
+}
+
+#moldura #conteudo #topo-pagina{
+	float: left;
+}
+
+#moldura #conteudo #topo-pagina #introducao {
+	border-bottom: 2px solid #eee;
+	border-right: 2px solid #eee;
+	float: left;
+	height: 270px;
+	padding-right: 15px;
+	*padding-right: 13px;
+}
+
+#moldura #conteudo #topo-pagina #introducao h5{
+	color: #3e4095;
+	font-size: 11px;
+	margin-left: 15px;
+}
+
+#moldura #conteudo #topo-pagina #introducao .red{
+	color: red;
+}
+
+#moldura #conteudo #topo-pagina #introducao p{
+	font: normal 11px Arial;
+	color: #848484;
+	width: 452px;
+	height: 72px;
+	text-align: justify;
+	margin: 0 0 0 15px;
+}
+
+#moldura #conteudo #topo-pagina #introducao a{
+	color: #3d3f92;
+	text-decoration: none;
+	font: bold 11px arial;
+}
+
+#moldura #conteudo #topo-pagina #parceiros {
+	float: left;
+	width: 264px;
+	height: 271px;
+	background: #fff url(../imgs/banner-bom.png) no-repeat;
+}
+
+#moldura #conteudo h3{
+	background: url(../imgs/fundo-cabecalho-secao.jpg) no-repeat bottom;
+	width: 190px;
+	height: 24px;
+	color: #3d3f92;
+	font: bold italic 14px "Trebuchet MS";
+	text-align: left;
+	margin: 2px;
+	padding-left: 35px; *padding-left:20px;
+}
+
+#moldura #conteudo #topo-pagina #parceiros #mep{
+	background: url(../imgs/movimento-energia.jpg) no-repeat center bottom;
+	width: 284px;
+	height: 54px;
+	margin: 20px 0 0 0;
+	border-bottom: 2px solid #eee;
+}
+
+#moldura #conteudo #topo-pagina #parceiros #mais-saude{
+	background: url(../imgs/mais-saude.jpg) no-repeat center bottom;
+	width: 284px;
+	height: 69px;
+	margin: 20px 0 0 0;
+	border-bottom: 2px solid #eee;
+}
+
+#moldura #conteudo #topo-pagina #parceiros #es{ 
+	background: url(../imgs/exercitando.jpg) no-repeat center bottom;
+	width: 100%;
+	height: 58px;
+	margin: 5px 0 0 0;
+	padding-bottom: 13px;
+	/*border-bottom: 2px solid #eee;*/
+}
+
+#moldura #conteudo #meio-pagina #area-restrita-webmail {
+	width: 233px;
+	height: 313px;
+	float: left;
+	border-right: 2px solid #eee;
+	padding-top: 10px;
+}
+
+#moldura #conteudo #meio-pagina .descricao{
+	margin: 26px 0 26px 20px;
+	font: normal 11px Arial;
+}
+
+#moldura #conteudo #meio-pagina #area-restrita-webmail label{
+	font: bold italic 11px Arial;
+	color: #3e4095;
+	margin-left: 20px;
+
+}
+
+#moldura #conteudo #meio-pagina .campo-texto{
+	width: 104px;
+	height: 21px;
+	background: url(../imgs/bg-campo-texto.jpg) repeat-x left;
+	border:1px solid black;
+	font: normal 11px arial;
+	color: gray;
+	margin-bottom:5px;
+}
+
+#moldura #conteudo #meio-pagina .bt-enviar{
+	background: url(../imgs/bt-enviar.jpg) no-repeat center;
+	width: 42px;
+	height: 19px;
+	border: 0;
+}
+
+#moldura #conteudo #meio-pagina #area-restrita-webmail h3{
+	margin-top: 20px;
+}
+
+#moldura #conteudo #meio-pagina .bt-acessar {
+	background: url(../imgs/bt-acessar.jpg) no-repeat bottom;
+	width: 62px;
+	height: 17px;
+	display: block;
+	margin: -15px 0 15px 70px; 
+}
+
+#moldura #conteudo #meio-pagina #enquete {
+	float: left;
+	padding-top: 29px; *padding-top: 21px;
+	width: 247px;
+	*width: 247px;
+	height: 294px;
+	/*border-right: 2px solid #eee;*/
+	/**border-right:0;*/
+}
+
+#moldura #conteudo #meio-pagina #enquete .pergunta {
+	margin: 26px 0 26px 20px;
+	font: normal 11px Arial;
+}
+
+#moldura #conteudo #meio-pagina #enquete .escolhas {
+	width: 100%;
+	font: normal 11px Arial;
+	margin: 26px 0 26px 20px;
+}
+
+#moldura #conteudo #meio-pagina #enquete .escolhas .opcao {
+	width: 150px;
+	display: block;
+}
+
+#moldura #conteudo .bt-enviar-enquete{
+	background: url(../imgs/bt-enviar-enquete.jpg) no-repeat bottom;
+	width: 61px;
+	height: 17px;
+	border: 0;
+	margin-top: 10px;
+}
+
+
+#moldura #conteudo #meio-pagina #enquete .bt-enviar-enquete{
+	margin: 50px 0 0 70px;
+}
+
+#moldura #conteudo #meio-pagina #dicas {
+	float: left;
+	width: 284px; *width: 289px;
+	border-top: 2px solid #eee;
+	border-left: 2px solid #eee;
+	margin-top:-2px; *margin-top:-3px;
+	padding-top: 29px; *padding-top:21px;
+	height: 294px; *height: 316px;
+	display: block;
+}
+
+#moldura #conteudo #meio-pagina .bt-dicas{
+	background: url(../imgs/bt-dicas.jpg) no-repeat bottom;
+	width: 61px;
+	height: 16px;
+	display: block;
+	margin: 22px 0 15px 100px; 
+}
+
+#moldura #conteudo #meio-pagina #dicas img {
+	margin-left: 30px;
+}
+
+#moldura #conteudo .alerta-msg {
+	background: white;
+	font: bold 12px Arial;
+	padding: 2px;
+	color: green;
+	margin: 10px;
+}
+
+#moldura #conteudo .errorlist {
+	list-style: none;
+	font: normal 12px Arial;
+	color: red;
+	margin: -5px 0 0 -80px;
+}
+
+#moldura #conteudo .alerta-msg h4 {
+	margin: 0;
+}
+
+#moldura #conteudo #sobre p {
+	text-align: justify;
+	color: gray;
+	font-size: 12px;
+	margin: 20px;
+}
+
+#moldura #conteudo #frmContato table{
+	margin-top: 10px;
+}
+
+#moldura #conteudo #frmContato table tr th {
+	color: gray;
+	font-size: 12px;
+	text-align: right;
+	vertical-align: top;
+}
+
+#moldura #conteudo #frmContato .input, 
+#moldura #conteudo #frmContato table tr td textarea{
+	border: 1px solid gray;
+	padding: 2px;
+	color: black;
+}
+
+#moldura #conteudo #erro404 {
+	margin: 20px;
+	font-size: 12px;
+}
+
+#moldura #conteudo #erro404 a {
+	font: bold 12px arial;
+	color: black;
+	text-decoration: none;
+}
+
+#moldura #conteudo #erro404 h4{
+	font-size: 16px;
+}
+
+#moldura #conteudo #lista-enquetes {
+	margin: 20px;
+}
+
+#moldura #conteudo #lista-enquetes ul {
+	font-size: 12px;
+}
+
+#moldura #conteudo #lista-enquetes ul a {
+	color: #3e4095;
+	text-decoration: none;
+}
+
+#moldura #conteudo #lista-enquetes ul a:hover {
+	text-decoration: underline;
+}
+
+#moldura #conteudo #detalhe-enquete {
+	margin: 20px;
+	font-size: 12px;
+}
+
+#moldura #conteudo #datalhe-enquete h4 {
+	font-size: 16px;
+}
+
+#moldura #conteudo #detalhe-enquete #bt-votar{
+	margin-top: 10px;
+}
+
+#moldura #conteudo #detalhe-enquete a{
+	color: black;
+	font: bold 12px Arial;
+}
+
+#moldura #conteudo #mapa {
+	margin: 20px;
+}
+
+#moldura #conteudo .alerta{
+	display:none;
+	background: #ffe4d2;
+	border:2px solid #fd9654;
+	width: 49%;
+	padding: 5px;
+	margin: 10px 5px 5px 30px;
+}
+#moldura #conteudo .alerta h4{
+	font-size: 14px;
+	margin:0;
+}
+
+#moldura #conteudo .alerta ul {
+	margin: 5px 5px 5px -25px;
+	margin: 5px 5px 5px 5px\9;
+	list-style: none;
+	font: bolder 12px Arial;
+	color: #be0028;
+}
+
+#moldura #conteudo #dentistas, 
+#moldura #conteudo #medicos{
+	font-size:12px;
+	margin: 5px 5px 5px 40px;
+}
+
+#moldura #conteudo #dentistas h3,
+#moldura #conteudo #medicos h3{
+	font: bold 16px Arial;
+	background: none;
+}
+
+#moldura #conteudo .paginacao{
+	font: normal 12px Arial;
+	padding: 10px;
+}

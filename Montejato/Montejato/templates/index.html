@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+
+	{% block script %}{% endblock %}
+<div id="menucentro">
+				<div id="menu" >
+						<ul>
+							<li><a href="{%url views.index%}">Home</a></li>
+							<li><a href="{%url views.Empresa%}">Empresa</a></li>
+							<li><a href="{%url views.Servicos%}">Serviços</a></li>
+							<li><a href="#">Política</a></li>
+							<li><a href="{%url views.Parceiros%}">Parceiros</a></li>
+							<li><a href="{%url views.Contato%}">Contato</a></li>
+						</ul>
+				</div>
+		</div>		
+
+				<div id="moldura">
+									<div id="logo">
+										<a href="{%url views.index%}"><img src="{{MEDIA_URL}}img/logo3.png"/></a>
+											<div id="conteudologo">
+														<div id="idiomas">	
+															<a href="#" id="pt"> &nbsp;</a>
+											    			<a href="#" id="ing"> &nbsp; </a>
+											    			<a href="#" id="esp"> &nbsp; </a>
+											    		</div>	
+											    			<div id="riscasdireita"></div>
+											</div>
+									</div>
+						<div id="banner">
+								<img src="{{MEDIA_URL}}img/banner2.png"/>
+						</div>
+						
+						{% block content %}
+						
+						
+						{% endblock %}
+				</div>
+
+{% include 'footer.html' %}

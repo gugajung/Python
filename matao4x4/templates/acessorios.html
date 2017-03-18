@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+{% block conteudo %}
+
+
+<div id="conteudo">
+	<div class="bloco">
+		<div class="titulo">
+			<p class="tipo">
+				Acessórios
+			</p>
+		</div>
+		<div id="texto">
+			<div id="voltar">
+				<a href="{% url views.index %}">Voltar para página inicial</a>
+			</div>
+			<div id="content" style="margin-top: -15px">
+			<table id="blocoItAcessorios" cellspacing="25">
+				<tr class="itemAcessorio">
+			{% for acessorio in acessorios %}
+						<td>
+							<div id="topoborda"></div>
+							<div id="meioborda">
+								<p><b>{{acessorio.nome}}</b></p>
+								<a href="{% url matao4x4.views.visualizarAc acessorio.id %}" target="_parent"><img src="{{MEDIA_URL}}{{acessorio.obterFoto}}" width="150" height="125" /></a>
+							</div>
+							<div id="rodapeborda"></div>
+						</td>
+					{% if forloop.counter|divisibleby:"3" %}
+						</tr>
+						<tr class="itemAcessorio">
+					{% endif %}
+			{% endfor %}
+			</table>
+			</div>
+			<div id="paginator">
+					{% if acessoriosLista.has_previous %}
+						<a href="?page={{ acessoriosLista.previous_page_number }}"><img class="anterior" src="{{MEDIA_URL}}img/anterior.png" width="35" height="35"/></a>
+					{% endif %}
+					    
+					<small>Página {{ acessoriosLista.number }} de {{ acessoriosLista.paginator.num_pages }}.</small>
+						
+					{% if acessoriosLista.has_next %}
+						<a href="?page={{ acessoriosLista.next_page_number }}"><img class="proximo" src="{{MEDIA_URL}}img/proximo.png" width="35" height="35"/></a>
+					{% endif %}
+			</div>	
+		</div>
+	</div>
+</div>
+{% endblock %} 

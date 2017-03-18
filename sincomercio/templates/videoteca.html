@@ -1,0 +1,82 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+{% block tituloPagina %} - Videoteca {% endblock %}
+
+{% block conteudo %}
+
+
+<style>	select,p,form{font-size:12px;} </style>
+	<div id="conteudo">
+		<!-- <div id="info-video" style="margin-left: -120px; margin-top:-90px;">
+			<img src=""  id="img-capa"/>
+			teste
+		</div> -->
+		<h2 style="margin-left: 231px; margin-left: -15px\9;">Videoteca</h2>
+		<hr class="divisoria"/>
+	</div>
+	<div id="videotecaform">
+	{% if filmes.object_list|length >= 1 %}
+	
+		<form action="/videoteca/" method="get" id="filtroGenero">
+			{{ csfr_token }}
+			Filtrar por gênero:
+			<select name="genero" id="genero" onchange="listaGeneros();">
+				<option>Selecione o gênero</option>
+				<option value="0">Todos</option> 
+				{% for gen in lista_generos %}
+					<option value="{{gen.id}}">{{gen.nome}}</option>
+				{% endfor %}
+			</select>
+		</form>
+	{% block filmes %}
+		{% if genero_nome %}
+				<span>Filmes do gênero: <strong>{{ genero_nome }}</strong></span>
+		{% endif %}
+	</div>	
+	<div id="videotecafilmes">
+	<table align="center" cellspacing="3" cellpadding="3">
+		<tr>
+		{% for filme in filmes.object_list %}
+				<td align="center">
+					<a href="{{MEDIA_URL}}{{filme.capa}}"rel="lightbox[roadtrip]"
+					title="{{filme.titulo}}">
+						<img src="{{ MEDIA_URL }}{{ filme.capa_menor }}" border="0" />
+					</a><br />
+					{{ filme.titulo }}<br />
+					Código: {{ filme.codigo }}
+				</td>
+					{% if forloop.counter|divisibleby:"4" %}
+						</tr><tr>
+					{% endif %}
+		{% endfor %}
+		</tr>
+	</table>
+	</div>
+	<div class="paginacao">
+		{% if filmes.has_previous %}
+     		{% if genero %}
+     	  	<a href="?genero={{gen.id}}&pagina={{filmes.previous_page_number}}">&laquo; Anteriores</a>
+     	  {% else %}
+					<a href="?pagina={{ filmes.previous_page_number }}">&laquo; Anteriores</a>
+     	  {% endif %}
+    {% endif %}
+        <span class="pagina-atual">
+            Página {{ filmes.number }} de {{ filmes.paginator.num_pages }}
+        </span>
+     {% if filmes.has_next %}
+     		{% if genero %}
+     	  	<a href="?genero={{gen.id}}&pagina={{filmes.next_page_number }}">Próximos &raquo;</a>
+     	  {% else %}
+     	  	<a href="?pagina={{filmes.next_page_number }}">Próximos &raquo;</a>     	  
+     	  {% endif %}
+     {% endif %}			
+	</div>
+		{% endblock %}		
+	{% else %}
+			<center>
+				<p>Desculpe, nenhum filme encontrado.</p>
+			</center>
+	{% endif %}
+	
+{% endblock %}

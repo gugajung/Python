@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %} - Eventos{% endblock %}
+{% load thumbnail %}
+{% load pagination_tags %}
+{% block conteudo %}
+	<div class="linksuteis"><h2>Eventos</h2></div>
+		<div class="divisoria"></div>
+		
+<div id="eventos">
+	<ul>
+	{% autopaginate eventos 15 %}
+	{% for evento in eventos %}
+		<li class="listaEventos"><a href="/eventos/{{evento.id}}/" class="link">{{evento.Chamada}}</a> {{evento.data}}</li>
+	{% endfor %}
+	</ul>
+	{% paginate %}
+	
+</div>
+
+{% endblock %}

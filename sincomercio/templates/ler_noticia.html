@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %} - Not&iacute;cia: {{ noticia.titulo }}{% endblock %}
+
+{% block conteudo %}
+	<div class="conteudo-geral">
+	<div class="linksuteis"><h3>{{ noticia.titulo }}</h3></div>
+	
+	<p>{{noticia.data}}</p>
+		<div class="imagem-geral">
+			{% if imagem %}
+				{% for img in imagem %}
+					<a href="{{ MEDIA_URL }}{{img.foto}}" rel="shadowbox">
+						<img src="{{MEDIA_URL}}/{{ img.foto_media }}" border="0"/>
+					</a>
+				{% endfor %}
+			{% else %}
+				<img src="{{MEDIA_URL}}/imgs/logo_sincomercio.jpg" border="0"/>
+			{% endif %}
+		</div>
+		
+		<p>
+			{{ noticia.conteudo|linebreaks }}
+		</p>
+		<p>
+		{% if noticia.audio %}
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="165" height="38" id="niftyPlayer1" align="">
+<param name=movie value="{{MEDIA_URL}}js/niftyplayer/niftyplayer.swf?file={{MEDIA_URL}}{{noticia.audio}}&as=0">
+<param name=quality value=high>
+<param name=bgcolor value=#FFFFFF>
+<embed src="{{MEDIA_URL}}js/niftyplayer/niftyplayer.swf?file={{MEDIA_URL}}{{noticia.audio}}&as=0" quality=high bgcolor=#FFFFFF width="165" height="38" name="niftyPlayer1" align="" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+</embed>
+</object>
+		{% endif %}
+		
+		{% if noticia.video %}
+			<br/><br/>
+			<iframe width="320" height="199" src="{{ noticia.video }}" frameborder="0" allowfullscreen></iframe><br><br>
+		{% endif %}
+		
+		</p>
+		
+		<small>Fonte: <a href="{{noticia.fonteUrl}}">{{ noticia.fonte }}</a></small>
+	</div>
+	
+	{% if imagens|length > 1 %}
+	<center>
+	<div class="galeria-holder">
+	<h3>Galeria</h3>
+		<ul class="galeria-imgs">
+			{% for imagem in imagens %}
+<!-- 				<li> -->
+					<a href="{{MEDIA_URL}}{{imagem.foto}}" rel="shadowbox[Noticia]" style="text-decoration: none">
+						<img src="{{MEDIA_URL}}{{ imagem.foto_media }}" width="98" border="0"/>
+					</a>
+<!-- 				</li> -->
+			{% endfor %}
+		</ul>
+	</div>
+	</center>
+	{% endif %}
+<div>
+<br />
+<br />
+<a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block tituloPagina %}Fale Conosco - {% endblock %}
+
+{% block conteudo %}
+	<h3>Fale Conosco</h3>
+{% if mostrar %}
+<div class="alerta" style="display:block;">
+	<h4>Sucesso!</h4>
+	<ul>
+            <li style="color:green">{{ mostrar }}</li>
+        </ul>
+</div>
+{% endif %}
+<div id="erros" class="alerta">
+	<h4>Erros encontrados: </h4>
+</div>
+<form method="post" id="frmContato"">
+{% csrf_token %}
+  <table width="100%" border="0" cellspacing="5" cellpadding="5">
+    {{ form }}
+
+    <tr>
+      <th>&nbsp;</th>
+      <td><input type="submit" value="Enviar Mensagem"/></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

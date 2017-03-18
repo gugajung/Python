@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div class="localizacao">
+			<div class="titulo">
+				<p class="tipo">
+				ACONTECEU
+				</p>
+			</div>
+			<div id="texto">
+				<div id="voltar">
+					<a href="{% url views.index %}">Voltar para página inicial</a>
+				</div><br>
+					{% for titulos in titulosacontecimentos %}
+						<div id="tituloaconteceu">
+								<a href="{{ titulos.get_absolute_url }}"><p>{{titulos.id}} {{titulos.titulo}}</p></a>
+						</div>		
+					{% endfor %}
+				</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

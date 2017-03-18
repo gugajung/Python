@@ -1,0 +1,493 @@
+{% extends 'index.html' %}
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+{% block tituloPagina %} - Quem Somos{% endblock %}
+
+{% block conteudo %}
+
+	<div class="linksuteis"><h2>Quem Somos</h2></div>
+
+	<hr class="divisoria"/>
+	
+		
+<style type="text/css" media="all">
+#box-toggle {
+	width:500px;
+	margin:0 ;
+	text-align:justify;
+	font:12px/1.4 Arial, Helvetica, sans-serif;
+	margin-left: 179px;
+	}
+#box-toggle .tgl {margin-top:30px;}
+#box-toggle span {
+	display:block;
+	cursor:pointer;
+	font-weight:bold;
+	font-size:14px;
+	color:#014A7F; 
+	margin-top:15px;
+	margin-left: 300px;
+	border: 1px solid #014A7F;
+	text-align: center;
+	}
+</style>
+<script type="text/javascript" src="jquery.js"></script> 
+<script type="text/javascript"> 
+jQuery.fn.toggleText = function(a,b) {
+return   this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
+}
+
+$(document).ready(function(){
+	$('.tgl').before('<span>Primeira Diretoria</span>');
+	$('.tgl').css('display', 'none')
+	$('span', '#box-toggle').click(function() {
+		$(this).next().slideToggle('slow')
+		.siblings('.tgl:visible').slideToggle('fast');
+	
+		$(this).toggleText('Revelar','Esconder')
+		.siblings('span').next('.tgl:visible').prev()
+		.toggleText('Revelar','Esconder')
+	});
+})
+	
+</script>
+
+	<p style="margin-left:500px; font-weight: bold; margin-top: 10px">Clique e conheça à:</p>
+		<div id="box-toggle">
+
+<div class="tgl">
+
+
+<div id="conteudo2">
+
+
+<p class="inst">O Sincomércio - Sindicato do Comércio Varejista de Matão foi fundado
+em 29 de março de 1990 para atender empresas do setor varejista com a
+finalidade de dar-lhes maior representatividade, trabalhar pela classe
+atendendo suas reivindicações. É filiado à FECOMÉRCIO - Federação do
+Comércio do Estado de São Paulo, portanto, com 21 anos de lutas em
+beneficio do comércio. Ao longo destes anos, também tem reivindicado
+melhores condições para o desenvolvimento do comércio regional, através
+da batalha por uma carga tributária mais justa, juros menores e maiores
+incentivos por parte dos governos federal, estadual e municipal. Isso
+tudo somado, ainda, à busca de um melhor relacionamento entre
+comerciantes e comerciários.</p>
+<img src="{{ MEDIA_URL }}imgs/assembleia.jpg" width="590" height="450" />
+
+
+ <div class="bloco1 claro1">
+	<div class="esquerda">	
+		<h2><b class="blocob">Diretoria:</b></h2>
+		<p><b>Presidente: </b> José Antonio Fragali  
+		<p><b>Vice-Presidente:</b> José Oreste Bozelli
+		<p><b>Secretário Geral:</b> Maria Silvia Gomes Jorge
+		<p><b>1º Secretário:</b> Walter Bottura
+		<p><b>1º Tesoureiro:</b> Dailton Barbasso
+		<p><b>Tesoureiro Geral:</b> Antonio Geraldo Giannini
+		<p>
+	</div>
+	
+	<div class="direita">
+		
+		<h2><b  class="blocob">Suplentes:</b></h2>
+		<p>Ademar  Appoloni
+		<p>Antonio Morelion
+		<p>Luiz Antonio Giannini
+		<p>Vanda Maria Mendes Germano
+		<p>Armando Biagioni Sobrinho
+		<p>Vera Regina Lobato Teixeira
+		<p>
+	</div>
+</div>
+
+
+<!--  -->
+<div class="bloco5 claro5">
+	<div class="esquerda">	
+		<h2><b  class="blocob">Conselho Fiscal:</b></h2>
+		<p>Aparecido Donizete  Armenini
+		<p>Nerino Bozelli
+		<p>Mario Vieira Priosti
+		<p>
+	</div>
+	
+	<div class="direita">
+		
+		<h2><b  class="blocob">Suplentes:</b></h2>
+			<p>Jose Galigher
+		<p>Aparecido Silva dos Santos
+		<p>Marcos Antonio Sguerri
+	</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+	<p style="border-top: 1px solid;color: #014A7F;"><p style="color: #000">O Sr. Jose Antonio Fragali foi o sócio fundador da entidade e 1º Presidente empossado,
+		exerceu quatro mandatos consecutivos durante o período de março de 1990 a abril de 2002, 
+		ainda hoje, apóia a Diretoria como vice presidente.<br>
+		O segundo e atual Presidente empossado é o Sr.  Antonio Geraldo Giannini, 
+		com dois mandatos, durante o período de abril de 2002 a janeiro de 2010, está exercendo o 3º mandato que será de janeiro 2010 a janeiro 2014. <p>	
+</div>
+
+<!--  -->
+
+</div></div>
+
+
+				<style type="text/css" media="all">
+#box-toggle1 {
+	width:500px;
+	margin:0 ;
+	text-align:justify;
+	font:12px/1.4 Arial, Helvetica, sans-serif;
+	}
+#box-toggle1 .tgl1 {margin-bottom:30px;}
+#box-toggle1 span {
+	display:block;
+	cursor:pointer;
+	font-weight:bold;
+	font-size:14px;
+	color:#014A7F; 
+	margin-top:15px;
+	}
+</style>
+<script type="text/javascript" src="jquery.js"></script> 
+<script type="text/javascript"> 
+jQuery.fn.toggleText = function(a,b) {
+return   this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
+}
+
+$(document).ready(function(){
+	$('.tgl1').before('<span>Diretoria Atual</span>');
+	$('.tgl1').css('display', 'none')
+	$('span', '#box-toggle1').click(function() {
+		$(this).next().slideToggle('slow')
+		.siblings('.tgl1:visible').slideToggle('fast');
+	
+		$(this).toggleText('Revelar','Esconder')
+		.siblings('span').next('.tgl1:visible').prev()
+		.toggleText('Revelar','Esconder')
+	});
+})
+	
+</script>
+
+
+		<div id="box-toggle1">
+
+<div class="tgl1">
+
+
+<div id="conteudo2">
+
+<div class="bloco1 claro1">
+	<div class="esquerda">
+		
+		<h2><b class="blocob">Diretoria atual:</b></h2>
+		<p>Presidente: Antonio Geraldo Giannini 
+		<p>Vice presidente:José Antonio Fragali 
+		<p>Secretária geral:Tânia Ap. Geraldo Cavicchioli 
+		<p>1º Secretário:Aparecido Gardini 
+		<p>Tesoureiro geral:Vagner Cândido Pereira 	
+		<p>1º Tesouro: Walter Bottura
+	</div>
+
+	<div class="direita">
+		
+		<h2><b class="blocob">Suplentes:</b></h2>
+		<p>José Fioravante Calera 
+		<p>Reginaldo Aparecido Bernardino 
+		<p>Andrei Marcio Mantovani Ghelfi 
+		<p>Sérgio Squisatti 
+		<p>Jonas Eduardo Simoni 
+		<p>Ricardo Maurício Benfatti		
+	</div>	
+</div>
+
+<div class="bloco2 claro2">
+	<div class="esquerda">
+		<h2><b class="blocob">Conselho Fiscal:</b></h2>
+		<p>Maria de Lourdes Ferras da Silva
+		<p>Adauto de Jesus Polsani
+		<p>Paulo Sérgio Scabello		
+	
+</div>
+	
+	<div class="direita">
+		<h2><b class="blocob">Suplentes:</b></h2>
+		<p>Maria Jose R dos Santos Roncalho
+		<p>Osvair Sartori
+		<p>Altair Lourenço	
+		
+</div>
+</div>
+
+<div class="bloco3 claro3">	
+<h2><b class="blocob">Delegado:</b></h2>
+	<p>1° Antonio Geraldo Giannini
+	<p>2° José Antonio Fragali
+</div>
+
+<div class="bloco4 claro4">
+
+ 				<h2><b class="blocob">Galeria:</b></h2> 
+					<p>Inauguração Sincomércio:</p>
+					
+					<br>
+					<a class="prev browse left"></a>
+					
+					
+
+<div class="scrollable" >   
+   
+   <div class="items">
+   
+      <div>
+      				<a href="{{MEDIA_URL}}fotos/img1.jpg" rel="lightbox[roadtrip]" title="Nova Sede Sincomercio">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/1.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img2.jpg" rel="lightbox[roadtrip]" title="Auditorio Sincomercio - inauguracao nova sede - 18 abril 2011">
+                    <img src="{{MEDIA_URL}}fotos/thumbs/2.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img3.jpg" rel="lightbox[roadtrip]" title="Auditorio Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/3.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img4.jpg" rel="lightbox[roadtrip]" title="Auditorio Sincomercio nauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/4.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img5.jpg" rel="lightbox[roadtrip]" title=" Compondo a mesa  Srs Jose A Fragali, Paulo R Gullo, Antonio G Giannini, Sr Aguinaldo Navarro e  o Prefeito Dr. Adauto Scardoeli - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/5.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+      </div>
+      
+      
+      <div>
+      		<a href="{{MEDIA_URL}}fotos/img6.jpg" rel="lightbox[roadtrip]" title="Carlos Alberto Diegolo - Cerimonial de inauguracao da sede Sincomercio - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/6.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img7.jpg" rel="lightbox[roadtrip]" title="Padre Marcos Peao abencoando  nova sede Sincomercio - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/7.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img8.jpg" rel="lightbox[roadtrip]x" title="Vice presidente Sr Jose Antonio Fragali e Presidente  Sr Antonio Geraldo Giannini decerrando placa de inauguracao Sincomercio -  18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/8.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 		<a type="hidden"  href="{{MEDIA_URL}}fotos/img9.jpg" rel="lightbox[roadtrip]" title=" Placa Inauguracao Sincomercio ladeada pelo Presidente e Vice Presidente - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/9.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img10.jpg" rel="lightbox[roadtrip]" title="Vice Presidente Sr Jose Antonio Fragali e Presidente Sr Antonio Geraldo Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/10.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+
+      </div>
+
+      		<div>
+					<a href="{{MEDIA_URL}}fotos/img11.jpg" rel="lightbox[roadtrip]" title="Diretora Tania Aparecida Geraldo recebendo placa de homenagem - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/11.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img12.jpg" rel="lightbox[roadtrip]" title="Diretor  Sr Aparecido Gardini - Sincomercio - inauguracao nova sede - 18 abril 2011 ">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/12.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img13.jpg" rel="lightbox[roadtrip]" title=" Diretor Sr Vagner Candido Pereira e Diretor presidente Sr Antonio G Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/13.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img14.jpg" rel="lightbox[roadtrip]" title=" Diretor Sr Walter Bottura e Presidente Sr Antonio G Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/14.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img15.jpg" rel="lightbox[roadtrip]" title="Diretor Sr Reginaldo A Bernardino e Presidente Sr Antonio G Giannini -Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/15.jpg" width="91px;" height="80px;"style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+			</div>      		
+			
+			<div>
+					<a href="{{MEDIA_URL}}fotos/img16.jpg" rel="lightbox[roadtrip]" title="Diretor Sr Jonas Eduardo Simoni e Presidente Sr Antonio Geraldo Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/16.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+						
+					<a href="{{MEDIA_URL}}fotos/img17.jpg" rel="lightbox[roadtrip]" title="Diretor Sr Ricardo Mauricio Benfatti e Oresidente Sr Antonio G Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/17.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img18.jpg" rel="lightbox[roadtrip]" title=" Diretor Sr Paulo Sergio Scabello e Presidente Sr antonio G Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                    <img src="{{MEDIA_URL}}fotos/thumbs/18.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img19.jpg" rel="lightbox[roadtrip]" title="Diretor Osvair Sartori e Presidente Antonio G Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/19.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img20.jpg" rel="lightbox[roadtrip]" title="Diretora Maria Jose e Presidente Sr Antonio G Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/20.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+			</div>
+			
+			<div>
+				<a href="{{MEDIA_URL}}fotos/img21.jpg" rel="lightbox[roadtrip]" title="Diretor Fecomercio Sr. Ivo Dall'acqua Junior recebendo placa de homenagem - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/21.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img22.jpg" rel="lightbox[roadtrip]" title="Sr Jose Oreste Bozelli Diretor fundador do Sincomercio sendo homenageado pelo Presidente Sr Antonio Geraldo Giannini - inauguracao nova sede - 18 abril 2011 ">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/22.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img23.jpg" rel="lightbox[roadtrip]" title="Sr Armindo Batista recebendo homenagem do presidente Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/23.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img24.jpg" rel="lightbox[roadtrip]" title="Diretor Vice Presidente Sr Jose Antonio  Fragali - Inauguracao nova sede Sincomercio">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/24.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+
+                 	<a href="{{MEDIA_URL}}fotos/img25.jpg" rel="lightbox[roadtrip]" title="Sr Paulo Roberto Gullo Presidente Sincomercio Sao Carlos - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/25.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>	
+						
+			</div>
+			
+			<div>
+				<a href="{{MEDIA_URL}}fotos/img26.jpg" rel="lightbox[roadtrip]" title="Prefeito Sr Dr Adauto Scardoelli prestigiando inauguracao nova sede Sincomercio - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/26.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img27.jpg" rel="lightbox[roadtrip]" title=" Sr. Airton Nogueira  presidente Sincomercio de Mogi das Cruzes - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/27.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img28.jpg" rel="lightbox[roadtrip]" title="Presidente Sr. Antonio Geraldo Giannini inaugurando nova sede Sincomercio  - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/28.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img29.jpg" rel="lightbox[roadtrip]" title="Carlos Alberto entrevistando Sr Antonio G Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/29.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img30.jpg" rel="lightbox[roadtrip]" title=" Presidentes Sincomercios da regiao - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/30.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+			</div> 
+
+<!--  -->
+	<div>
+				<a href="{{MEDIA_URL}}fotos/img31.jpg" rel="lightbox[roadtrip]" title=" Familia Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/31.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img32.jpg" rel="lightbox[roadtrip]" title=" Flavia, Mara e Maria do Carmo Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/32.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	                 	
+                 	<a href="{{MEDIA_URL}}fotos/img33.jpg" rel="lightbox[roadtrip]" title=" ">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/33.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img34.jpg" rel="lightbox[roadtrip]" title="Giannini ladeado pelos diretores da Ciesp Srs Antonio Carlos Chiozzini e Roberto Cadioli - inauguracao sincomercio 18-04-2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/34.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img35.jpg" rel="lightbox[roadtrip]" title="Presidente Sindfarma Rib Preto Sr Jose Carlos Brandao e presidente Sincomercio Matao - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/35.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+	</div> 
+	
+	<div>
+			<a href="{{MEDIA_URL}}fotos/img36.jpg" rel="lightbox[roadtrip]" title="Presidente Sincomercio Sr Antonio Geraldo Giannini e Presidente Sincomerciario Jose Carlos Pelegrini - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/36.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+              <a href="{{MEDIA_URL}}fotos/img37.jpg" rel="lightbox[roadtrip]" title="Angelica, Antonio G Giannini, Maria Helena Giannini, Jose A Fragali, Elza M Fragali e Fernanda Giannini - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/37.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img38.jpg" rel="lightbox[roadtrip]" title="Coquetel inauguracao Sincomercio - nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/38.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>   	
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img39.jpg" rel="lightbox[roadtrip]" title="Dr Enivaldo de Pietre e Antonio G Giannini - Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/39.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img40.jpg" rel="lightbox[roadtrip]" title="Maria Helena S Giannini e Valeria Giannini  - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/40.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+
+                 	
+	</div>
+	
+<!--  -->
+
+			<div>
+				<a href="{{MEDIA_URL}}fotos/img41.jpg" rel="lightbox[roadtrip]" title="Sr Antonio G Giannini e 2º promotor  Dr. Guilherme Athayde R FrancoSincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/41.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+
+                 	<a href="{{MEDIA_URL}}fotos/img42.jpg" rel="lightbox[roadtrip]" title="Sr Chimente e presidente Sincomercio Matao - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/42.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img43.jpg" rel="lightbox[roadtrip]" title="Srs Walter Bottura, Arlindo Zarbim e Fragali no terraco Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/43.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img44.jpg" rel="lightbox[roadtrip]" title="Terraco Sincomercio - inauguracao nova sede - 18 abril 2011">
+                    <img src="{{MEDIA_URL}}fotos/thumbs/44.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img45.jpg" rel="lightbox[roadtrip]" title="Sincomercio recepcionando convidados na inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/45.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+			</div>
+			
+	<div>
+			<a href="{{MEDIA_URL}}fotos/img46.jpg" rel="lightbox[roadtrip]" title="Sincomercio Recepcionando convidados  - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/46.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img47.jpg" rel="lightbox[roadtrip]" title="Sincomercio - inauguracao nova sede - 18 abril 2011 ">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/47.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img48.jpg" rel="lightbox[roadtrip]" title="Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/48.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img49.jpg" rel="lightbox[roadtrip]" title="Sincomercio - inauguracao nova sede - 18 abril 2011 ">
+                    <img src="{{MEDIA_URL}}fotos/thumbs/49.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img50.jpg" rel="lightbox[roadtrip]" title=" Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/50.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+	</div>
+		
+		<div>
+			<a href="{{MEDIA_URL}}fotos/img51.jpg" rel="lightbox[roadtrip]" title="Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/51.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img52.jpg" rel="lightbox[roadtrip]" title="Recepcao dia inauguracao Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/52.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img53.jpg" rel="lightbox[roadtrip]" title="Coquetel de inauguracao no terraco Sincomercio -  nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/53.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img54.jpg" rel="lightbox[roadtrip]" title="Coquetel de inauguracao Sincomercio -  18 abril 2011">
+                    <img src="{{MEDIA_URL}}fotos/thumbs/54.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+                 	<a href="{{MEDIA_URL}}fotos/img55.jpg" rel="lightbox[roadtrip]" title="Coquetel Inauguracao Sincomercio  - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/55.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+	</div>
+
+		<div>
+			<a href="{{MEDIA_URL}}fotos/img56.jpg" rel="lightbox[roadtrip]" title="Coquetel inauguracao Sincomercio - inauguracao nova sede - 18 abril 2011">
+                 	<img src="{{MEDIA_URL}}fotos/thumbs/56.jpg" width="91px;" height="80px;" style=" margin: 20px  -7px 20px 21px"/> </a>
+                 	
+	</div>
+			
+   </div>
+   
+</div>
+<a class="next browse right"></a>
+
+<style>
+.scrollable {
+
+	position:relative;
+	overflow:hidden;
+	width: 629px;
+	height:120px;
+}
+
+.scrollable .items {
+	width:20000em;
+	position:absolute;
+}
+
+.items div {
+	float:left;
+}
+
+       </style>                         
+       
+	<script>
+$(function() {
+  // initialize scrollable
+  $(".scrollable").scrollable();
+});
+</script>
+
+</div>
+</div>
+</div>
+</div>
+</div> 
+<!-- <hr/> -->
+	<br/>
+	<a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div class="localizacao">
+			<div class="titulo">
+				<p class="tipo">
+				EQUIPE
+				</p>
+			</div>
+			<div id="texto">
+				<div id="voltar">
+					<a href="{% url views.index %}">Voltar para página inicial</a>
+				</div>
+					<div id="equipe">
+						<li>Éder Araújo (Coordenador de trilha)</li>		<br>
+						<li>Felipe Bambozzi Veasey (Eventos e Comercial)</li>	<br>
+						<li>Fúlvio Ramon (Planejamento e Logística)</li>	<br>
+						<li>Marcelo Radaeli (Apoio técnico na Trilha)</li>		<br>
+						<li>José Luiz Gandolfi (Apoio Técnico na Trilha)</li>		
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

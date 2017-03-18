@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %} - Contribuioes: {{ contribuicao.titulo }}{% endblock %}
+
+{% block conteudo %}
+
+	<div id="ler_contribuicao">
+		
+		{% for contribuicaos in contribuicao %}
+				<div class="linksuteis"><h3 style="color: #039; border-bottom: 1px solid">{{ contribuicaos.titulo }}</h3></div>
+					
+	  {% endfor %}
+		
+		{% for lercontrib in listacontribuicao %}
+				<p style="margin-top: 30px;font-size: 12px;margin-bottom: -18px;"><a href="{{ lercontrib.arquivo.url }}" style="text-decoration: none;color: black">{{ lercontrib.titulo }}</a></p>
+					
+	  {% endfor %}
+
+</div>
+{% endblock %}

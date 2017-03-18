@@ -1,0 +1,153 @@
+/*
+ * jQuery Blueberry Slider v0.4 BETA
+ * http://marktyrrell.com/labs/blueberry/
+ *
+ * Copyright (C) 2011, Mark Tyrrell <me@marktyrrell.com>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+.blueberry { margin: 0 auto; width: 500px;}
+.blueberry .slides {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.blueberry .slides li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	
+}
+.blueberry .slides li img {
+	display: block;
+	width: 450px;
+	max-width: none;
+	height: 252px;
+	border: 4px solid #696666;
+	
+}
+.blueberry .slides li.active { display: block; position: relative; }
+.blueberry .crop li img { width: auto; }
+
+.blueberry .pager {
+	height: 40px;
+	margin-top: -290px;
+	position: relative;
+	background: url(/media/js/blueberry/img2.png) no-repeat;
+}
+.blueberry .pager li { display: inline-block;}
+.blueberry .pager li a,
+.blueberry .pager li a span {
+	display: block;
+	height: 17px;
+	width: 17px;
+
+}
+.blueberry .pager li a {
+	padding: 18px 0px;
+	-webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+	border-radius: 15px;
+	padding-left: 4px;
+	
+}
+
+span{
+	margin-left: 5px;
+}
+
+.blueberry .pager li a span {
+	overflow: hidden;
+	
+	text-indent: -9999px;
+-webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-top: -11px;
+}
+.blueberry .pager li.active a span { background: #404040; }
+
+/**/
+	
+.blueberry2 {
+	margin: 0 auto;
+	width: 500px;
+	width: 394px;
+	height: 190px;
+	margin-left: 7px;
+	padding-top:20px;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	padding-left: 20px;
+}
+.blueberry2 .slides {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.blueberry2 .slides li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	
+}
+.blueberry2 .slides li img {
+	display: block;
+	width: 100%;
+	max-width: none;
+	height: 280px;
+	border: 4px solid #696666;
+	-webkit-border-radius: 3px;
+}
+.blueberry2 .slides li.active { display: block; position: relative; }
+.blueberry2 .crop li img { width: auto; }
+
+
+.blueberry2 .pager li { display: inline-block;}
+.blueberry2 .pager li a,
+.blueberry2 .pager li a span {
+	display: block;
+
+
+}
+.blueberry2 .pager li a {
+	padding: 18px 0px;
+	-webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+	border-radius: 15px;
+	padding-left: 4px;
+	
+}
+
+span{
+	margin-left: 5px;
+}
+
+.blueberry2 .pager li a span {
+	overflow: hidden;
+	
+	text-indent: -9999px;
+-webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-top: -11px;
+}
+.blueberry2 .pager li.active a span { background: #404040; }
+	

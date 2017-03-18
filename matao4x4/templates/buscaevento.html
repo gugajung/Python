@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div class="titulo">
+			<p class="tipo">Eventos</p>
+		</div>
+		{% if eventos %}
+		<div id="texto">
+			<div id="voltar">
+				<a href="{% url views.index %}">Voltar para página inicial</a>
+			</div><br/>		
+			<small class="result">Resultados encontrados por: '<b>{{ query }}</b>'</small><br/>
+			<ul class="listaevento">
+				{% for evento in eventos %}
+				<li><a href="/eventos/visualizar/{{evento.id}}" target="_parent"><b><p class="texto">{{evento.titulo}}</p></b></a></li>
+				<li><small class="result">{{evento.descricao}}</small></li>
+				{% endfor %}
+			</ul>
+			
+		</div>
+		{% else %}
+		<div id="texto">
+			<div id="voltar">
+				<a href="{% url views.index %}">Voltar para página inicial</a>
+			</div>					
+			<p class="texto">Nenhum evento com a palavra '<b>{{ query }}</b>' foi encontrado</p>
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

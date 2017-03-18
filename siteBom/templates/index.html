@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		
+		<!-- INICIO CSS -->
+		<link rel="stylesheet" href="{{ MEDIA_URL }}css/bom.css" />
+		<!-- FIM CSS -->
+		
+		<link rel="shortcut icon" href="{{ MEDIA_URL }}imgs/favicon.ico" type="image/x-icon" />
+		
+		<!-- INICIO JAVASCRIPT -->
+		<script src="http://www.sysnetwork.com.br/web-libs/jquery-1.4.2.min.js" ></script>
+		<script src="{{ MEDIA_URL}}js/bom.min.js" charset="iso-8859-1"></script>
+		<!-- FIM JAVASCRIPT -->
+		
+		<title>{% block tituloPagina %} Home - {% endblock %}Benefício Odontológico Médicos</title>
+	</head>
+<body>
+<!-- INICIO ESTRUTURA -->
+<div id="moldura">
+	<!-- INICIO MENU -->
+	<div id="topo">
+		<script>carregarFlash('{{ MEDIA_URL }}topo.swf', 769, 337)</script>
+	</div>
+	<!-- FIM MENU -->
+	
+	<!-- INICIO CONTEUDO -->
+	<div id="conteudo">
+		{% block conteudo %}
+		<div id="topo-pagina">
+		<!--  INICIO SOBRE A BOM -->
+			<div id="introducao">
+				<h5>Benefício Odontológico - Planos Empresariais BOM - uma decisão inteligente.</h5>
+				<p>
+					Empresas de todo o Brasil têm percebido que para manter seu quadro de colaboradores
+					statisfeitos, além da remuneração compatível com o mercado, os benefícios agregados a 
+					essa remuneração são fundamentais. Possibilitando o alcance de um clima organizacional favorável e
+					consequentemente maior produtividade do funcionário, trazendo assim vantagem competitiva
+					para a organização.
+				</p>
+				
+				<h5 class="red">Planos Flexíveis</h5>
+				
+				<p>
+					Oferecemos para seu quadro de colaboradores Planos Odontológicos flexíveis que irão ao
+					encontro da real necessidade de sua empresa. Nossa área comercial de criteriosa
+					análise das necessidades de sua organização apresentará a solução de acesso à odontologia. 
+					Solicite sua proposta clicando <a href="faleconosco/">aqui</a> ainda entre em contato solicitando uma visita de
+					um de nossos profissionais do setor comercial.
+				</p>
+			</div>
+		<!--  FIM SOBRE A BOM -->
+		
+		<!-- INICIO PARCEIROS -->
+		<div id="parceiros"><!--
+			<h3>Parceiros</h3>		
+			<div id="mep"></div>
+			<div id="mais-saude"></div>
+			<div id="es"></div>
+		--></div>
+		<!-- FIM PARCEIROS -->
+		</div>
+		
+		<!-- INCIO DINAMICO -->
+		<div id="meio-pagina">
+			<div id="area-restrita-webmail">
+				<h3>WebMail</h3>
+				
+				<div class="descricao">
+					Acesse o seu webmail.
+				</div>
+				
+				<label for="email">
+					E-Mail: <input type="text" name="email" id="email" class="campo-texto"/>
+				</label><Br/>
+				
+				<label for="senha">
+					Senha: <input type="password" name="senha" id="senha" class="campo-texto" />
+					<input type="button" id="bt-email" class="bt-enviar" name="enviar" id="enviar" value="" />
+				</label>
+				
+				<h3>Área Restrita</h3>
+				
+				<div class="descricao">
+					Clique para acessar o sistema BOM.
+				</div>
+				
+				<a href="#" class="bt-acessar" id="bt-sistema" title="Acesso direto ao sistema BOM"></a>
+			</div>
+			
+			<div id="enquete">
+				<h3>Enquete</h3>
+				
+				{% if ultima_enquete %}
+					{% for enquete in ultima_enquete %}
+					<form action="{{enquete.get_absolute_url}}votar/" method="post">
+					{% csrf_token %}
+					<div class="pergunta">
+						{{ enquete.titulo|cut:"?" }}?
+					</div>
+					
+					<div class="escolhas">
+						{% for opcao in enquete.escolha_set.all %}
+						<div class="opcao">
+							<input type="radio" name="opcao" id="opcao{{ forloop.counter }}" value="{{ opcao.id }}" />
+							{{ opcao.escolha }}
+						</div>
+						{% endfor %}
+					</div>
+					
+					<input type="submit" id="enviar-enquete" value="" name="enviar-enquete" class="bt-enviar-enquete" />
+					</form>
+					{% endfor %}
+				{% else %}
+					<div class="pergunta">Nenhuma enquete foi encontrada.</div>
+				{% endif %}
+			</div>
+			
+			<!-- INICIO DICAS -->
+			<div id="dicas">
+				<h3>Dicas para sua saúde</h3>
+				
+				<div class="descricao">
+					Aqui você vai encontrar dicas para manter
+					uma vida mais saudável, com a alimentação
+					correta e a prática de exercícios.
+				</div>
+				<img src="{{ MEDIA_URL }}imgs/ilustracao-dicas.jpg" border="0" width="208" height="98" />
+				
+				<a href="/dicas" class="bt-dicas" title="Saiba mais dicas"></a>
+			</div>
+			<!-- FIM DICAS -->
+		</div>
+		<!-- FIM DINAMICO -->
+		{% endblock %}
+	</div>
+	<!-- FIM CONTEUDO -->
+
+<!-- INICIO INFO ADICIONAIS -->
+<div id="rodape">
+	<div>Rua Prudente de Moraes, 830 - Sala 19 - Centro, Matão - SP | Fone: (16) 3384-6242<br/>
+	BOM - Benefícios Odontológico e Médicos &copy; - Todos os direitos reservados - 2010</div>
+</div>
+<!-- FIM INFO ADICIONAIS -->
+</div>
+<!-- FIM ESTRUTURA -->
+</body>
+</html>

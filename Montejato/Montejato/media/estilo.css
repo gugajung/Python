@@ -1,0 +1,404 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url("img/fundo.png") repeat-x;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+h3{
+	border-bottom: 1px solid;
+}
+
+p{
+	margin-top:20px;
+}
+
+#menucentro {
+    margin: 0 auto;
+    width: 556px;	
+	
+}
+#menu {
+}
+#menu ul {
+}
+#menu ul li {
+    float: left;
+    font-size: 17px;
+    list-style: none;
+    margin-top: 25px;
+    padding-left: 25px;
+}
+#menu ul li a {
+    color: #FFFFFF;
+    font-style: italic;
+    text-decoration: none;
+}
+#menu ul li a:hover {
+    background:  #AD0101 ;
+    padding: 31px 8px 14px 10px;
+}
+#logo {
+    padding-top: 68px;
+    *padding-top: 0px;
+    *margin-top:18px;
+    width: 848px;
+}
+
+#logo a img{
+border-width:0;
+}
+
+.textologo {
+    color: #373435;
+    font-family: Britannic Bold;
+    font-size: 24px;
+    margin-left: 330px;
+    margin-top: -96px;
+}
+.textologo2 {
+    color: #373435;
+    font-family: Britannic Bold;
+    font-size: 24px;
+    margin-left: 442px;
+    margin-top: 4px;
+}
+.textologo3 {
+    color: #373435;
+    font-family: Britannic Bold;
+    font-size: 22px;
+    margin-left: 546px;
+    margin-top: 5px;
+    width: 347px;
+}
+#logo #conteudologo #idiomas {
+    background: url("img/idiomas.png") no-repeat;
+    display: block;
+    float: right;
+    height: 34px;
+    margin: -193px 0 20px;
+    position: relative;
+    width: 73px;
+    margin-right: -24px;
+}
+#logo #conteudologo #idiomas #pt {
+    float: left;
+    height: 20px;
+    margin-left: -2px;
+    margin-top: -2px;
+    width: 25px;
+}
+#logo #conteudologo #idiomas #ing {
+    float: left;
+    height: 20px;
+    margin-left: 1px;
+    margin-top: -2px;
+    width: 22px;
+}
+#logo #conteudologo #idiomas #esp {
+    float: left;
+    height: 20px;
+    margin-left: 1px;
+    margin-top: -2px;
+    width: 25px;
+}
+#logo #conteudologo #idiomas #pt, 
+#logo #conteudologo #idiomas #ing, 
+#logo #conteudologo #idiomas #esp {
+    text-decoration: none;
+}
+#moldura {
+  margin: 8px auto 0;
+    width: 884px;
+    left: 50%;
+     } 
+#moldura #banner {
+    margin-top: -11px;
+}
+#moldura #jateamento {
+    background: url("img/jateamento.png") no-repeat;
+    height: 185px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#moldura #jateamento #modelagemacessoJateamento, 
+#moldura #construcaocivil #modelagemacessoConstrucaocivil, 
+#moldura #montagem #modelagemacessoMontagem {
+    padding-top: 129px;
+}
+#moldura #jateamento #acessarJateamento {
+    margin-left: 71px;
+    padding-bottom: 15px;
+    padding-left: 82px;
+}
+#moldura #construcaocivil #acessarConstrucaocivil {
+    margin-left: 58px;
+    padding-bottom: 15px;
+    padding-left: 82px;
+}
+#moldura #construcaocivil {
+    background: url("img/construcaocivil.png") no-repeat;
+    height: 185px;
+    margin-left: 304px;
+    margin-top: -184px;
+}
+#moldura #montagem #acessarMontagem {
+    margin-left: 58px;
+    padding-bottom: 15px;
+    padding-left: 82px;
+}
+#moldura #montagem {
+    background: url("img/montagem.png") no-repeat;
+    height: 185px;
+    margin-left: 597px;
+    margin-top: -184px;
+}
+#moldura #servicos {
+    border: 1px dotted #BFBFBF;
+    float: left;
+    height: 135px;
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 285px;
+}
+#moldura #servicos #imgservicos, #moldura #empresa #imgempresa, #moldura #enderecos #imgenderecos, #moldura #newsletter #imgnewsletter {
+    margin-left: 10px;
+}
+#moldura #servicos #conteudoservicos {
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: justify;
+    padding-right: 10px;
+}
+#moldura #servicos #maisServicos, #moldura #enderecos #maisEndereco {
+    color: #16AFAD;
+    float: right;
+    width: 45px;
+    *margin-top:-16px;
+}
+#moldura #empresa {
+    background: #F4F4F4;
+    float: left;
+    height: 138px;
+    margin-left: 9px;
+    margin-top: 7px;
+    width: 578px;
+}
+#moldura #empresa #conteudoempresa {
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: justify;
+     padding-right: 10px;
+}
+#moldura #enderecos {
+    background: #F4F4F4;
+    height: 135px;
+    margin-left: 10px;
+    margin-top: 167px;
+    *margin-top:25px;
+    *margin-right:580px;
+    *margin-left:0px;
+    width: 285px;
+}
+#moldura #enderecos #faixaEndereco {
+    background: #A09FA0;
+    border: 1px solid #A09FA0;
+    height: 5px;
+    margin-left: -10px;
+    margin-top: 2px;
+    width: 283px;
+}
+#moldura #enderecos #conteudoendereco {
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: justify;
+     padding-right: 10px;
+}
+
+#moldura #newsletter {
+    border: 1px dotted #BFBFBF;
+    height: 134px;
+    *height:145px;
+    margin-left: 305px;
+/*    *margin-left:85px;*/
+    margin-top: -134px;
+    *margin-top:-146px;
+    width: 355px;
+}
+
+#moldura #newsletter #formularionewsletter {
+    margin-top: 5px;
+}
+
+#moldura .btnBuscar {
+    background: url("img/inputemail2.png") no-repeat;
+    border: none;
+    height: 24px;
+    margin-left: -157px;
+    width: 247px;
+}
+
+#inputemail {
+    margin-left: 10px;
+    *margin-bottom:2px;
+}
+
+#moldura #newsletter #formularionewsletter #imgbotaoOK {
+    background: url("img/botaoOK.png") no-repeat;
+    border:none;
+    cursor: pointer;
+    margin-left: -55px;
+    padding-top: 2px;
+    width: 50px;
+}
+#moldura #newsletter #formularionewsletter label {
+    font-weight: bold;
+    margin-left: 18px;
+}
+#moldura #newsletter #formularionewsletter #inforcadastra {
+    font-weight: bold;
+    margin-left: 18px;
+    margin-top: 15px;
+}
+#moldura #webmail {
+    border: 1px dotted #BFBFBF;
+    height: 136px;
+    margin-left: 670px;
+    margin-top: -137px;
+    *margin-top:-145px;
+}
+#moldura #webmail #imgfundowebmail {
+    background: url("img/fundowebmail.png") repeat-x;
+    height: 108px;
+}
+#moldura #webmail #molduratitulo {
+    background: none repeat scroll 0 0 #79C5D3;
+    height: 28px;
+}
+#moldura #webmail #formulariowebmail {
+    font-weight: bold;
+    margin-left: 10px;
+    padding-top: 20px;
+}
+#moldura #webmail #formulariowebmail #emailweb {
+    border: 1px none #CCCCCC;
+    margin-bottom: 10px;
+    margin-left: 6px;
+}
+#moldura #webmail #formulariowebmail #senhawebmail {
+    border: 1px none #CCCCCC;
+/*    margin-bottom: 10px;*/
+ margin-bottom: 1px;
+    margin-left: 2px;
+}
+#moldura #webmail #formulariowebmail #imgbotaoacesso {
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+#moldura #faixa {
+    border: 1px dotted #BFBFBF;
+    *border-right-color:#FFFFFF;
+    *border-left-color:#FFFFFF;
+    *border-bottom-color:#FFFFFF;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 874px;
+}
+#rodape {
+    background: url("img/rodape.png") repeat-x;
+    height: 88px;
+}
+#rodape #marcaregistrada {
+    color: #FFFFFF;
+    margin: 0 auto;
+    padding-top: 65px;
+    width: 860px;
+}
+#rodape #painelsites {
+    color: white;
+    margin: -72px auto 0;
+    padding-left: 818px;
+    width: 177px;
+}
+#rodape #painelsites #sitepainel, #rodape #painelsites #siteweb {
+    color: white;
+    text-decoration: none;
+}
+#rodape #sysnetwork {
+    font-size: 14px;
+    margin: 42px auto 0;
+    padding-left: 754px;
+    width: 254px;
+}
+#rodape #sysnetwork a {
+    color: #A2DAFF;
+    text-decoration: none;
+}
+#rodape #sysnetwork a:hover {
+    color: #A2DAFF;
+}
+
+#molduraconteudo{
+	margin-left: 10px;
+}
+
+#molduraconteudo #formulariocadastro{
+	margin-bottom: 20px;
+	width: 400px;
+	font-weight: bold;
+}
+
+#molduraconteudo #formulariocadastro #enviar{
+	margin-left: 134px; 
+	width: 60px; 
+	height: 25px;
+}
+
+#molduraconteudo #formulariocadastro #limpar{
+	width: 60px; 
+	height: 25px;
+}
+
+#molduraconteudo #imgemail{
+	margin-left: 600px;
+	margin-top:-240px;
+}
+
+#molduraconteudo #molduraparerias{
+padding-bottom: 20px;
+margin: 0 auto;
+width: 774px;
+}
+
+#molduraconteudo  #molduraparerias #imgcutrale{
+	margin-left: 70px;
+}
+
+#molduraconteudo #molduraparerias #imgJBS{
+	margin-left: 70px;
+}
+
+#molduraconteudo #molduraparerias #imgilouis{
+	margin-left: 70px;
+}
+
+#molduraconteudo #molduraparerias #imgbaldan{
+	margin-left: -5px;
+}
+#molduraconteudo #molduraparerias #imgfrigorifico_marfrig{
+	margin-left: 81px;
+	margin-top:15px;
+}
+#molduraconteudo #molduraparerias #imgpetobras{
+	margin-left: 96px;
+}
+#molduraconteudo #molduraparerias #imgtigre{
+	margin-left: 67px;
+}
+

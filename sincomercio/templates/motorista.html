@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+{% block tituloPagina %} - Acordo Coletivo{% endblock %}
+
+{% block conteudo %}
+	<div class="linksuteis"><h2>Convenção do Motorista do Comércio</h2></div>
+	<hr class="divisoria"/>
+	<h4 style="margin:3px; margin-left: 231px">Motorista</h4>
+	   
+	<div class="lista-links">
+	   	{% for motorista in motorista %}
+	<a href="{{MEDIA_URL}}{{ motorista.arquivo }}">{{ motorista.descricao }}</a><br>
+	   	{% empty %}
+	<div align="center"><small>Nenhum motorista foi encontrado.</small></div>
+
+	   	{% endfor %}
+    </div>
+    
+	<a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+{% endblock %}

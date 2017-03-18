@@ -1,0 +1,198 @@
+{% extends 'index.html' %}
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+{% block conteudo %}
+
+	<h2>Conheça o Sincomercio Matão</h2>
+
+	<hr class="divisoria"/>
+
+	<link type="text/css" href="{{MEDIA_URL}}js/novo/jquery-ui-1.8.18.custom.css" rel="stylesheet" />	
+	<link href="estilos.css" rel="stylesheet" type="text/css" /> <!-- CSS para as páginas exemplo -->
+	<script type="text/javascript" src="{{MEDIA_URL}}js/novo/modernizr.js"></script> 
+	<script type="text/javascript" src="{{MEDIA_URL}}js/novo/jquery-min.js"></script>
+	<script type="text/javascript" src="{{MEDIA_URL}}js/novo/jquery-ui-1.8.18.custom.min.js"></script>
+	<script>
+//<![CDATA[
+$(function() { 
+	$('#abas').tabs({fx: [{opacity: 'toggle', duration: 1000}, {opacity: 'toggle', duration: 1000}]});	
+	$('button').each(function() {
+		$(this).click(function() {
+			var aba = $(this).attr('id');
+			$('#abas').tabs('select', aba);	
+		});
+	});
+});
+// ]]>
+</script>
+<br>
+
+
+	<section>
+		
+		<div id="botao">
+	<button type="button" class="botao" id="1">Sincomercio</button>
+    <button type="button" class="botao" id="2">Recepção com atendimento personalizado</button>
+    <button type="button" class="botao" id="3">Administração</button>
+    <button type="button" class="botao" id="4">Salas para treinamento</button>
+    <button type="button" class="botao" id="5">Área de convivência ou coquetel</button>
+		</div>
+    <!-- <button type="button" class="botao" id="1">Sincomercio</button><br>
+    <button type="button" class="botao" id="2">Recepção com atendimento personalizado</button><br>
+    <button type="button" class="botao" id="3">Administração</button><br>
+    <button type="button" class="botao" id="4">Salas para treinamento</button><br>
+      <button type="button" class="botao" id="5">Área para coffee break ou coquetel</button><br>
+    </p> -->
+    <div id="abas">
+	<ul class="ui-helper-hidden">
+		<li><a href="#aba-1">Sincomercio</a></li>
+		<li><a href="#aba-2">Recepção com atendimento personalizado</a></li>
+		<li><a href="#aba-3">Administração</a></li>
+		<li><a href="#aba-4">Salas para treinamento</a></li>
+		<li><a href="#aba-5">Área para coffee break ou coquete</a></li>
+    </ul>
+	<div id="aba-1">
+		<p>Seja Bem vindo à nova sede do Sincomercio Matão, abaixo conheça um pouco do espaço Sincomercio e o que podemos oferecer para você empresário.</p>
+		<a href="{{MEDIA_URL}}fotos/img1.JPG" rel="lightbox[roadtrip]" title="Sede Sincomércio">
+                 	<img src="{{MEDIA_URL}}fotos/img1.JPG" width="250px;" height="350px;" style=" margin: 20px  -7px 20px 77px"/> </a>
+	</div>
+	<div id="aba-2">
+		<p align="center">Recepção com atendimento personalizado.</p>
+	 	<div style="width: 200px;">
+				<a href="{{MEDIA_URL}}imgs/DSC_9886.JPG" rel="lightbox[roadtrip]" title="Recepção">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9886.JPG" width="200px;" height="150px;" style=" margin: 20px 13px 20px -4px"/> </a>
+	
+		<a href="{{MEDIA_URL}}imgs/DSC_9888.JPG" rel="lightbox[roadtrip]" title="Recepção">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9888.JPG" width="200px;" height="150px;" style=" margin: -170px 4px 20px 220px"/> </a>
+			</div>
+	</div>
+	<div id="aba-3">
+		<p align="center">Administração.</p>
+			<div style="width: 200px;">
+				<a href="{{MEDIA_URL}}imgs/DSC_9893.JPG" rel="lightbox[roadtrip]" title="Administração">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9893.JPG" width="200px;" height="150px;" style=" margin: 20px 13px 20px -4px"/> </a>
+	
+		<a href="{{MEDIA_URL}}imgs/DSC_9894.JPG" rel="lightbox[roadtrip]" title="Administração">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9894.JPG" width="200px;" height="150px;" style=" margin: -170px 4px 20px 220px"/> </a>
+			</div>
+	</div>
+	<div id="aba-4">
+	<p>O Sincomercio Matão, possui três salas para treinamento com amplo espaço para sua empresa apresentar ou receber seus clientes. Entre em contato conosco e agende uma visita teremos o maior prazer em ter sua empresa como parceira. </p>
+		<div style="width: 200px; " >
+			<div style="height: 175">
+								<a href="{{MEDIA_URL}}imgs/DSC_9808.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9808.JPG" width="150px;" height="130px;" style=" margin: 20px 47px 20px -22px"/> </a>
+		</div>
+		<a href="{{MEDIA_URL}}imgs/DSC_9815.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9815.JPG" width="150px;" height="130px;" style=" margin: -156px -7px 27px 134px"/> </a>
+			
+			
+		<a href="{{MEDIA_URL}}imgs/DSC_9823.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9823.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+	
+	
+		
+	   <a href="{{MEDIA_URL}}imgs/DSC_9824.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+						 <img src="{{MEDIA_URL}}imgs/DSC_9824.JPG" width="150px;" height="130px;" style=" margin: 20px 47px 20px -22px"/> </a>
+						 
+		<a href="{{MEDIA_URL}}imgs/DSC_9828.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9828.JPG" width="150px;" height="130px;" style=" margin: -156px -7px 27px 134px"/> </a>
+			
+			
+		<a href="{{MEDIA_URL}}imgs/DSC_9830.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9830.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+						
+						
+		<a href="{{MEDIA_URL}}imgs/DSC_9831.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+						 <img src="{{MEDIA_URL}}imgs/DSC_9831.JPG" width="150px;" height="130px;" style=" margin: 20px 47px 20px -22px"/> </a>
+						 
+		<a href="{{MEDIA_URL}}imgs/DSC_9833.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9833.JPG" width="150px;" height="130px;" style=" margin: -156px -7px 27px 134px"/> </a>
+			
+			
+		<a href="{{MEDIA_URL}}imgs/DSC_9840.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9840.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+						
+       <a href="{{MEDIA_URL}}imgs/DSC_9849.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+						 <img src="{{MEDIA_URL}}imgs/DSC_9849.JPG" width="150px;" height="130px;" style=" margin: 20px 47px 20px -22px"/> </a>
+						 
+		<a href="{{MEDIA_URL}}imgs/DSC_9853.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9853.JPG" width="150px;" height="130px;" style=" margin: -156px -7px 27px 134px"/> </a>
+			
+			
+		<a href="{{MEDIA_URL}}imgs/DSC_9856.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9856.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+						       
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+     <!--
+         
+              <a href="{{MEDIA_URL}}imgs/DSC_9830.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                          <img src="{{MEDIA_URL}}imgs/DSC_9830.JPG" width="150px;" height="130px;" style=" margin: -156px -7px 27px 134px"/> </a>
+                                                       <a href="{{MEDIA_URL}}imgs/DSC_9831.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                          <img src="{{MEDIA_URL}}imgs/DSC_9831.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+                                       <a href="{{MEDIA_URL}}imgs/DSC_9833.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                          <img src="{{MEDIA_URL}}imgs/DSC_9833.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+             
+             
+             <a href="{{MEDIA_URL}}imgs/DSC_9840.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                          <img src="{{MEDIA_URL}}imgs/DSC_9840.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+                                                                         <a href="{{MEDIA_URL}}imgs/DSC_9849.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                          <img src="{{MEDIA_URL}}imgs/DSC_9849.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+                           <a href="{{MEDIA_URL}}imgs/DSC_9853.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                          <img src="{{MEDIA_URL}}imgs/DSC_9853.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+                                            <a href="{{MEDIA_URL}}imgs/DSC_9856.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                          <img src="{{MEDIA_URL}}imgs/DSC_9856.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+         -->
+     </div>
+	</div>
+	<div id="aba-5">
+		<p>Amplo espaço para o coffee break nos intervalos dos treinamentos ou mesmo para recepção de um coquetel com seus clientes e parceiros.</p>
+			<div style="width: 200px; " >
+			<div style="height: 175">
+								<a href="{{MEDIA_URL}}imgs/DSC_9865.JPG" rel="lightbox[roadtrip]" title="Espaço para coffee break">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9865.JPG" width="150px;" height="130px;" style=" margin: 20px 47px 20px -22px"/> </a>
+		</div>
+		<a href="{{MEDIA_URL}}imgs/DSC_9867.JPG" rel="lightbox[roadtrip]" title="Espaço para coffee break">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9867.JPG" width="150px;" height="130px;" style=" margin: -156px -7px 27px 134px"/> </a>
+			
+			
+		<a href="{{MEDIA_URL}}imgs/DSC_9871.JPG" rel="lightbox[roadtrip]" title="Espaço para coffee break">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9871.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+	
+		 <a href="{{MEDIA_URL}}imgs/DSC_9873.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+						 <img src="{{MEDIA_URL}}imgs/DSC_9873.JPG" width="150px;" height="130px;" style=" margin: 20px 47px 20px -22px"/> </a>
+						 
+		<a href="{{MEDIA_URL}}imgs/DSC_9875.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9875.JPG" width="150px;" height="130px;" style=" margin: -156px -7px 27px 134px"/> </a>
+			
+			
+		<a href="{{MEDIA_URL}}imgs/DSC_9876.JPG" rel="lightbox[roadtrip]" title="Salas de treinamento">
+                 	<img src="{{MEDIA_URL}}imgs/DSC_9876.JPG" width="150px;" height="130px;" style=" margin: -158px -7px 45px 289px"/> </a>	
+						
+	
+	</div>
+<!-- 	</div> -->
+		
+
+	</div>
+</div>
+</section>
+		
+			
+	<br></br>
+	
+	<p style="margin-left: 231px">Para mais detalhes de nossos serviços <a href="{% url views.servicos %}" style="text-decoration: none;color: #000; font-weight:bold  ">clique aqui.</a></p> 
+	
+	<br></br>
+	<a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+
+
+<div id="molduraconteudo">
+	<h2>Busca</h2>
+		<div id="busca"><br><br>
+{% if q %}
+		<span>Resultados encontrados com o termo: <strong>{{ q }}</strong></span>
+			
+			{% if lista_noticias|length > 0 %}
+				<table border="0" width="590px" cellspacing="0" cellpadding="3" class="table-list">
+					<tr>
+						<td><h3><strong>Notícia</strong></h3></td>
+						<td><h3><strong>Publicada em</strong></h3></td>
+					</tr>	<br><br>
+					{% for noticia in lista_noticias %}
+						<tr>
+							<td><a href="{{noticia.get_absolute_url}}" id="buscanoticias">{{ noticia.titulo }}</a></td>
+							<td>{{ noticia.data }}</td>
+						</tr>
+					{% endfor %}
+					</table>
+					
+						{% else %}
+					
+					{% for noticiacont in lista_noticias2 %}
+						<tr><br><br>
+							<td><a href="{{noticiacont.get_absolute_url}}" id="buscanoticias">{{ noticiacont.conteudo }}</a></td>
+							<br><td>{{ noticiacont.data }}</td>
+						</tr>
+					{% endfor %}
+					
+<!-- 						<span>Desculpe, mas nada foi encontrado com o termo: <strong>{{ q }}</strong></span> -->
+					
+			{% endif %}		
+		 	
+	{% endif %}
+	
+	{% if q2 %}
+			{% if lista_links|length > 0 %}
+				<table border="0" width="590px" cellspacing="0" cellpadding="3" class="table-list">
+					<br><br>
+					{% for linksuteis in lista_links %}
+						<tr>
+							<td><a href="{{linksuteis.site_url}}" id="buscanoticias" target="_blank">{{linksuteis.site_nome}}</a></td>
+						</tr>
+					{% endfor %}
+					</table>
+			{% endif %}	
+			
+				
+				 
+	{% else %}
+					<span>Não é possível realizar a busca com o campo vazio!</span>
+	  {% endif %}<br><br>			
+
+</div>
+{% endblock %}

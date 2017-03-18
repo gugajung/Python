@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+
+<div id="outroseventos">
+	<div class="bloco">
+		<div class="titulo">
+			<p class="tipo">
+				EVENTOS
+			</p>
+		</div>
+		<div id="texto">
+			<div id="voltar2">
+				<a href="{% url views.index %}">Voltar para página inicial</a>
+			</div></div>
+		<div id="blocoEvD">
+			{% for evento in eventos %}
+			<div class="blocox">
+				<div class="topo"></div>
+				<div class="corpo">
+					<img class="eventoD" src="{{MEDIA_URL}}{{evento.imagem}}" width="50" height="100" />
+					<div class="text">
+						<p>
+							<u>{{evento.titulo|slice:"18"}}...</u>
+						</p>
+						<br/>
+						<p style="width: 105px;">
+							<a href="{% url matao4x4.views.visualizarEv evento.id %}" target="_parent"><font size="3"><u>+ DETALHES</u></font></a>
+						</p>
+					</div>
+				</div>
+				<div class="rodape"></div>
+			</div>
+			{% if forloop.counter|divisibleby:"2" %}
+			{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

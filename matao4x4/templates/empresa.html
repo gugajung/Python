@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div class="titulo">
+			<p class="tipo">EMPRESA</p>
+		</div>	
+		<div id="texto">
+			<div id="voltar">
+				<a href="{% url views.index %}">Voltar para página inicial</a>
+			</div>			
+			<p class="texto">A Matão 4x4 é uma empresa especializada em eventos OFF-ROAD, atuando profissionalmente no interior de São Paulo desde sua inauguração em 2008. 
+<br><br>
+As pessoas envolvidas nos eventos OFF-ROAD organizados pela Matão 4x4 tem experiência e conhecimento para oferecer as melhores condições de serviço.  
+<br><br>
+Para proporcionar segurança e tranquilidade as pessoas que participam dos eventos,  sempre fazemos o acompanhamento de todo o processo, desde o levantamento do local, fazendo a abertura da trilha até a finalização do evento.  Além disso colocamos dois veículos de apoio para dar suporte garantindo que tudo saia como planejado.
+<br><br>
+A Matão 4x4 nasceu com o objetivo de proporcionar momentos de alegria e diversão  para todos que querem curtir uma aventura 4x4.
+</p><br/>
+<!-- 			<img class="static" src="{{MEDIA_URL}}img/maquete.jpg" width="720" height="250" alt="Ocorreu algum erro ao exibir a imagem!"/> -->
+<!-- 			<img class="static" src="{{MEDIA_URL}}img/maquete2.jpg" width="720" height="250" alt="Ocorreu algum erro ao exibir a imagem!"/>		 -->
+		</div>
+	</div>
+</div>
+{% endblock %}

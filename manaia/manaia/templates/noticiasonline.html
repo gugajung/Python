@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="molduraconteudo">
+		<h2>Noticias Online</h2>	
+		<br><br>
+				{% for noticia in noticias %} 
+				
+					
+			{{noticia.data}} <a href="{{ noticia.get_absolute_url }}" id="todasnoticias">{{ noticia.titulo }} </a><br>				
+					
+ 				{% endfor %}<br><br>
+</div>
+
+{% endblock %}

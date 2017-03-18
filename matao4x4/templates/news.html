@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/estilo.css"/>
+	</head>
+	<body style="background: #000000; width: 225px;" >
+		<small>Digite seus dados para receber novidades.</small>
+		<form id="formNewsletter" method="post" action="http://www.sysnetwork.com.br/sysmkt/newsletter_django/newsletter_matao4x4.php">
+				<table>
+					<tr>
+						<td>Nome*: </td>
+						<td>
+							{{ form.nome.errors }}
+								{{ form.nome }}
+						</td>
+					</tr>
+					<tr>
+						<td>E-mail*: </td>
+						<td>
+							{{ form.email.errors }}
+								{{ form.email }}
+						</td>
+					</tr>	
+					<tr>
+						<td>Cidade: </td>
+						<td>
+							{{ form.cidade.errors }}
+								{{ form.cidade }}
+						</td>
+					</tr>				
+					<tr>
+						<td>Estado: </td>
+						<td>
+							{{ form.estado.errors }}
+								{{ form.estado }}
+						</td>
+					</tr>
+				</table><br>
+				<div>
+					<input type="submit" value="Enviar"/>
+					<input type="reset" value="Limpar campos" />
+				</div>
+		</form>
+			<script>
+				$(document).ready(function(){
+					$('#news #id_nome').val('');
+					$('#news #id_email').val('');
+				});
+			</script>
+	</body>
+</html>

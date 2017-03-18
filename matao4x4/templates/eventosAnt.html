@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+					<div class="bloco">
+						<div class="titulo">
+							<p class="tipo">Eventos Anteriores</p>
+						</div>
+							<div id="voltar">
+					<a href="{% url views.index %}">Voltar para página inicial</a>
+				</div>
+						  <div id="content2" >
+							<table id="blocoItAcessorios" cellspacing="25">
+								<tr class="itemAcessorio">
+									{% for imgeventos in capaLista.object_list %}
+												<td>
+													<div id="topoborda"></div>
+													<div id="meioborda">
+														<p><b>{{imgeventos.galeriaEvento.evento.titulo}}</b></p>
+														<a href="{% url matao4x4.views.visualizarGa imgeventos.galeriaEvento.id %}" target="_parent"><img src="{{MEDIA_URL}}{{imgeventos.imagem}}" width="150" height="125" /></a>
+													</div>
+													<div id="rodapeborda"></div>
+												</td>
+											{% if forloop.counter|divisibleby:"3" %}
+												</tr>
+												<tr class="itemAcessorio">
+											{% endif %}
+									{% endfor %}
+								</table>
+										<div id="paginator2">
+											{% if capaLista.has_previous %}
+												<a href="?page={{ capaLista.previous_page_number }}">Anterior</a>
+											{% endif %}
+											    
+											<small>Página {{ capaLista.number }} de {{ capaLista.paginator.num_pages }}.</small>
+												
+											{% if capaLista.has_next %}
+												<a href="?page={{ capaLista.next_page_number }}">Proximo</a>
+											{% endif %}
+						 				 </div>	
+						</div>
+						
+					</div>
+				</div>
+
+{% endblock %}
+
+

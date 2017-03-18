@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %} - Contribuições: {{ contribuicao.titulo }}{% endblock %}
+
+{% block conteudo %}
+
+	<div class="linksuteis"><h2>Contribuição Sindical</h2></div>
+	<hr class="divisoria"/>
+
+
+<div id="Contribuicao">
+	
+
+	<ul>
+						<li>
+							<a href="https://sindical.caixa.gov.br/sitcs_internet/contribuinte/login/login.do" target="blank">Emita aqui a sua guia</a> 
+						    <p style="border-bottom: 1px solid #ccc; margin-top: 10px;"></p>
+						</li>
+			
+	{% if contribuicao|length > 0 %}	
+			{% for contrib in contribuicao %}
+						
+						<li>
+							<a href="{{ contrib.get_absolute_url }}">{{ contrib.titulo }}</a> 
+							<p style="border-bottom: 1px solid #ccc; margin-top: 10px;"></p>
+						</li>	
+				{% endfor %}
+	{%  endif %}
+						
+							<li>
+							<a href="https://www.programarelaciona.com.br/contribuicao-sindical.php" target="blank">Tabelas para Calculo da Contribuição Sindical (Acesse o site)</a>
+							<p style="border-bottom: 1px solid #ccc; margin-top: 10px;"></p>
+						</li>	
+						
+						<li>
+							<a href="/tiposcontribuicao/">Contribuições - Conheça os tipos</a>
+							<p style="border-bottom: 1px solid #ccc; margin-top: 10px;"></p>
+						</li>	
+	</ul>
+	
+	<!-- 
+	<ul>
+		{% if noticias|length > 1 %}	
+		{% for noticia in noticias %}
+		<li>
+		<a href="{{ noticia.get_absolute_url }}">{{ noticia.titulo }}</a>
+		</li>
+		{% endfor %}
+		<a href="{% url noticias fonte='todas' %}" id="maisnoticias">mais notícias...</a> 
+		</ul>  
+		{% else %}
+		<p class="nenhumanoticia">Nenhuma Noticia  foi encontrada!</p>
+		{% endif %} 
+	</ul> -->
+	
+</div>
+
+{% endblock %}

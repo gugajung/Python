@@ -1,0 +1,110 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<script src="http://www.sysnetwork.com.br/web-libs/jquery.maskedinput-1.2.2.js"></script>
+<script>
+ $(document).ready(function(){  
+ $(function(){  
+ $("#id_telefone").mask("(99)9999-9999");  
+ });  
+ });
+ </script>
+<script src="{{MEDIA_URL}}js/jquery.msg.min.js"></script>
+<script src="{{MEDIA_URL}}js/jquery.center.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/jquery.msg.css"/>
+<div id="conteudo">
+	<div class="bloco">
+		<div class="titulo">
+			<p class="tipo">{{acessorio.nome}}</p>
+		</div>	
+		<div id="texto">
+			<div id="voltar">
+				<a href="{% url views.index %}">Voltar para página inicial</a>
+			</div>
+				<div id="fotomaior">
+					<!-- Foto do acessorio -->
+					{%for pict in foto %}
+					<img src="{{MEDIA_URL}}{{pict.foto}}" width="300" height="250"/>
+					{% endfor %}
+				</div>	
+				<div id="descricao">
+					<!-- Descrição do acessorio -->
+					<p><b>{{acessorio.nome}}</b><br/><br/>
+						<b>Marca</b>: {{acessorio.marca}}<br/>
+						<b>A partir de</b>: R${{acessorio.valor}} / {{acessorio.unidade}}<br/><br/>
+						<b>Descrição</b>: {{acessorio.descricao}}</p><br/>
+						<a href="#" onclick="$.msg({ autoUnblock : false, content : $('#comoComprar').html()});"><img src="{{MEDIA_URL}}img/comocomprar.png" /></a>
+						<p><b>Compartilhe!</b></p>
+						<table cellpadding="5" style="margin-left: -5px;">
+						    <tr align="center">
+						    	<td><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" rel="nofollow"></a></td>
+						    	<td><a name="fb_share" type="button" share_url="{{ url }}"></a></td>
+						    </tr>
+						</table>
+						<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+						<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+				</div>				
+				<div id="galeria">
+					<!-- galeria de fotos -->
+					{% for fotosGaleria in galeria %}
+						<a onclick="getFotoMaior('{{fotosGaleria.foto}}');" href="javascript:void(0);"><img src="{{MEDIA_URL}}{{fotosGaleria.foto}}" width="80" height="80" /></a>
+					{% endfor %}
+				</div>
+				<div id="contatoAcessorio">
+					<p>Quer Comprar? Envie-nos um e-mail!<br/>Campos com (*) devem ser preenchidos.</p>
+						<form id="formAcessorio" method="post">
+							{% csrf_token %}
+							<table>
+								<tr>
+									<td>{{formac.acessorio.errors}}
+										{{formac.acessorio}}</td>
+								</tr>
+								<tr>
+									<td>{{formac.marca.errors}}
+										{{formac.marca}}</td>
+								</tr>
+								<tr>
+									<td>{{formac.valor.errors}}
+										{{formac.valor}}</td>
+								</tr>
+								<tr>
+									<td>Nome(*): </td>
+									<td>{{formac.nome.errors}}
+										 {{formac.nome}} </td>
+								</tr>
+								<tr>
+									<td>Email(*): </td>
+									<td>{{formac.email.errors}}
+										{{formac.email}}
+									</td>
+								</tr>
+								<tr>
+									<td>Telefone: </td>
+									<td>{{formac.telefone.errors}}
+										{{formac.telefone}}</td>
+								</tr>
+								<tr>
+									<td>Mensagem(*): </td>
+									<td>{{formac.mensagem.erros}}
+										{{formac.mensagem}}</td>								
+								</tr>
+							</table><br/>
+							<input class="buttons" type="submit" value="Enviar"/>
+							<input class="buttons" type="reset" value="Limpar campos" />
+						</form>	
+					{% if mensagem %}
+					<script>alert("{{mensagem}}");</script>
+					{% endif %}
+				</div>
+		</div>
+	</div>
+</div>
+<div id="comoComprar" style="display: none;">
+	<h3>Como Comprar</h3>
+	<p align="center">
+		<font color="#000">Gostamos de negociar!<br/> É pensando assim que buscamos as melhores negociações e o preço mais justo em nossos produtos.
+		O único formato de compra no Matão 4x4 é o depósito bancário, dessa forma podemos negociar melhores condições com nossos fornecedores e repassar esse benefício a você cliente.
+		Faça como muitos clientes que já compraram e continuam comprando dessa forma, mande-nos um e-mail e vamos negociar o melhor preço.</font>
+	</p>
+</div>
+{% endblock %}

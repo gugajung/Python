@@ -1,0 +1,297 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+{% block tituloPagina %} - Lojas Aniversariantes{% endblock %}
+
+{% block conteudo %}
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/accordion.css" type="text/css" media="screen" titleAcordion="no title" charset="utf-8"/>
+	<script src="{{ MEDIA_URL }}js/jqueryui.accordion.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function(){
+			$("#accordion").accordion({active: false, collapsible:true, autoHeight:false});
+			
+			$('#list3').accordion({ 
+		    header: 'div.titleAcordion', 
+		    active: false, 
+		    alwaysOpen: false, 
+		    animated: false, 
+		    autoHeight: false 
+			});
+		});
+	</script>
+	
+	
+	<!-- <h2>Lojas Aniversariantes</h2>
+	<div class="divisoria"></div>
+	{% if lojas.object_list|length <= 0 %}
+		<center>
+			<font size="2">Nenhuma loja está fazendo aniversário hoje.</font>
+		</center>
+	{% else %}
+	<table border="0" width="750px" cellspacing="0" cellpadding="0" class="table-list">
+	<tr>
+		<td><h3>Empresa</h3></td>
+		<td><h3>Descrição</h3></td>
+		<td><h3>Aniversário em</h3></td>
+	</tr>	
+	{% for loja in lojas.object_list %}
+		<tr>
+			<td>{{ loja.nome }}</td>
+			<td>{{ loja.descricao }}</td>
+			<td>{{ loja.data_aniver }} </td>
+		</tr>
+	{% endfor %}
+	</table> -->
+	<!-- <div class="paginacao" align="center">
+		 <a href="?pagina={{ lojas.previous_page_number }}">&laquo; Anteriores</a>
+        {% endif %}
+        <span class="pagina-atual">
+            Página {{ lojas.number }} de {{ lojas.paginator.num_pages }}
+        </span>
+        {% if lojas.has_next %}
+        <a href="?pagina={{lojas.next_page_number }}">Próximos &raquo;</a>
+        {% endif %}
+	</div> -->
+	<div id="list3">
+			<div class="linksuteis">
+				<div class="titleAcordion">Janeiro</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 1 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Fevereiro</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 2 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Março</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 3 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Abril</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 4 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Maio</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 5 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Junho</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 6 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Julho</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 7 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Agosto</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 8 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Setembro</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 9 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Outubro</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 10 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Novembro</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 11 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+			<div>
+				<div class="titleAcordion">Dezembro</div>
+				<div >
+					<table class="tabelaAcordion">
+						<tr>
+							<th>Nome</th>
+							<th>Data do Aniversario</th>
+						</tr>
+					{% for loja in lista_lojas %}
+					    
+						{% if loja.data_aniver.month == 12 %}
+							<tr>
+								<th>{{ loja.descricao }}</th>
+								<th>{{ loja.data_aniver }}<th>
+							</tr>
+						{% endif %}					
+					{% endfor %}
+					</table>
+				</div>
+			</div>
+		</div>
+		
+{% endblock %}

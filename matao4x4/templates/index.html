@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		
+		<!-- META TAGS BUSCAS -->
+		<meta name="robots" content="index,follow" />
+		<meta name="rating" content="General" /> 
+		<meta name="title" content="Matão 4x4" />
+		<meta name="description" content="Matão 4x4 oferece opções completas para o seu auto 4x4, acessórios, eventos e muito mais!" />
+		<meta name="keywords" content="matão 4x4, autos, matão, acessórios 4x4, matão são paulo, camionetes, classificados matão, matão 4x4 matão sp, matão 4x4 matão" />		
+		<!-- FIM META TAGS BUSCAS -->
+		
+		<title>Matão 4x4</title>
+		<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/estilo.css"/>
+		<!--[if lte IE 9]>
+        	<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/estilo-ie.css" />
+		<![endif]-->
+		<script src="http://www.sysnetwork.com.br/web-libs/jquery.js"></script>
+		<script src="http://www.sysnetwork.com.br/web-libs/cycle.all.min.js"></script>
+		<script src="{{MEDIA_URL}}js/scripts.js"></script>
+		
+		
+		<script>
+			$('#slideshow').cycle('fade');
+		</script>
+	</head>
+	<body>
+		<div id="moldura">
+			<div id="topo">
+				<div id="slideshow">
+						{% for banner in banners %}
+						<img class="banner" src="{{MEDIA_URL}}{{banner.imagem}}">
+						{% endfor %}
+				</div>
+				<div id="menu">
+					<ul>
+						<li class="home"><a href="{% url views.index %}">PAGINA INÍCIAL</a></li>
+						<li class="empresa"><a href="{% url views.empresa %}">EMPRESA</a></li>
+						<li class="equipe"><a href="{% url views.equipe %}">EQUIPE</a></li>
+						<li class="expedicoes"><a href="{% url views.expedicao %}">EXPEDIÇÕES E EVENTOS</a></li>
+						<li class="dicas"><a href="{% url views.dicas %}">DICAS 4X4</a></li>
+						<li class="aconteceu"><a href="{% url views.aconteceu %}">ACONTECEU</a></li>
+						<li class="contato"><a href="{% url views.contato %}">CONTATO</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="fundo">
+				{% block conteudo %}
+				
+				
+				<div id="veiculos">
+					<div class="bloco">
+						<div class="titulo">
+							<p class="tipo">Fotos Eventos</p>
+						</div>
+						  <div id="content" >
+							<table id="blocoItAcessorios" cellspacing="25">
+								<tr class="itemAcessorio">
+									{% for imgeventos in capa %}
+												<td>
+													<div id="topoborda"></div>
+													<div id="meioborda">
+														<p><b>{{imgeventos.galeriaEvento.evento.titulo}}</b></p>
+														<a href="{% url matao4x4.views.visualizarGa imgeventos.galeriaEvento.id %}" target="_parent"><img src="{{MEDIA_URL}}{{imgeventos.imagem}}" width="150" height="125" /></a>
+													</div>
+													<div id="rodapeborda"></div>
+												</td>
+											{% if forloop.counter|divisibleby:"3" %}
+												</tr>
+												<tr class="itemAcessorio">
+											{% endif %}
+									{% endfor %}
+								</table>
+									<div id="eventosant"><a href="{% url views.eventosant %}">Eventos Anteriores</a></div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="eventos">
+					<div class="bloco2">
+						<div class="titulo">
+							<p class="tipo">EVENTOS</p><a href="{% url views.visualizaroutroev %}"><p class="maiseventos">+ OUTROS EVENTOS</p></a>
+						</div>
+						<div id="content-1">
+						<div id="evDestaque">
+							{% for eventoDestaque in eventosDestaque %}
+								<div class="blocoEv">
+									<div id="topo"></div>
+									<div id="meio">
+										<img class="eventoD" src="{{MEDIA_URL}}{{eventoDestaque.imagem}}" width="300" height="376"/>
+												<div class="text">
+														<p><u>{{eventoDestaque.titulo}}</u></p><br/>
+														<p class="descE">Dia {{eventoDestaque.data}}</p><br>
+														{% if eventoDestaque.telefone %}
+														<p class="descE">Telefone: {{eventoDestaque.telefone}}</p><br>
+														{% endif %}
+														{%if eventoDestaque.site %}
+														<p class="descE">Site: <a href="{{eventoDestaque.site}}" target="_blank">Acesse clicando aqui!</a></p><br>
+														{% endif %}
+														<p class="descE">Cidade: {{eventoDestaque.cidade}} / {{eventoDestaque.estado}}</p><br>
+														<p><a href="{% url matao4x4.views.visualizarEv eventoDestaque.id %}" target="_parent">+ DETALHES</a></p>
+													</div>
+									</div>
+									<div id="rodape"></div>
+								</div> 
+							{% endfor %}
+						</div>
+						
+						</div>						 										
+					</div>
+				</div>
+				{% endblock %}
+			</div>
+				<div id="anunciantes">
+					<small><b><center>Publicidade:</center></b></small>
+					{% for anuncio in anuncios.anunciantes %}
+						{% if anuncio.link %}
+							<a href="{{ anuncio.link }}" target="_blank"><img src="{{ MEDIA_URL }}{{ anuncio.imagem }}" alt="{{ anuncio.anunciante }}" width="160"/></a>
+						{% else %}
+							 <img src="{{ MEDIA_URL }}{{ anuncio.imagem }}" alt="{{ anuncio.anunciante }}" width="160"/>
+						{% endif %}
+					{% endfor %}
+				</div>
+			<div id="rodape">
+				<p>Av. Baldan, 2608 - Res. Olívio Benassi | CEP: 15993-000 | Matão/SP | Fone: (16) 9711-5146</p>
+			</div>
+			<div align="center"/>
+				<small><a href="http://www.sysnetwork.com.br/" target="_blank"><font color="white">Desenvolvido por Sysnetwork</font></a></small>
+			</div>
+		</div>
+	</body>
+</html>

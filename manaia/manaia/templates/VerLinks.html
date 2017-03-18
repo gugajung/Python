@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+
+<div id="molduraconteudo">
+	<h2>Links</h2>
+	<div id="verLink">
+		<ul id="categorias">
+		{% for categoria in categorias %}
+			
+			<li class="links">
+				<h3>{{categoria.nome}}</h3>
+				<ul>
+					{% for link in categoria.nomeCategorias.all %}
+					<li><a href ="{{link.site_url}}" target="_blank" class="linksVer">{{link.site_nome}}</a>
+						
+					</li>
+					{% endfor %}
+				</ul>
+			</li>
+				
+		{% endfor %}
+		</ul>		
+				
+	</div>
+	
+</div>
+
+{% endblock %}

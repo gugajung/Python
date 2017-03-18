@@ -1,0 +1,89 @@
+{% extends 'index.html' %}
+
+{% block content %}
+	<div id="jateamento"> 
+									<div id="modelagemacessoJateamento">
+										<a href="{%url views.Jateamento%}" id="acessarJateamento"></a> 
+									</div>
+							</div>
+							
+							<div id="construcaocivil">
+									<div id="modelagemacessoConstrucaocivil">
+										<a href="{%url views.Construcao%}" id="acessarConstrucaocivil"></a></div>
+									</div>
+							<div id="montagem">
+									<div id="modelagemacessoMontagem">
+										<a href="{%url views.Montagem%}" id="acessarMontagem"></a>
+									</div>
+							</div>		
+							
+									<div id="servicos">
+											<img src="{{MEDIA_URL}}img/servicos.png" id="imgservicos"/>
+											<div id="conteudoservicos">
+												A Monte Jato presta serviço para os setores sucroalcooeiro, cítrus, celulose e pale,
+												saneamento, siderurgia, etc, utilizando-se de engenharia especializada para realizar
+												 a melhor forma o ....
+												 		<a href="{%url views.Servicos%}" id="maisServicos">mais...</a>
+											</div>
+									</div>
+									
+								<div id="empresa">
+										<img src="{{MEDIA_URL}}img/empresa.png" id="imgempresa" />
+										<div id="conteudoempresa">
+											É uma empresa prestadora de serviços na área de Manutenção, Jateamento e Pinturas
+											Industriais. Em anexo, informações para sua apreciação, espero que preencha os requisitos
+											necessários para fazermos uma parceria em prestação de serviços em sua empresa.
+											Qualquer informação suplimentar de natureza técnica comercial, sobre habilitação ou instrução, não 
+											prevista será fornecida a pedido da empresa.
+										</div>
+								</div>	
+								
+									<div id="enderecos">
+										<img src="{{MEDIA_URL}}img/enderecos.png"  id="imgenderecos"/>
+											<div id="conteudoendereco">
+												<center style="font-size: 16px; font-family: Constantia" >MONTEJATO</center>
+												<div style="margin-top: 2px;">
+													Endereço: Av. Antonio Gorgatti n° 142 - Distrito Industrial - Matão SP.<br>
+													Telefone: (16) 3384 - 6744<br>
+												Email: montejato@montejato.com.br
+												</div>
+													<div id="faixaEndereco"></div>
+											</div>
+									</div>
+									
+											<div id="newsletter">
+													<img src="{{MEDIA_URL}}img/newsletter.png" id="imgnewsletter"/>
+														<div id="formularionewsletter">
+																<form method="post">
+																	<label>e-mail</label>
+																	
+																	<input  type="text" name="busca" id="inputemail">
+				  													<input type="text" id="btnBusca" class="btnBuscar" value="" />
+				  													<input type="submit" id="imgbotaoOK" value=""/>
+																</form>
+																	<div id="inforcadastra">
+																		*Cadastra-se e receba nossos boletins informativos e novidades
+																		diariamente no seu e-mail.
+																	</div>
+														</div>	
+											</div>		
+												
+													<div id="webmail">
+																	<div id="molduratitulo">
+																		<img src="{{MEDIA_URL}}img/webmail.png" />
+																	</div>
+																	<div id="imgfundowebmail">
+																		<div id="formulariowebmail">
+																				<label>Email</label>
+																				<input type="text" name="emailweb" size="20" id="emailweb"><br>
+																				<label style="padding-top:5px;">Senha</label>
+																				<input type="password" name="senhawebmail" id="senhawebmail" size="20">
+																					
+																					<img src="{{MEDIA_URL}}img/botaoacesso.png" id="imgbotaoacesso"/>
+																					
+																		</div>
+																</div>
+													</div>
+															<div id="faixa"></div>
+		
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %}Enquetes - {% endblock %}
+{% block conteudo %}
+	<h3>Enquetes</h3>
+	
+{% if enquetes.object_list|length > 0 %}
+<div id="lista-enquetes">
+   <ul>
+    {% for enquete in enquetes.object_list %}
+        <li><a href="{{enquete.get_absolute_url}}">{{ enquete.titulo }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma enquete foi encontrada.</p>
+{% endif %}
+</div>
+<center>
+<div class="paginacao">
+	{% if enquetes.has_previous %}
+	 <a href="?pagina={{ enquetes.previous_page_number }}">&laquo; Anteriores</a>
+       {% endif %}
+       <span class="pagina-atual">
+           Página {{ enquetes.number }} de {{ enquetes.paginator.num_pages }}
+       </span>
+       {% if enquetes.has_next %}
+       <a href="?pagina={{enquetes.next_page_number }}">Próximos &raquo;</a>
+       {% endif %}
+</div>
+</center>
+{% endblock %}

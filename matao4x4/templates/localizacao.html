@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div class="localizacao">
+			<div class="titulo">
+				<p class="tipo">
+					LOCALIZAÇÃO
+				</p>
+			</div>
+			<div id="texto">
+				<div id="voltar">
+					<a href="{% url views.index %}">Voltar para página inicial</a>
+				</div>
+				<p class="texto">
+					Estamos localizados na Av. Balda, nº 2608, Matão - São Paulo, 15991 - 172
+					<br/>
+					Venha nos visitar!
+				</p>
+				<div style="text-align: center; margin-top: 35px;">
+				<iframe width="720" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Avenida+Baldan,+2608,+Mat%C3%A3o+-+S%C3%A3o+Paulo&amp;aq=0&amp;sll=-14.239424,-53.186502&amp;sspn=58.828096,79.013672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Baldan,+2608+-+Mat%C3%A3o+-+S%C3%A3o+Paulo,+15991-172&amp;t=m&amp;ll=-21.608001,-48.373854&amp;spn=0.008977,0.015428&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+				<br />
+				<small><a class="exibemapa" href="http://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=Avenida+Baldan,+2608,+Mat%C3%A3o+-+S%C3%A3o+Paulo&amp;aq=0&amp;sll=-14.239424,-53.186502&amp;sspn=58.828096,79.013672&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Av.+Baldan,+2608+-+Mat%C3%A3o+-+S%C3%A3o+Paulo,+15991-172&amp;t=m&amp;ll=-21.608001,-48.373854&amp;spn=0.008977,0.015428&amp;z=16&amp;iwloc=A" style="color:#0000FF;text-align:left">Exibir mapa ampliado</a></small>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

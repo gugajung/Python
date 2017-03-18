@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+{% block tituloPagina %} - Lojas Aniversariantes{% endblock %}
+
+{% block conteudo %}
+	<div class="linksuteis"><h2>Cursos e Palestras</h2></div>
+
+	<hr class="divisoria"/>
+	<div id="conteudoPlestras" align="center" >
+		<ul>
+			{% for palestra in palestras%}
+			<div id="palestra">
+				<div id="tituloPalestras">{{palestra.titulo}}</div>
+				<div id="dataPalestras">{{palestra.data}}</div>
+				<div id="textoPalestras">{{palestra.texto}}</div>
+				<div id="imagemPalestras">
+					<img src="{{palestra.imagem.url}}" />
+				</div>
+				</div>
+			{% endfor %}
+		</ul>
+	</div>
+		
+{% endblock %}

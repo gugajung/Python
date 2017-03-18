@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+{% load thumbnail %}
+<html>
+	<head>
+		
+		
+		<!-- INCIO CSS -->
+			
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/estilo.css" />
+		<link rel="stylesheet" href="{{MEDIA_URL}}js/shadowbox-3.0.3/shadowbox.css" />
+		<link rel="stylesheet" href="{{MEDIA_URL}}js/jquery-ui-1.8.2/css/south-street/jquery-ui-1.8.2.custom.css" />
+<!-- FIM CSS -->
+		
+		<link rel="shortcut icon" href="{{ MEDIA_URL }}imgs/favicon.ico" type="image/x-icon" />
+		
+		<title>Sincomércio Matão {% block tituloPagina %} {% endblock %}</title>
+		
+		<!-- INICIO JAVASCRIPT -->
+		<script src="{{MEDIA_URL}}js/jquery-1.4.2.min.js"></script>
+		<script src="{{MEDIA_URL}}js/jquery.cycle.all.min.js"></script>
+		<script src="{{MEDIA_URL}}js/shadowbox-3.0.3/shadowbox.js"></script>
+		<script src="{{MEDIA_URL}}js/jquery-ui-1.8.2/js/jquery-ui-1.8.2.custom.min.js"></script>
+		<script src="{{MEDIA_URL}}js/scripts.js" charset="iso-8859-1"></script>
+		 <script src="{{MEDIA_URL}}js/niftyplayer/niftyplayer.js"></script> 
+		<script src="{{MEDIA_URL}}js/niftyplayer/flashmp3alizerconf.js"></script>
+		<script src="{{MEDIA_URL}}js/niftyplayer/flashmp3alizer.js"></script> 
+		
+		 <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}js/scrollable-horizontal.css" />
+		<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}js/scrollable-buttons.css" />
+  		<script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+		<script src="{{ MEDIA_URL }}js/tools.js"></script>
+   	
+		
+		
+		<script>
+		Shadowbox.init({
+				displayCounter: true
+		});
+		// $(function(){
+			
+			iniciaTransicao();
+		// });
+		</script>
+		
+<!-- FIM JAVASCRIPT -->
+
+	</head>
+<body>
+	<div id="moldbanner">
+				<div id="logo">
+				</div> 
+	</div>		
+<div id="moldmoldura">				
+				  <div id="moldura">
+				  		<div id="busca" ><br>
+				  			<form onsubmit="return validaBusca();" action="/busca/" method="get">
+				  				{{ csfr_token }}
+				  					<label class="busc">Busca:</label> 
+				  					<input id="buscar" type="text" name="busca" value="" />
+				  					<input type="submit" id="btnBusca" class="btnBuscar" value="" />
+				  					
+				  			</form>
+				  		</div>
+				  			<div id="menu">
+				  				<div id="imgMenu">
+				  				 <img src="{{MEDIA_URL}}img/menu.png" id="imgMenu" />
+ 									</div>
+				  				<ul>
+<!-- 				  					<li><a href="/" >HOME</a></li> -->
+				  					<li><a href="{%url views.index%}" >PÁGINA INICIAL</a></li>
+				  					<div class="separacao"></div>
+<!-- 				  					<li><a href="/quemsomos/" >QUEM SOMOS</a></li> -->
+				  					<li><a href="{%url views.quem_somos%}" >QUEM SOMOS</a></li>
+				  					<div class="separacao"></div>
+				  					<li><a href="{% url views.acordo %}">CONVENÇÃO DO COMÉRCIO</a></li>
+				  					<div class="separacao"></div>
+				  					<li><a href="{% url views.motorista %}" >CONVENÇÃO DO MOTORISTA <br> DO COMÉRCIO</a></li>
+				  					<div class="separacao"></div>
+									<li><a href="{% url views.calendario %}" >CALENDÁRIO DO COMÉRCIO</a></li>
+				  					<div class="separacao"></div>
+				  					<li><a href="{% url views.calendarioMercado %}" >CALENDÁRIO DO SUPERMERCADO</a></li>
+				  					<div class="separacao"></div>
+				  					<li><a href="{% url views.contribuicao %}">CONTRIBUIÇÕES</a></li>
+				  					<div class="separacao"></div>
+				  					<li><a href="{% url views.repis %}" >REPIS</a></li>
+				  					<div class="separacao"></div>
+				  					<li><a href="{% url views.palestras %}" >CURSOS E PALESTRAS</a></li>
+				  					<div class="separacao"></div>
+				  					<li><a href="{% url views.links %}" >LINKS ÚTEIS</a></li>
+				  					<div class="separacao"></div>
+<!-- 				  					<li><a href="/contato/">CONTATO</a></li> -->
+									<li><a href="{% url views.contato %}">CONTATO</a></li>
+				  					
+				  				</ul>
+				  			</div>
+			  				<div id="menuImprensa">
+			  					<img src="{{MEDIA_URL}}img/menuImprensa.png" id="ImgmenuImprensa"/>
+			  					 <ul>
+			  					 	<li style="color: #343535">JORNAIS</li>
+			  						 	<div class="separacao"></div>
+			  					 	<li><a href="http://www.acomarcanet.com.br/">A Comarca</a></li>
+			  					 		<div class="separacao"></div>
+			  					 	<li><a href="http://www.jcmatao.com.br">Jornal do Comércio</a></li>
+			  						 	<div class="separacao"></div>
+			  					 	<li><a href="http://www.estadao.com.br/">Estadão</a></li>
+			  					 		<div class="separacao"></div>
+			  					 	<li><a href="http://www.folha.uol.com.br/">Folha de São Paulo</a></li>
+			  					 		<div class="separacao"></div>
+			  					 	<li  style="color: #343535">REVISTAS</a></li>
+			  					 		<div class="separacao"></div>
+			  					 	<li><a href="http://www.revistakappa.com.br/">Kappa Magazine</a></li>
+			  					 		<div class="separacao"></div>
+			  					 	<li><a href="http://www.revistamaxxi.com.br/">Revista Maxxi</a></li>
+			  					 		<div class="separacao"></div>
+			  					 	<li style="color: #343535">RÁDIOS</a></li>
+			  						 	<div class="separacao"></div>
+			  					 	<li><a href="http://www.radiocidade890.am.br/">Rádio Cidade</a></li>
+			  						 	<div class="separacao"></div>
+			  					 	<li><a href="http://www.saudadesfm.com.br/">Saudades FM</a></li>
+			  					 		<div class="separacao"></div>
+			  					 	<li><a href="http://www.radioeducadorafm.com.br/">Rádio Comunitária</a></li>
+			  					 </ul>	
+			  				</div>
+
+									<div id="blococonteudo">
+				  							{% block conteudo %}
+					  									<div id="NoticiasTopo">
+																		{% if imagemUltimaNoticia %}
+																			{% for imagem in imagemUltimaNoticia %}
+	 																			<img src="{{imagem.foto_media.url}}" width="238" height="156" border="0" style="padding-right: 10px"/>
+																			{% endfor %}
+																		{% else %}
+																				<img src="{{MEDIA_URL}}imgs/logo_sincomercio.jpg" width="238" height="156" border="0" style="padding-right: 10px"/>
+																		{% endif %}
+					  							 	
+												 {% for ultima in ultimaNoticia %}
+	<!-- 											 			{{ ultima.get_absolute_url }}  -->
+												<div id="titulonoticiatopo">
+												 			{{ ultima.titulo }}
+															<!-- 	<a class="link-titulo-noticia" href="{{ ultima.get_absolute_url }}">
+																 <h2 class="titulo-noticia">{{ ultima.titulo }}</h2></a> -->
+													</div>			 
+																	<!-- <p> -->
+																	
+																	<div id="descricaonoticiatopo">
+																			{% if ultima.chamada %}
+																				{{ ultima.chamada }}
+																			{% else %}
+																				{{ ultima.conteudo|slice:":320"}}...
+																			{% endif %}
+																		</div>
+																			
+																	</p>
+																	<a href="{{ ultima.get_absolute_url }}"  id="vernoticiatopo">ver notícia...</a>
+											   {% endfor %}				  							 
+					  					     	</div>
+					
+
+					  					     
+					  					     
+					  					     		<div id="faixa"></div> 
+					  							
+									  					<div id="blocoesquerdo">
+									  						<div id="ultimaNoticiaDes">
+																<img src="{{MEDIA_URL}}img/ultimasnoticias2.png" id="tituloUltimasnoticias"/>
+											  					     	<div id="ultimasNoticias">
+																				<ul>
+																					{% if noticias|length > 1 %}	
+																					{% for noticia in noticias %}
+																					<li>
+																					<a href="{{ noticia.get_absolute_url }}">{{ noticia.titulo|slice:":50"}}</a>
+																					</li>
+																					{% endfor %}<br>
+																					<a href="{% url noticias fonte='todas' %}" id="maisnoticias">mais notícias...</a> 
+											  					     			
+											  					     				{% else %}
+												  					     			<p class="nenhumanoticia">Nenhuma Noticia foi encontrada!</p>
+												  					     			{% endif %} 
+												  					     		</ul>
+							  					     				
+							 				  					     					
+									  					     			</div>	
+									  					     				<div id="UltimasNoticiasFeComercio">
+									  					     					 <img src="{{MEDIA_URL}}img/ultimasnoticiasfecomercio2.png"  id="NoticiasFeComercio"/>
+									  					     					 		<div id="ultimasnoticiasfe">
+									  					     					 					<ul id="noticias_fecomercio">
+																									{# for noticiaFe in noticias_fecomercio #} 
+																									<!--<li>
+																										<a href="{{noticiaFe.get_absolute_url}}">{{ noticiaFe.titulo|slice:":23"}}...</a><br><br>
+																									</li>-->
+																								{# endfor #}
+																								</ul>
+																								<br>
+																								<br>
+									  					     					 					<a href="http://www.fecomercio.com.br/" id="maisnoticias" target="_blank">mais notícias...</a>
+																  					     		<br>
+																  					     		 
+																  					     		 <!-- <ul>
+																  					     			{% if noticias_fecomercio|length > 1 %}	
+																									{% for noticiaFe in noticias_fecomercio %} 
+																									<li>
+																										<a href="{{ noticiaFe.get_absolute_url }}">{{ noticiaFe.titulo }}</a>	
+																									</li>
+																									{% endfor %}
+																									<a href="http://www.fecomercio.com.br/" id="maisnoticias" target="_blank">mais notícias...</a>
+																  					     			{% else %}
+																  					     			</ul>  
+																  					     			<p class="nenhumanoticia">Nenhuma Noticia  foi encontrada!</p>
+																  					     			{% endif %}  -->
+																  					     					
+													  					     					
+									  					     							</div>	
+									  					     				</div>
+									  					     	</div>		
+									  					     			
+									  					     			<div id="videoteca">
+									  					     					<img src="{{MEDIA_URL}}img/videoteca.png" id="imgvideotecatitulo"/><br>
+									  					     					<img src="{{MEDIA_URL}}img/pft-videoteca.jpg"  id="imgvideoteca"/>	
+									  					     						<div id="descricaovideoteca">
+									  					     							Você já visitou nossa videoteca?
+									  					     						</div>
+									  					     							<a href="{% url views.videoteca %}" id="vermais">ver mais...</a>
+									  					     			</div>
+									  					     		
+									  					</div>
+									  					
+									  				<div id="blocodireto">
+										  						 <div id="blocoConhecaSincomercio">
+										  							<img src="{{MEDIA_URL}}img/conhecasincomercio.png"  id="imgconhesincomercio"/><br>
+										  							<img src="{{MEDIA_URL}}img/sedesincomercio.png" id="imgsede"/>
+										  								<div id="descricaosincomercio">
+										  									Clique e conheça a nova sede do Sincomercio Matão.
+										  								</div>
+										  										<a href="{% url views.conhecasincomercio %}" id="vermaisSincomercio">ver mais...</a>
+										  						</div>
+										  							<div id="lojasAniversarios">
+										  								<img src="{{MEDIA_URL}}img/lojasaniversariantes.png" id="imglojasaniversarios"/><br>
+										  								<img src="{{MEDIA_URL}}img/Caixa-de-presente.jpg" id="imgbolo"/>
+										  									<div id="descricaolojasaniversario">
+																			{% if lojas_aniver|length == 1 %}
+																						{% for loja in lojas_aniver %}
+																						
+	<!-- 																					<img src="{{ MEDIA_URL }}{{loja.foto_loja_menor}}" width="128" height="93" border="0" class="flutua"/> -->
+																					<p>
+																						{{ loja.descricao|slice:"100" }}...
+																					</p>
+																						{% endfor %}
+																			
+																					<a href="/lojas/" id="vermaislojasaniversario">ver mais...</a>
+																					{% else %}
+																					 
+																						{% if lojas_aniver|length > 1 %}		
+																							<div id="lista-lojas">
+																							
+																							{% for loja in lojas_aniver %}
+																							<div>
+																									<img src="{{ MEDIA_URL }}{{loja.foto_loja_menor}}" width="128" height="93" border="0" class="flutua"/>	
+																								
+																									<p>
+																										{{ loja.descricao|slice:"100" }}...
+																									</p>
+																							</div>	
+																							{% endfor %}
+																							</div>
+																							<a href="/lojas/" id="vermaislojasaniversario">ver mais...</a>
+																							
+																						{% else %}
+																							<p>Nenhuma loja está comemorando aniversário hoje!</p>
+																							<a href="/lojas/" id="vermaislojasaniversario">ver mais...</a>
+																						{% endif %}
+																						
+																					{% endif %} 
+																				</div>								  									
+										  							</div>
+										  								
+										  								<div id="arearestrita">
+										  									 <img src="{{MEDIA_URL}}img/tituloeventos.png" id="imgarearestrita"/><br>
+										  									 <img src="{{MEDIA_URL}}img/eventos.png" id="imgcadeado" />
+										  									 		<div id="formulario">
+										  									 				{% if eventos|length > 0 %}
+																								{% for evento in eventos %}
+																									Evento:<a href="/eventos/{{evento.id}}/" class="link">{{evento.Chamada}}</a>
+																									<div id="outrosEventosIndex"><a href="/eventos/" class="link">Outros Eventos</a></div>
+																								{% endfor %}
+																							{% else %}
+																								
+																								<div id="outrosEventosIndex"><a href="/eventos/" class="link">Outros Eventos</a></div>
+																							{% endif %}
+																									
+										  											</div>
+										  								</div>
+							  								</div> 
+					  						</div> 
+					  						
+					  						<div id="contairnerparceiros">
+					  							<img src="{{MEDIA_URL}}img/parceiros.png" id="imgparceiros"><br/>				  										
+					  										{% for parceiro in parceiros %}
+																{% thumbnail parceiro.imagem "100x100" as imagem %}
+																	<div class="parceiros"><a href="{{parceiro.url}}"><img src={{imagem.url}} alt="" class="imgsParceiros"/></a></div>
+																{% endthumbnail %}
+															{% endfor %}
+					  						</div>
+					  						<!-- <div id="blocoparceiros">
+					  								
+					  									<ul id="ulparceiros"> -->
+					  										<!-- <li><img src="{{MEDIA_URL}}img/claro.png" class="parceiros"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/colombo.jpg" class="parceiros"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/raiz.gif" class="parceiros"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/sysnetwork.jpg"  class="parceiros"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/lojascem.jpg" class="par class="parceiros"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/lojascem.jpg" clceiros"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/magazini.png" class="parceiros"/></li> -->
+					  										
+					  										
+					  										<!-- <li><img src="{{MEDIA_URL}}img/claro.png" id="imgclaro"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/colombo.jpg" id="imgcolombo"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/raiz.gif" id="imgraiz"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/sysnetwork.jpg"  id="imgsysnetwork"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/lojascem.jpg" id="imglojascem"/></li>
+					  										<li><img src="{{MEDIA_URL}}img/magazini.png" id="imgmagazane"/></li> -->
+					  									<!-- </ul>
+					  									
+					  						</div> -->
+					  						{% endblock %}
+				  				</div>
+				  </div> 
+</div>				  	
+				  <div id="rodape" > 
+				  			<div id="rodapeposit">
+				  					<div id="Enderecosincomercio">
+				  			 		
+				  			 				<div id="dadosendereco">
+				  			 					<p class="sincomercio">Sincomércio</p>
+												Sindicato do Comércio Varejista de Matão<br>
+				  			 					Av. 7 de Setembro, 1425 - Centro - 15990-160 - Matão SP<br>
+				  			 					Contato: (16) 3383 - 8200 <br>
+												Email: scvmatao@fecomercio.com.br 
+				  			 				</div>
+				  			 					<div id="prop">
+					  			 						 <a href="http://www.fecomercio.com.br" target="_blank" id="linkFecomercio" style="text-decoration: none">
+															<img src="{{MEDIA_URL}}img/fecomercio.png" id="imgfecomercio" />		
+														</a>
+														<a href="http://www.sebraesp.com.br/" target="_blank" id="linkSebrae" style="text-decoration: none">
+															<img src="{{MEDIA_URL}}img/sebrae.png" id="imgsebrae" />
+														</a>
+														<a href="http://www.sp.senac.br" target="_blank" id="linkSenac" style="text-decoration: none">
+															<img src="{{MEDIA_URL}}img/logo_senac_novo.png" id="imgsenac" />
+														</a>
+														
+														<a href="http://www.sescsp.org.br" target="_blank" id="linkSenac2" style="text-decoration: none">
+															<img src="{{MEDIA_URL}}img/sesc.png" id="imgsenac2" />		
+														</a>
+												</div>
+													
+									
+				  			 				
+				  			 				 </div>
+				  			 				 <div id="faixarodape"></div>
+				  			 			 <div id="Copyryght">
+				  			 				 &copy; Copyryght - Todos os direitos reservados.
+				  			 			</div>
+				  			</div> 			
+				 </div> 
+					  	<div id="rodapesys">
+					  		<center><a href="http://www.sysnetwork.com.br" class="sysnetwork">Desenvolvido por Sysnetwork</a></center>
+					  	</div>  
+								<script>
+					$(function(){
+						getNoticiasFecomercio();
+					});
+					</script>
+	
+	<!-- <div id="moldura">
+		<div id="topo">
+			<div id="frmBusca">
+				<form method="get" action="/busca/" onSubmit="return validaBusca();">
+					{{ csfr_token }}
+						Busca : <input type="text" name="busca" id="busca" />
+						<input type="submit" id="btnBusca" class="btnBuscar" value="" /> 
+				</form>
+			</div>
+			<div class="associado">
+			<a href="http://www.fecomercio.com.br/"><img src="{{MEDIA_URL}}imgs/logo_fecomercio.png" border="0"/></a>
+			</div>	
+		</div> -->
+		<!-- INICIO MENU -->
+		<!-- <div id="menu"> -->
+			
+			<!-- <ul>
+				<li id="li1"><a href="/">Início</a></li>
+				<li id="li2"><a href="/quemsomos/">Quem Somos</a></li>
+				<li id="li3"><a href="/campanhas/">Campanhas</a></li>
+				<li id="li4"><a href="/servicos/">Nossos Serviços</a></li>
+				<li id="li5"><a href="/localizacao/">Localização</a></li>
+				<li id="li6"><a href="/contato/">Contato</a></li>
+			</ul> -->
+		<!-- </div>
+		<div id="fim-menu"></div> -->
+		<!--  FIM MENU -->
+		
+<!-- 		<div id="box_comunicado">
+			{% if listaComunicados %}
+				{% if listaComunicados|length > 0 %}	
+					{% for c in listaComunicados %}
+					
+						{% if c.texto %}
+							<p><strong>{{ c.titulo }}</strong>: {{ c.texto }}  -->
+<!-- (periodo de exibição: {{ c.periodo_de|date:"d/m/Y" }} a {{ c.periodo_ate|date:"d/m/Y" }})
+ -->
+ 							<!-- </p>
+ 						{% endif %}
+						
+						{% if c.imagem %}
+							<img src="{{ MEDIA_URL }}{{c.imagem}}" border="0" />
+						{% endif %}
+					{% endfor %}
+					<script>
+						$("#box_comunicado").slideDown('slow');
+					</script>
+				{% endif %}
+			{% endif %}
+		</div> -->
+		
+		<!-- INCIO CONTEUDO -->
+		<!-- <div id="conteudo">
+		
+				<h2>Informativo</h2>
+		<div id="informativo"> -->
+			
+			
+			
+		<!--  INICIO CURRICULUM ONLINE 
+			<div id="curriculum-online">
+				<div id="conteudo-curriculum">
+					<h3>Curriculum Online</h3>
+					Associado :
+					<input type="text" name="nome-associado" disabled="disabled" class="associado"/>
+					Senha :
+					<input type="password" name="senha-associado" disabled="disabled"/>
+					<button id="entrar-curriculum">Entrar</button>
+				</div>
+			</div>
+		<!--  FIM CURRICULUM ONLINE -->
+		
+			<!-- 	{% for ultima in ultimaNoticia %}
+				<a class="link-titulo-noticia" href="{{ ultima.get_absolute_url }}">
+				 <h2 class="titulo-noticia">{{ ultima.titulo }}</h2></a>
+					<p>
+						{% if imagemUltimaNoticia %}
+							{% for imagem in imagemUltimaNoticia %}
+								<img src="{{MEDIA_URL}}{{imagem.foto_media}}" width="238" height="156" border="0" style="padding-right: 10px"/>
+							{% endfor %}
+						{% else %}
+								<img src="{{MEDIA_URL}}imgs/logo_sincomercio.jpg" width="238" height="156" border="0" style="padding-right: 10px"/>
+						{% endif %}
+						<div class="preview-noticia">
+							{% if ultima.chamada %}
+								{{ ultima.chamada }}
+							{% else %}
+								{{ ultima.conteudo|slice:":320"}}...
+							{% endif %}
+						<a href="{{ ultima.get_absolute_url }}">Continuar lendo &raquo;</a>
+						</div>
+					</p>
+				{% endfor %}
+				</div>
+				
+			  <div class="bloco escuro">
+			  
+				<div class="esquerda">
+					
+				</div>
+				
+				<div class="direita noticia-fe">
+					<h3>Últimas Notícias FeComércio</h3>
+					<div class="loader"></div>
+					<ul id="noticias_fecomercio">
+						{# for noticiaFe in noticias_fecomercio #} -->
+						<!--<li>
+							<a href="{{noticiaFe.get_absolute_url}}">{{ noticiaFe.titulo|slice:":23"}}...</a>
+						</li>-->
+					<!-- 	{# endfor #}
+					</ul>
+					
+					<a href="http://www.fecomercio.com.br/" class="mais" target="_blank">Mais notícias FeComércio...</a>
+				</div>	
+		</div>
+			  
+			  <div class="bloco claro">
+					<div class="esquerda">
+						<h3>Você já visitou nossa videoteca?</h3>
+						<a href="/videoteca/">
+							<img src="{{MEDIA_URL}}imgs/videoteca3.jpg" width="250" height="139" border="0"/>
+						</a>
+					</div>
+				 
+					<div class="direita">
+						<h3>Lojas Aniversariantes</h3>
+						{% if lojas_aniver|length == 1 %}
+							{% for loja in lojas_aniver %}
+							<img src="{{ MEDIA_URL }}{{loja.foto_loja_menor}}" width="128" height="93" border="0" class="flutua"/>
+						<p>
+							{{ loja.descricao|slice:"100" }}...
+						</p>
+							{% endfor %}
+				
+						<a href="/lojas/" class="mais">Mais lojas...</a>
+						{% else %}
+						 
+							{% if lojas_aniver|length > 1 %}		
+								<div id="lista-lojas">
+								
+								{% for loja in lojas_aniver %}
+								<div>
+										<img src="{{ MEDIA_URL }}{{loja.foto_loja_menor}}" width="128" height="93" border="0" class="flutua"/>	
+									
+										<p>
+											{{ loja.descricao|slice:"100" }}...
+										</p>
+								</div>	
+								{% endfor %}
+								</div>
+								<a href="/lojas/" class="mais">Mais lojas...</a>
+								
+							{% else %}
+								<p>Nenhuma loja está comemorando aniversário hoje!</p>
+							{% endif %}
+							
+						{% endif %}
+					</div>
+			</div>
+				 -->
+					
+		
+				
+					<!-- INICIO BLOC ACAO-CAMPANHAS -->
+						<!-- <div class="bloco escuro">
+							<div class="esquerda">
+									<h3>Ações Sociais</h3>
+										{% for acao in ultima_acao %}
+											{% for img in imagem_acao %}
+												<img src="{{ MEDIA_URL}}{{img.foto_acao_menor}}" width="100" height="91" border="0" class="flutua"/>
+											{% endfor %}
+										<p class="noticia_tv">
+											<a href="{{ acao.get_absolute_url }}">{{ acao.descricao|slice:"100" }}...</a>
+										</p>
+									{% endfor %}
+								<a href="/acoes-sociais/" class="mais" title="Continuar lendo">Mais ações sociais...</a>
+							</div>
+						
+						<div class="direita">
+							<h3>Campanhas</h3>
+							{% for campanha in ultima_campanha %}
+								{% for img in imagem_campanha %}
+									<img src="{{ MEDIA_URL}}{{ img.fotoCampMenor}}" width="100" height="93" border="0" class="flutua"/>
+								{% endfor %}
+							<p class="noticia_tv">
+								<a href="{{campanha.get_absolute_url}}">{{ campanha.descricao|slice:"100" }}...</a>
+							</p>
+							{% endfor %}
+							<a href="/campanhas" class="mais" title="Continuar lendo">Mais campanhas...</a>
+						</div>
+					</div> 
+				
+				  <div class="bloco claro">
+						<div class="esquerda">
+							<h3>Links Úteis</h3>
+							<a href="/links"><img src="{{MEDIA_URL}}imgs/links.png" width="200" height="150" border="0"/></a>
+						</div>
+						<div class="direita"> -->
+							
+							
+<!-- 							<h3>TV FeComércio</h3> -->
+								<!-- <h3>Conheça Sincomercio matão</h3>
+								<img src="{{MEDIA_URL}}imgs/IMG_0089.png" width="91" class="flutua"/> 
+							{% if ultima_noticia_tv %}
+								{% for noticia_tv in ultima_noticia_tv %}
+									<p class="noticia_tv">
+									<a href="/conhecasincomercio/" >	Clique e conheça a nova sede do Sincomercio Matão.</a>
+									</p>
+								{% endfor %}
+							{% else %}
+								<p class="noticia_tv">
+								</p>
+							{% endif %}
+						</div>
+				  </div>
+				  
+				  	<div class="bloco-lateral-direito" > -->
+<!-- 				  <h3>- Calendários</h3> -->
+			<!-- <img src="{{MEDIA_URL}}imgs/21.png"  width="140" />	
+					<br><br>
+				<a href="{% url views.acordo %}" title="Comercío 2011"> Comércio </a> <br/>
+                 <a href="{% url views.acordo %}" title="Supermercados 2011">Supermercado</a>
+                    <br>
+					<br /> -->
+					  
+<!-- 					<h3>- Convenções</h3> -->
+				<!-- 	<img src="{{MEDIA_URL}}imgs/22.png"  width="140" />	
+						<br><br>
+				  	<a href="{% url views.acordo %}" title="Acordo comercial comercio"> Convenção coletiva do Comércio</a><br/>                    
+                    <a href="{% url views.acordo %}" title="Acordo comercial - Motoristas"> Convenção coletiva motorista do Comércio</a>
+                         <br><br><br><br><br><br><br>
+			
+				<img style="margin-left: 23px;" src="{{MEDIA_URL}}imgs/claro.jpg" /><br><br><br><br>
+				<img style="margin-left: 23px;"src="{{MEDIA_URL}}imgs/colombo.jpg" /><br><br><br><br>
+				<img style="margin-left: 23px;"src="{{MEDIA_URL}}imgs/raiz.gif" /><br><br><br><br>
+				<img style="margin-left: 23px;"src="{{MEDIA_URL}}imgs/sysnetwork.jpg" /><br><br><br>
+				<img style="margin-left: 23px;"src="{{MEDIA_URL}}imgs/lojascem.jpg" /><br><br><br>
+				<img style="margin-left: 23px;"src="{{MEDIA_URL}}imgs/magazini.gif" width="98" height="90"/>
+				</div>
+				  
+				  
+				  <script>
+					$(function(){
+						getNoticiasFecomercio();
+					});
+					</script>
+			
+		</div>
+		 -->
+		
+		<!-- FIM CONTEUDO -->
+		
+		<!-- INICIO BANNERS ROTATIVOS -->
+		<!-- <div id="banners" style="{{ estilo }}">
+			<div id="bloco-tld">
+				{% for banner in banners_tld %}
+					<img src="{{MEDIA_URL}}{{banner.banner}}" alt="{{banner.empresa}}" id="tempo-{{banner.id}}" 
+					tempo="{{banner.tempoExibicao}}" banner="{{banner.id}}" border="0" title="{{banner.empresa}}" onClick="location='{{banner.url}}'"/>
+				{% endfor %}
+			</div>
+			<div id="bloco-mld">
+			{% for banner in banners_mld %}
+					<img src="{{MEDIA_URL}}{{banner.banner}}" alt="{{banner.empresa}}" id="tempo-{{banner.id}}" 
+					tempo="{{banner.tempoExibicao}}" banner="{{banner.id}}"/>
+				{% endfor %}
+			</div>
+			<div id="bloco-bld">
+			{% for banner in banners_bld %}
+					<img src="{{MEDIA_URL}}{{banner.banner}}" alt="{{banner.empresa}}" id="tempo-{{banner.id}}" 
+					tempo="{{banner.tempoExibicao}}" banner="{{banner.id}}"/>
+				{% endfor %}
+			</div>
+		</div> -->
+		<!-- FIM BANNERS ROTATIVOS -->
+		
+		<!-- INICIO RODAPE -->
+		
+
+		
+		<!-- <div id="rodape">
+		<p>
+			<b>Sincomércio</b><br/>
+			Av. 7 de Setembro, 1425 - Centro - 15990-160 - Matão - SP<br/>
+			Contato : (16) 3384 - 3541 - scvmatao@fecomercio.com.br
+		</p>
+		
+			<p>						
+				<a href="http://www.sescsp.org.br" target="_blank">
+					<img style="margin-top: 11px;" src="/midias/imgs/logo_sesc.png"/>		
+				</a>
+				<a href="http://www.sp.senac.br" target="_blank">
+					<img src="/midias/imgs/senac.png"/>
+				</a>
+				<a href="http://www.sebraesp.com.br/" target="_blank">
+					<img src="/midias/imgs/sebrae.png" />
+				</a>
+			</p>
+		</div> -->
+		<!-- FIM RODAPE -->
+	<!-- </div> -->
+<!-- INICIO DIALOGS -->
+<!-- 	<div id="info-video">
+	</div> -->
+
+<!-- FIM DIALOGS -->
+</body>
+</html>

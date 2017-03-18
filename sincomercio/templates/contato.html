@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{% block tituloPagina %} - Contato {% endblock %}
+
+{% block conteudo %}
+<div class="linksuteis"><h2>Contato</h2></div>
+<hr class="divisoria"/>
+	<p class="contato" id="contatotexto">Caso tenha alguma dúvida ou sugestão sobre nossos serviços entre em contato através do formulário abaixo ou ligue para (16) 3383 - 8200 ou pelo endereço Av. 7 de Setembro, 1425 - Centro - 15990-160 - Matão SP. E teremos prazer em atendê-lo.</p>
+{% if mostrar %}
+<div class="alerta" style="display:block;">
+	<h4>Sucesso!</h4>
+	<ul>
+            <li style="color:green">{{ mostrar }}</li>
+    </ul>
+</div>
+{% endif %}
+<div id="erros" class="alerta">
+	<h4>Erros encontrados: </h4>
+</div>
+<div id="contato">
+<form method="post" class="form">
+
+{% csrf_token %}
+
+<table width="85%" border="0" cellspacing="5" cellpadding="5" id="tb-frm-contato">
+
+      {{ form }}
+    <tr>
+      <th>&nbsp;</th>
+      <td align="left"><input id="enviar-contato" type="submit" value="Enviar Mensagem"/></td>
+    </tr>
+  </table>
+</form>
+</div>
+<div id="imagencarta">
+<img src="{{MEDIA_URL}}imgs/boneco_email.jpg" width="320px"/>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div class="localizacao">
+			<div class="titulo">
+				<p class="tipo">
+				 ACONTECEU
+				</p>
+			</div>
+			<div id="texto">
+				<div id="voltar">
+					<a href="{% url views.index %}">Voltar para página inicial</a>
+				</div>
+					<div id="todoaconteceu">
+						{% for todoconteudo in conteudoacontecimentos %}
+							<p>{{todoconteudo.tituloaconteceu}}</p><br>
+							<p>{{todoconteudo.conteudo}}</p>
+						{% endfor %}
+					</div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div id="oficina">
+			<div class="titulo">
+				<p class="tipo">OFICINA</p>
+			</div>	
+			<div id="texto">
+				<div id="voltar">
+					<a href="{% url views.index %}">Voltar para página inicial</a>
+				</div>
+				<p class="texto">A oficina Matão 4x4 e picapes tem elevadores e ferramental especializado onde é possível instalar acessórios, fazer revisões, manutenções, consertos e etc.<br/><br/>
+		É muito importante fazer uma manutenção preventiva, ainda mais se você é viciado em aventura e adora sair com seu veículo todos os finais de semana.<br/><br/>
+		Para manter seu 4x4 em perfeita ordem, você deve tomar algumas medidas preventivas:
+		Sempre que for sair com se veículo, verifique nível do óleo, água do radiador, nível de óleo nos diferenciais e pressão e estado dos pneus.<br/><br/>
+		A escolha dos equipamentos é fundamental,  equipe seu veículo de acordo com seu uso e não relaxe com a segurança. Uma gaiola de proteção e cintos de 4 ou 5 pontos são recomendados se você pretende participar de competições.<br/><br/>
+		Fazendo essas revisões periodicamente você mantém seu 4x4 em dia, com baixo custo e não terá surpresas desagradáveis e gastos excessivos, em virtude de quebras por falta de manutenção adequada.<br/>
+				</p><br/>
+				<img class="static" src="{{MEDIA_URL}}img/oficina.jpg" width="720" height="450"/>
+			</div>			
+		</div>
+	</div>
+</div>
+{% endblock %}

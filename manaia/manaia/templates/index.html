@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>.: Manaia Consultoria :.</title>
+		<meta name="author" content="User" />
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/estilo.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!-- Date: 2012-12-04 -->
+		<link rel="stylesheet" href="{{MEDIA_URL}}js/blueberry/blueberry.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="{{MEDIA_URL}}js/blueberry/jquery.blueberry.js"></script>
+		<script src="{{MEDIA_URL}}js/scripts.js"></script>
+		
+		
+		<script>
+			$(window).load(function() {
+				$('.blueberry').blueberry();
+				$('.blueberry2').blueberry();
+			});
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="moldura">
+				
+			<div id="menu">
+				
+				<ul>
+				<a href="{% url views.index %}"><img src="{{MEDIA_URL}}img/inicio2.png"  id="menuinicio" /></a>
+					
+					<li><a href="{% url views.Empresa %}" class="empresa">A Empresa</a>
+						<p class="separadorEmp"> <img src="{{MEDIA_URL}}img/separador.png" /></p>
+					</li>
+					
+					<li><a href="#" onclick="abrir();" class="area" target="_blank">Área Restrita</a>
+						<p class="separadorAREA"> <img src="{{MEDIA_URL}}img/separador.png" /></p>
+					</li>
+					
+					<li><a href="{% url views.Localizacao %}" class="Localizacao">Localização</a>
+						<p class="separadorLoca"> <img src="{{MEDIA_URL}}img/separador.png" /></p>
+					</li>
+					
+					<li><a href="{% url views.NoticiasOnline %}" class="Noticiason">Notícias Online</a>
+						<p class="separador"> <img src="{{MEDIA_URL}}img/separador.png" /></p>
+					</li>
+					
+					<li><a href="{% url views.Equipe %}" class="equipe">Equipe</a>
+						<p class="separadorEq"> <img src="{{MEDIA_URL}}img/separador.png" /></p>
+					</li>
+					
+					<li><a href="{% url views.Servicos %}" class="servicos">Serviços</a>
+						<p class="separadorSer"> <img src="{{MEDIA_URL}}img/separador.png" /></p>	
+					</li>
+					
+					<li><a href="{% url views.Contato %}" class="contato">Contato</a></li>
+				</ul>
+				 	<div id="buscar">
+						<div id="busca">
+							  <form onsubmit="return validaBusca();" action="{% url views.Busca %}" method="get">
+					  				{{ csfr_token }}
+					  					<input id="inputbusca" type="text" name="busca">
+					  					<input type="submit" id="btnBusca" class="btnBuscar" value="" />
+					  					
+					  			</form>
+						</div>
+				</div>					
+				
+			</div>
+			
+				<div id="banner">
+						<div id="redesociais">
+							<a href="#" class="twitter"><img src="{{MEDIA_URL}}img/twitter.png" /></a>
+							<a href=" http://www.facebook.com/pages/MANAIA-CONSULTORIA-TRIBUT%C3%81RIA/287208174704859?ref=hl" class="facebook"><img src="{{MEDIA_URL}}img/facebook.png" /></a>
+							<a href="#" class="forun"><img src="{{MEDIA_URL}}img/forun.png" /></a>
+						</div>
+					<div id="logo">
+						<img src="{{MEDIA_URL}}img/logo.png" /><br>
+						<p class="textologo">Consultoria Tributária</p>
+					</div>
+					 <div id="slidebanners">
+					 	
+						<div class="blueberry">
+					      <ul class="slides">
+					      	{% for banners in banner %}
+					      	  <li><img src="{{MEDIA_URL}}{{banners.imagem}} "/></li>
+					      	{% endfor %}
+					      	
+					      </ul>
+					    </div> 
+					</div>
+						<div id="fundo">
+								
+<!-- 							<p class="textoBanner">Atuando há mais de 26 anos na prestação de serviços na região de Matão.</p>  -->
+							<!-- <div class="blueberry2">
+						      <ul class="slides">
+						      	{% for banners in banner %}
+						      	  <li class="tt">{{banners.descricao}}</li>
+						      	{% endfor %}
+						      	
+						      </ul>
+						    </div>  -->
+						</div>
+					
+					
+				</div>
+				<div id="molduraconteudo">
+					{% block conteudo %}
+							<div id="blocoesquerdo">
+										<div id="blocoesquerdoCima" style="border-right: 1px solid;">
+									 	<div id="historiaEmpresa">
+											<img src="{{MEDIA_URL}}img/livro.png" />
+												<div id="titulo">
+													<p>História da</p><p class="italico">Empresa</p>
+												</div>		
+										 </div>	
+												<div id="imgempresa">
+													<img src="{{MEDIA_URL}}img/imgempresa.png" />
+												</div>
+													
+												<div id="textohistoriaempresa">
+													<p class="textoinicio">Manaia Consultoria Tributária localiza-se em uma região favorável do Estado mais rico 
+													do Brasil, por isso a empresa apresenta uma carteira de clientes composta por grandes empresas em diversos 
+													segmentos da economia brasileira.
+													</p>
+												</div>		
+													<a href="{% url views.Empresa %}" id="mais">Mais...</a>	<br>
+											<p style="border-bottom: 1px solid; margin-left: 20px;margin-top: 7px; width: 211px"></p>		
+											</div>		
+											<div id="blocoesquerdoBaixo" style="border-right: 1px solid;">
+														<img src="{{MEDIA_URL}}img/estrutura.png" />
+													<div id="titulo">
+														<p>Nossa</p><p class="italicoEstrutura">Estrutura</p>
+													</div>	
+		<!-- 												<div id="imgEstrutura"></div> -->
+															<img src="{{MEDIA_URL}}img/nossaestrutura.png" style="margin-top:20px;"/>
+														<div id="textoEstrutura">
+															<p class="textoinicio">Outro ponto que ganha destaque é a estrutura física da empresa. Possuindo sede própria, 
+															está localizada em área central da “industrial” cidade de Matão, a qual se localiza na região central do Interior 
+															Paulista ..
+															</p>
+														</div>	
+														<a href="{% url views.Empresa %}" id="mais">Mais...</a>	
+														
+											</div>		
+												
+											
+							</div>
+					<div id="blococentral">
+						<div id="noticias">
+							<img src="{{MEDIA_URL}}img/jornal.png" />
+								<div id="tituloNoticias">
+									<p>Notícias</p><p class="italicoNoticias">Online</p>
+								</div>
+									<!--
+									<div id="blocotodasNOticias">
+																					{% for noticia in noticias %}
+																					
+																						<img src="{{MEDIA_URL}}img/flecha.png" id="flecha"/>	
+																						<a href="{{ noticia.get_absolute_url }}" style="text-decoration: none">
+																						<p id="conteudoNoticias">{{noticia.conteudo|slice:":150"}}...</p></a><br>
+																						
+																						<p style="border-top:1px solid; margin-top: -15px; margin-left: 30px;"></p>
+																						<div id="" style="float: right">
+																						<a href="{{ noticia.get_absolute_url }}" id="maisNoticias">Mais...</a>
+																						</div>
+																						{% endfor %}
+																				
+																					<div id="noticiasanteriores">
+																						<a href="{% url views.NoticiasOnline %}" id="linksAnt">NotÃ­cias Anteriores</a>
+																					</div>
+																					
+																		</div>
+															</div>-->
+									<div id="blocotodasNOticias">
+										<ul id="ulNoticia">
+											{% for noticia in noticias %}
+												
+													<li class="noticia">
+														
+															<div class="flechaNoticias">
+																<img src="{{MEDIA_URL}}img/flecha.png" />
+															</div>	
+														
+															<div  class="conteudoNoticia">
+																<a href="{{ noticia.get_absolute_url }}" style="text-decoration: none">
+																	<div class="conteudodaNoticia">{{noticia.conteudo|striptags|slice:":160"}}...</div>
+																</a>															
+															</div>
+															<div class="divmaisNoticia">
+																<a href="{{ noticia.get_absolute_url }}" class="maisNoticia">Mais...</a>
+															</div>
+														<div class="linha" >	
+														</div>
+													</li>
+											{% endfor %}
+											<div id="noticiasanteriores">
+												<a href="{% url views.NoticiasOnline %}" id="linksAnt">Noticias Anteriores</a>
+											</div>
+											
+										</ul>
+									</div>
+						
+							<div id="blocoNewsletter">
+								<img src="{{MEDIA_URL}}img/carta.png" />
+									<div id="titulo">
+										<p class="italicoNew">Newsletter</p>
+									</div>
+										<p id="textoNew">Cadastre-se em nossa Newsletter e você receberá periodicamente nossas novidades em seu E-mail.</p><br><br>
+										<form id="news" name="news" method="post" action="{% url views.index %}" onsubmit="return validaDados()">
+											{% csrf_token %}
+											<div id="formularionews">
+													<small><label>Nome:</label></small>
+														<p style="margin-bottom: 5px;margin-left: 64px;margin-top: -20px">{{ form.nome }}<br></p>
+													<small><label>E-mail:</label></small>
+														{{ form.email }}	
+											</div>
+											<div style="margin-top: -23px;">
+												<input class="botao" type="submit" value=""/>
+											</div>
+									</form>
+							</div>
+							
+					</div>
+					</div>
+					
+					
+					
+					
+					<div id="blocodireito">
+						<div id="linksUteis">
+							<img src="{{MEDIA_URL}}img/link.png" />
+								<div id="tituloLink">
+									<p>Links</p><p class="italicoLinksUteis">Úteis</p><br>
+									<a href="{% url views.VerLinks %}" id="maislink">Mais Links...</a><br>
+									
+									{% for categoria in categorias %}
+										<a href="{% url views.VerLinks %}" id="maislink">{{categoria.nome}}</a><br>
+									{% endfor %}
+									
+									
+								</div>
+									<div id="todosLInksuteis">
+										{% for linksuteis in linksUteis %}
+										<li style="margin-top: -15px;margin-left: 10px;"><a href="{{linksuteis.site_url}}" id="link" target="_blank">{{linksuteis.site_nome}}</a></li><br>
+										{% endfor %}
+									</div>
+						</div>
+					</div>
+						
+					{% endblock %}
+ 					<div id="rodape">
+							<div id="menurodape">
+									<ul>
+										<li><a href="{% url views.Empresa %}">A Empresa</a></li>
+										<li><a href="http://sysnetwork.com.br/testes/django/manaia/admin/">Área Restrita</a></li>
+										<li><a href="{% url views.Localizacao %}">Localização</a></li>
+										<li><a href="{% url views.NoticiasOnline %}">Notícias Online</a></li>
+										<li><a href="{% url views.Equipe %}">Equipe</a></li>
+										<li><a href="{% url views.Servicos %}">Serviços</a></li>
+										<li><a href="{% url views.Contato %}">Contato</a></li>
+									</ul>
+							</div>
+								<img src="{{MEDIA_URL}}img/faixa.png" style="margin-left: 180px;"/>
+								<p class="endereco">Rua Affonso Maccagnan, 600 | Centro | Matão - SP | 15990-680 |  16 3384-2045</p>
+								<p class="copy">Copyright - Todos os direitos reservados.</p>		
+						</div>
+						
+								<a href="http://sysnetwork.com.br/" target="_blank" class="sysnetwork">Desenvolvido por SySNetwork</a>
+				</div> 
+		</div>
+	</body>
+</html>
+

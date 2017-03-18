@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>.: Manaia Consultoria :.</title>
+		<meta name="author" content="User" />
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/estilo.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!-- Date: 2012-12-04 -->
+		<link rel="stylesheet" href="{{MEDIA_URL}}js/blueberry/blueberry.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="{{MEDIA_URL}}js/blueberry/jquery.blueberry.js"></script>
+		<script src="{{MEDIA_URL}}js/scripts.js"></script>
+		<script src="{{MEDIA_URL}}js/consultamenu.js"></script>
+		<link rel="stylesheet" href="{{ MEDIA_URL }}css/accordion.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<script>
+			$(window).load(function() {
+				$('.blueberry').blueberry();
+				$('.blueberry2').blueberry();
+			});
+		</script>
+		
+		<script src="{{ MEDIA_URL }}js/jqueryui.accordion.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function(){
+				$("#accordion").accordion({active: false, collapsible:true, autoHeight:false});
+			});
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="moldura">
+				
+				<div id="bannerConsultaDownloads">
+					<div id="logoConsultaDownloads">
+						<img src="{{MEDIA_URL}}img/logo.png" /><br>
+						<p class="textologo">Consultoria Tributária</p>
+						
+					</div>
+					<div id="tituloConsultaDownloads">Consultas e downloads de arquivos</div>					
+				</div>
+				<div id="molduraconteudo">
+					{% block conteudo %}
+					<div id="divpesquisaDow"><div id="loginuser">Olá {{usuario}} <a href="areacliente/logout/">Logout</a> </div><form id="pesquisaForm"><input type="text" name="pesquisaInput"/>{% csrf_token %}<a href="#" id="btnPesquisarDownloads"><img src="{{MEDIA_URL}}/img/btnpesquisadown.png" /></a></form></div>
+							<div id="menuConsultaDocumento">
+								<div id="categoriasDownload">Categorias</div>
+								<ul>
+								{% for categoria in categorias %}
+									{% for arquivo in arquivos %}
+										{% ifequal arquivo.categoria categoria %}									
+											{% ifnotequal arquivo None %}
+												<li class="listaMenuConsulta"><a class="categoriaMenu" id="{{categoria.id}}" href="#">{{categoria.nome}}</a></li>
+											{% endifnotequal %}
+										{% endifequal %}
+									{% endfor %}
+								{% endfor %}
+								</ul>
+								
+								<form id="menuConsultaForm">
+									{% csrf_token %}
+									<input  id="valorCategoria" name ="valorCategoria" value="" type="hidden"/>
+								</form>
+							</div>
+							<div id="documentosConsulta">
+								<div id="titulodocumentosConsulta">Downloads</div>
+								<ul id="documentosConsultaDownload">
+									
+								</ul>						
+								
+							</div>
+					{% endblock %}
+ 					<div id="rodape">
+							<div id="menurodape">
+									<ul>
+										<li><a href="{% url views.Empresa %}">A Empresa</a></li>
+										<li><a href="http://sysnetwork.com.br/testes/django/manaia/admin/">Área Restrita</a></li>
+										<li><a href="{% url views.Localizacao %}">Localização</a></li>
+										<li><a href="{% url views.NoticiasOnline %}">Notícias Online</a></li>
+										<li><a href="{% url views.Equipe %}">Equipe</a></li>
+										<li><a href="{% url views.Servicos %}">Serviços</a></li>
+										<li><a href="{% url views.Contato %}">Contato</a></li>
+									</ul>
+							</div>
+								<img src="{{MEDIA_URL}}img/faixa.png" style="margin-left: 180px;"/>
+								<p class="endereco">Rua Affonso Maccagnan, 600 | Centro | Matão - SP | 15990-680 |  16 3384-2045</p>
+								<p class="copy">Copyright - Todos os direitos reservados.</p>		
+						</div>
+						
+								<a href="http://sysnetwork.com.br/" target="_blank" class="sysnetwork">Desenvolvido por SySNetwork</a>
+				</div> 
+		</div>
+	</body>
+</html>
+

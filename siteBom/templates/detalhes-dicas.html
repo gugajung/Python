@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %}Dicas - {{dica.titulo}} - {% endblock %}
+{% block conteudo %}
+	<h3>Lendo a Dica</h3>
+<div id="detalhe-enquete">
+	<h2>{{ dica.titulo }}</h2>
+	
+	<p>{{ dica.texto }}</p>
+</div>
+{% endblock %}

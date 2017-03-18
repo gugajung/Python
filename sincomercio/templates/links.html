@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% block tituloPagina %} - Links Úteis {% endblock %}
+
+
+{% block conteudo %}
+	<div class="linksuteis"><h2>Links Úteis</h2></div>
+	<hr class="divisoria"/>
+	
+	{% if lista_links %}
+		<ul class="link-list">
+		{% for link in lista_links %}
+		<li>
+			<a href="{{ link.site_url }}" target="_blank" title="Visitar o site: {{ link.site_nome }}">{{ link.site_nome }}</a>
+			<span>{{ link.site_descricao }}</span></li>
+		{% endfor %}
+		</ul>
+		<br /><br />
+		<div class="paginacao">
+		{% if links.has_previous %}
+			<a href="?pagina={{ links.previous_page_number }}">&laquo; Anteriores</a>
+		{% endif %}
+		<span class="pagina-atual">
+			Página {{ links.number }} de {{ links.paginator.num_pages }}
+		</span>
+		{% if links.has_next %}
+			<a href="?pagina={{ links.next_page_number }}">&raquo; Próximos</a>
+		{% endif %}
+		</div>
+	{% else %}
+		<div align="center"><p>Nenhum link foi encontrado</p></div>
+	{% endif %}
+	
+{% endblock %}

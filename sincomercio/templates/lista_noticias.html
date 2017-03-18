@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+{% block tituloPagina %} - Notícias{% endblock %}
+
+{% block conteudo %}
+	
+	{% if noticias.object_list|length = 0 %}
+	
+		<center>
+			<font size="2">Nenhuma notícia foi encontrada.</font>
+		</center>
+	
+	{% else %}
+	{% if fonte == 'todas' %}
+		<div class="linksuteis"><h2>Listando todas as notícias</h2></div>
+	{% else %}
+		<h2>Notícias - {{ fonte|capfirst }}</h2>
+	{% endif %}
+	<div class="divisoria"></div>
+	<table border="0" width="590px" cellspacing="0" cellpadding="3" class="table-list">
+	<tr>
+		<td><h3><strong>Notícia</strong></h3></td>
+		<td><h3><strong>Publicada em</strong></h3></td>
+	</tr>	
+	{% for noticia in noticias.object_list %}
+		<tr>
+			<td><a href="{{noticia.get_absolute_url}}">{{ noticia.titulo }}</a></td>
+			<td>{{ noticia.data }}</td>
+		</tr>
+	{% endfor %}
+	</table>
+	<center>
+	<div class="paginacao">
+		{% if noticias.has_previous %}
+		 <a href="?pagina={{ noticias.previous_page_number }}">&laquo; Anteriores</a>
+        {% endif %}
+        <span class="pagina-atual">
+            Página {{ noticias.number }} de {{ noticias.paginator.num_pages }}
+        </span>
+        {% if noticias.has_next %}
+        <a href="?pagina={{noticias.next_page_number }}">Próximos &raquo;</a>
+        {% endif %}
+	</div>	</center>
+	{% endif %}
+{% endblock %}

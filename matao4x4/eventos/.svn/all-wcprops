@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/matao4x4/!svn/ver/1/src/matao4x4/veiculos
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/matao4x4/!svn/ver/1/src/matao4x4/veiculos/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/matao4x4/!svn/ver/1/src/matao4x4/veiculos/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/matao4x4/!svn/ver/1/src/matao4x4/veiculos/__init__.py
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/matao4x4/!svn/ver/1/src/matao4x4/veiculos/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/matao4x4/!svn/ver/1/src/matao4x4/veiculos/models.py
+END

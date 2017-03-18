@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+{% block tituloPagina %} - Ação Social: {{ acao.titulo }}{% endblock %}
+
+{% block conteudo %}
+	<div class="conteudo-geral">
+	<div class="linksuteis"><h3 style="color: #3e4323; font: normal 18px Arial;">{{ acao.titulo }}</h3></div>
+		<div class="imagem-geral">
+			{% for img in imagem %}
+				<a href="{{ MEDIA_URL }}{{img.foto_acao}}" rel="shadowbox">
+					<img src="{{MEDIA_URL}}/{{ img.foto_acao }}" border="0" width="238" height="156"/>
+				</a>
+			{% endfor %}
+		</div>
+		<p>
+			{{acao.descricao|linebreaks }}
+		</p>
+	</div>
+	
+	{% if imagens|length > 1 %}
+	<center>
+	<div class="galeria-holder">
+	<h3 style="color: #3e4323; font: normal 18px Arial;">Galeria</h3>
+		<ul class="galeria-imgs">
+			{% for imagem in imagens %}
+				<li>
+					<a href="{{MEDIA_URL}}{{imagem.foto_acao}}" rel="shadowbox[AcaoSocial]">
+						<img src="{{MEDIA_URL}}{{ imagem.foto_acao_menor }}" width="98" border="0"/>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	</center>
+	{% endif %}
+	
+<hr/>
+<a href="/acoes-sociais/" class="link-big">	Ver outras ações </a>
+<div>
+<br />
+<a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+</div>
+{% endblock %}

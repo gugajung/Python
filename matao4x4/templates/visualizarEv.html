@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div class="titulo">
+			<p class="tipo">Evento</p>
+		</div>
+		<div id="texto">
+			<div id="voltar">
+				<a href="{% url views.index %}">Voltar para página inicial</a>
+			</div>
+			<center>
+				<img src="{{MEDIA_URL}}{{evento.imagem}}" width="350" height="450" />
+			<br/><br/>
+			<p class="texto"><b>{{evento.titulo}}<br/>
+				{{evento.data}}</b>
+			</p><br/>
+			<p class="texto">{{evento.descricao}}</p><br/>
+			<p class="texto">Informações:<br/>
+				Cidade: <b>{{evento.cidade}} / {{evento.estado}}</b> <br/>
+				Telefone: <b>{{evento.telefone}}</b>
+				{% if evento.site %}
+				<br/>
+				Visite o site do evento <a href="{{evento.site}}" target="_blank"><b>clicando aqui!</b></a>
+				{% endif %}
+			</p><br/>
+			<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+			<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<table cellspacing="10">
+			    <tr>
+			    	<td><a href="http://twitter.com/share" class="twitter-share-button" data-count="none" rel="nofollow"></a></td>
+			    	<td><a name="fb_share" type="button" share_url="{{ url }}"></a></td>
+			    </tr>
+			</table>
+			</center>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

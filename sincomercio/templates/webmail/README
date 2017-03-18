@@ -1,0 +1,33 @@
+CangrejoMail
+http://www.cangrejomail.com.ar
+
+Introduction:
+-------------
+CnagrejoMail is a mod of "SquirrelMail". SquirrelMail is a standards-based 
+webmail package written in PHP. The goal of CangrejoMail is to improve 
+SquirrelMail by making compatible with XHTML 1.0, CSS standards and manage themes. Also
+it includes some elements that works with AJAX to make things more easy for 
+the user, but it's also prepared to work with browser that do not support 
+javascript at all. 
+
+Why did you guys create CangrejoMail? We saw the power of SquirrelMail but
+we also saw the lack of css support and theme handling. Also we added other 
+features that we like from other webmails out there.
+
+Contact:
+--------
+It is pretty easy to get in contact with the developers if you need help or
+if you find bugs that need to be reported.  The best way to contact us is
+through our main email:
+   
+   info@cangrejomail.com.ar
+
+Installation:
+-------------
+For detailed instructions on how to install CangrejoMail on your server,
+please refer to the INSTALL document in the same directory as this document.
+
+Licensing: 
+----------
+This product is distributed under the GPL.  Please read through the file
+COPYING for more information about our license.

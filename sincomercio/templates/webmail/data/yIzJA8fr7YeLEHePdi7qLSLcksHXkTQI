@@ -1,0 +1,72 @@
+Return-Path: <ntsantanagc@gmail.com>
+Delivered-To: fabiano@predilecta.com.br
+Received: from mail.predilecta.com.br (localhost [127.0.0.1])
+	by mail.predilecta.com.br (Postfix) with ESMTP id 7D59C35D7CC
+	for <fabiano@predilecta.com.br>; Mon, 16 Jan 2012 18:09:41 -0200 (BRST)
+X-Virus-Scanned: amavisd-new at predilecta.com.br
+Authentication-Results: mail.predilecta.com.br (amavisd-new); dkim=pass
+	header.i=@gmail.com
+Received: from mail.predilecta.com.br ([127.0.0.1])
+	by mail.predilecta.com.br (mail.predilecta.com.br [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 3Q0LJ7Sgtkds for <fabiano@predilecta.com.br>;
+	Mon, 16 Jan 2012 18:09:35 -0200 (BRST)
+Received-SPF: pass (mail.predilecta.com.br: domain of gmail.com designates 209.85.161.177 as permitted sender) client-ip=209.85.161.177; envelope-from=ntsantanagc@gmail.com; helo=mail-gx0-f177.google.com;
+Received: from mail-gx0-f177.google.com (mail-gx0-f177.google.com [209.85.161.177])
+	(using TLSv1 with cipher RC4-SHA (128/128 bits))
+	(No client certificate requested)
+	by mail.predilecta.com.br (Postfix) with ESMTPS id 50F2935D7BC
+	for <fabiano@predilecta.com.br>; Mon, 16 Jan 2012 18:09:33 -0200 (BRST)
+Received: by ggnl1 with SMTP id l1so3248743ggn.36
+        for <fabiano@predilecta.com.br>; Mon, 16 Jan 2012 12:05:47 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=mime-version:in-reply-to:references:date:message-id:subject:from:to
+         :content-type:content-transfer-encoding;
+        bh=bJpd0AG6LYcQBRJSOR5L23CmIM/u2+UUWEjyByj6nRo=;
+        b=ZNVDFg90tD5K6F3bybeKL/fv+Rqw5SJCVtxSkCQWcU9NXKLEFshv+g8N91NakQt7i1
+         sBz+MfAYU37xdWv9kLomJBt8fKEGoMUyBjVCY/vcMSwksfwe1hmK8J6aHAU3Npc9nKND
+         w62KKTraRamvztJq+DScS6Ye4rdmyiPGVy3Pg=
+MIME-Version: 1.0
+Received: by 10.50.184.166 with SMTP id ev6mr14288965igc.2.1326744336537; Mon,
+ 16 Jan 2012 12:05:36 -0800 (PST)
+Received: by 10.50.217.230 with HTTP; Mon, 16 Jan 2012 12:05:36 -0800 (PST)
+In-Reply-To: <CA+v+eWFWPnQqA+onDroW_Bfzd2KysS6PLEWgc6fO_rTZD7Dg4g@mail.gmail.com>
+References: <CA+v+eWF2XnM8JO_KVNe6gDMv5ELoznUZg2+spvnf=nZn6Od0Vg@mail.gmail.com>
+	<CA+v+eWFWPnQqA+onDroW_Bfzd2KysS6PLEWgc6fO_rTZD7Dg4g@mail.gmail.com>
+Date: Mon, 16 Jan 2012 18:05:36 -0200
+Message-ID: <CA+v+eWEGU-6A=jsLvOy4L83jCRN=i=fGLP9XEKLkYTw-OyuWfw@mail.gmail.com>
+Subject: =?ISO-8859-1?Q?Re=3A_=3A_=3A_Oferta_de_transporte_rodovi=E1rio=2E?=
+From: Nilton Santana <ntsantanagc@gmail.com>
+To: Nilton Santana <ntsantanagc@gmail.com>
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+>
+>
+> ---------- Mensagem encaminhada ----------
+> De: Nilton Santana <ntsantanagc@gmail.com>
+> Data: 3 de janeiro de 2012 07:37
+> Assunto: Oferta de transporte rodovi=E1rio.
+> Para: ntsantanagc@gmail.com
+>
+>
+> Um novo ano, exige tamb=E9m novas mudan=E7as no servi=E7o de
+> transporte rodovi=E1rio de cargas fracionadas.
+>
+> Quero apresentar duas empresas, com o melhor atendimento
+> e o menor pre=E7o de frete, com total seguran=E7a, ap=F3lice dupla
+> de seguro, RCTRC e RCFDC, ve=EDculos ba=FAs pr=F3prios e rastre-
+> ados. Prazo certo, agendado para coleta e entrega.
+>
+> Atendendo de S=E3o Paulo - SP., para os estados do Paran=E1 e
+> Santa Catarina.
+>
+> Consulte sem compromisso, solicite cota=E7=E3o e pre=E7o de frete
+> acessando os sites:
+>
+> www.cattanicargas.com.br =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 www.intracargo.c=
+om.br
+>
+> Atenciosamente, =A0Nilton =A0 Cel. =A0 11 =A0 6519.1001.
+
+

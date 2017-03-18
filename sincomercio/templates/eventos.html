@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %} - Eventos: {{ evento.titulo }}{% endblock %}
+{% load thumbnail %}
+{% block conteudo %}
+
+<div class="linksuteis"><h2>Eventos</h2></div>
+	<hr class="divisoria"/>
+
+
+<div id="eventos">
+	<div>
+		<h2>Informação Sobre o Evento</h2>
+	</div>
+	<div id="imagens">
+	<div id="galeriaevento">Galeria:</div>
+	<div  id="conteudogaleriaevento">
+	{% if evento.sobre != ''%}
+			{{evento.sobre}}
+		{% else %}
+			Evento sem informações.
+		{% endif %}
+			</div>
+	<div id="molduraGaleria">
+	{% for imagen in imagens %}
+		{% thumbnail imagen.imagem "800x600" as imagem %}
+	
+	      <div class="imagensGaleria"><a href="{{imagem.url}}" rel="lightbox[roadtrip]"  title="{{imagen.legenda}}"><img src={{imagem.url}} style="width: 200px; height:150px" alt="" /></a></div>
+	    {% endthumbnail %}
+	{% endfor %}
+	</div>
+	</div>
+	<div><a href="/eventos/" id="outroseventos" class="link">Outros Eventos</a></div>
+</div>
+
+{% endblock %}

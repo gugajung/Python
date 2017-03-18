@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>.: Manaia Consultoria :.</title>
+		<meta name="author" content="User" />
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/estilo.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<!-- Date: 2012-12-04 -->
+		<link rel="stylesheet" href="{{MEDIA_URL}}js/blueberry/blueberry.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="{{MEDIA_URL}}js/blueberry/jquery.blueberry.js"></script>
+		<script src="{{MEDIA_URL}}js/scripts.js"></script>
+		<link rel="stylesheet" href="{{MEDIA_URL}}css/estilo.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<script>
+			$(window).load(function() {
+				$('.blueberry').blueberry();
+				$('.blueberry2').blueberry();
+			});
+		</script>
+		
+		
+	</head>
+
+	<body>
+		<div id="formularioLogin">
+			<form method="post" class="tabelaformulario">
+				<div id="tableformLogin">
+					<img src="/media/img/logoLogin.png" id="fotoManaiaLogin">
+				<table >
+					{% csrf_token %}
+					<tr>
+								<td class="informelogin">Login: </td> 
+								<td>{{ form.username.errors }}
+									{{ form.username }}</td>
+					</tr>
+					<tr><br>
+								<td class="loginSenha">Senha: </td> 
+								<td> {{ form.password.errors }}
+								{{ form.password }}
+								</td>
+					</tr> 
+									
+									
+									
+				
+				</table>
+				<div id="botaologar"><input name="botao" type="submit" value="Login"></div>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>

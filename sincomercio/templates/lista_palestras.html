@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+{% block tituloPagina %} - Lojas Aniversariantes{% endblock %}
+
+{% block conteudo %}
+	<div class="linksuteis"><h2>Cursos e Palestras</h2></div>
+
+	<hr class="divisoria"/>
+	<div id="conteudoPlestras" align="center" >
+		
+		<div id="listaPalestras">
+			{% for palestra in palestras%}
+			<a href="/cursopalestra/{{palestra.id}}" class="itemPalestra">{{palestra.titulo}} - {{palestra.data}} </a><br/>
+			{% endfor %}
+		</div>
+		
+		<div class="pagination">
+		    <span class="step-links">
+		        {% if palestras.has_previous %}
+		            <a href="?page={{ palestras.previous_page_number }}">Anterior</a>
+		        {% endif %}
+		
+		        <span class="current">
+		            Pagina {{ palestras.number }} de {{ palestras.paginator.num_pages }}.
+		        </span>
+		
+		        {% if palestras.has_next %}
+		            <a href="?page={{ palestras.next_page_number }}">Proximo</a>
+		        {% endif %}
+		    </span>
+		</div>
+	</div>
+		
+{% endblock %}

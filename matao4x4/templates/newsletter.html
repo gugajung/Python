@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+		<div class="titulo">
+			<p class="tipo">
+				Newsletter
+			</p>
+		</div>
+		<div id="texto">
+			<div id="voltar">
+					<a href="javascript:history.go(-1)">Voltar para página anterior</a>
+			</div>
+			<p class="texto">Cadastre-se e receba informações periódicas sobre a Matão 4x4.</p>
+			<p class="texto">Campos com (*) devem ser obrigatóriamente preenchidos.</p>
+			<form id="formNewsletter" method="post" action="http://www.sysnetwork.com.br/sysmkt/newsletter_django/newsletter_matao4x4.php">
+				<table>
+					<tr>
+						<td>Nome*: </td>
+						<td>
+							{{ form.nome.errors }}
+								{{ form.nome }}
+						</td>
+					</tr>
+					<tr>
+						<td>E-mail*: </td>
+						<td>
+							{{ form.email.errors }}
+								{{ form.email }}
+						</td>
+					</tr>	
+					<tr>
+						<td>Cidade: </td>
+						<td>
+							{{ form.cidade.errors }}
+								{{ form.cidade }}
+						</td>
+					</tr>				
+					<tr>
+						<td>Estado: </td>
+						<td>
+							{{ form.estado.errors }}
+								{{ form.estado }}
+						</td>
+					</tr>
+				</table><br>
+				<div>
+					<input type="submit" value="Enviar"/>
+					<input type="reset" value="Limpar campos" />
+				</div>
+		</form>
+			<script>
+				$(document).ready(function(){
+					$('#news #id_nome').val('');
+					$('#news #id_email').val('');
+				});
+			</script>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

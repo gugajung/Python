@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+<div id="conteudo">
+	<div class="bloco">
+			<div class="titulo">
+				<p class="tipo">
+					LAVA JATO
+				</p>
+			</div>
+			<div id="texto">
+				<div id="voltar">
+					<a href="{% url views.index %}">Voltar para página inicial</a>
+				</div>
+				<p class="texto">
+					O lava-jato da Matão 4x4 e Picapes é especializado em lavagens técnicas (lavagem + lubrificação) e também possui o auto-serviço para lavagem básica, onde o próprio dono do veículo faz a lavagem para tirar o barro mais pesado.
+					<br/>
+					<br/>
+					Nunca deixe de lavar seu veículo depois de uma trilha, a lama seca quase instantaneamente ao passar pelo radiador, entupindo as aletas e provocando superaquecimento. É preciso ficar atento à temperatura do motor e esguichar o radiador assim que for possível.
+					<br/>
+					<br/>
+					A areia gruda e se mistura à graxas e óleos que “sobraram” da lubrificação e provoca atrito em todas as peças móveis. Retentores, rolamentos, cruzetas, cardãs, pivôs e freios são as principais vítimas.
+					<br/>
+					<br/>
+					Depois da trilha, é muito importante não descuidar, deixar seu 4x4 esquecido na garagem até o próximo fim de semana. E não basta lavar e lubrificar. É preciso fazer uma verificação completa.
+					<br/>
+					<br/>
+				</p>
+				<br/>
+				<img class="static" src="{{MEDIA_URL}}img/lavajato.jpg" width="720" height="450" alt="Ocorreu algum erro ao exibir a imagem."/>
+			</div>
+	</div>
+</div>
+
+
+{% endblock %}

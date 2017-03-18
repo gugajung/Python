@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% block conteudo %}
+<script src="http://www.sysnetwork.com.br/web-libs/jquery.maskedinput-1.2.2.js"></script>
+<script>
+ $(document).ready(function(){  
+ $(function(){  
+ $("#id_telefone").mask("(99)9999-9999");  
+ });  
+ }); 
+</script>
+<div id="conteudo">
+	<div class="bloco">
+		<div id="contato">
+			<div class="titulo">
+				<p class="tipo">
+					CONTATO
+				</p>
+			</div>
+			{% if mensagem %}
+			<div id="{{ classe }}">
+				<p>
+					{{ mensagem }}
+				</p>
+			</div>
+			{% endif %}
+			<div id="texto">
+				<div id="voltar">
+					<a href="{% url views.index %}">Voltar para página inicial</a>
+				</div>
+				<p class="texto">
+					Entre em contato conosco. Teremos o maior prazer em atendê-lo.
+					<br/>
+					Os campos com (*) são obrigatórios.
+				</p>
+				<form method="post" id="formContato" enctype="multipart/form-data">
+					{% csrf_token %}
+					<table>
+						<tr>
+							<td>Nome*: </td>
+							<td> {{ form.nome.errors }}
+							{{ form.nome }} </td>
+						</tr>
+						<tr>
+							<td>Telefone*: </td>
+							<td> {{ form.telefone.errors }}
+							{{ form.telefone }} </td>
+						</tr>
+						<tr>
+							<td>Cidade: </td>
+							<td> {{ form.cidade.errors }}
+							{{ form.cidade }} </td>
+						</tr>
+						<tr>
+							<td>E-mail*: </td>
+							<td> {{ form.email.errors }}
+							{{ form.email }} </td>
+						</tr>
+						<tr>
+							<td>Mensagem*: </td>
+							<td> {{ form.mensagem.errors }}
+							{{ form.mensagem }} </td>
+						</tr>
+					</table>
+					<br/>
+					<input type="submit" value="Enviar" style="border: 1px solid #ccc;"/>
+					<input type="reset" value="Limpar campos" style="border: 1px solid #ccc;" />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

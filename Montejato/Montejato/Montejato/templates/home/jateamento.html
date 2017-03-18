@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+
+{% block header %}
+
+{% block script %}
+	 	<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}js/scrollable/scrollable-horizontal.css" />
+		<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}js/scrollable/scrollable-buttons.css" />
+  		<script src="{{ MEDIA_URL }}js/scrollable/jquery.tools.min.js"></script>
+  		<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}js/shadowbox/shadowbox.css" />
+  		<script src="{{ MEDIA_URL }}js/shadowbox/shadowbox.js"></script>
+{% endblock %}
+
+{% endblock %}
+
+{% block content %}
+<div id="molduraconteudo">
+	<h3>Jateamento e Pintura</h3>
+	<br>
+	<div style="margin:0 auto; width: 774px; height:120px;">
+		<a class="prev browse left"></a>
+
+	<div class="scrollable" id="scrollable">
+
+ 		 <div class="items">
+    
+	    <div>
+		  <a href="{{MEDIA_URL}}img/ejateamento/foto01.jpg" rel="lightbox[roadtrip]">
+	      <img src="{{MEDIA_URL}}img/ejateamento/foto01.jpg" /></a>
+		  <a href="{{MEDIA_URL}}img/ejateamento/foto02.jpg" rel="lightbox[roadtrip]">
+	       <img src="{{MEDIA_URL}}img/ejateamento/foto02.jpg" /></a>
+	       <a href="{{MEDIA_URL}}img/ejateamento/foto03.jpg" rel="lightbox[roadtrip]">
+	       <img src="{{MEDIA_URL}}img/ejateamento/foto03.jpg" /></a>
+	       <a href="{{MEDIA_URL}}img/ejateamento/im001.jpg" rel="lightbox[roadtrip]">
+	       <img src="{{MEDIA_URL}}img/ejateamento/im001.jpg" /></a>
+	       <a href="{{MEDIA_URL}}img/ejateamento/IMG_1180.JPG" rel="lightbox[roadtrip]">
+	      <img src="{{MEDIA_URL}}img/ejateamento/IMG_1180.JPG" /></a>
+	    </div>
+    
+	    <div>
+	      <a href="{{MEDIA_URL}}img/ejateamento/IMG_1181.JPG" rel="lightbox[roadtrip]">
+	      <img src="{{MEDIA_URL}}img/ejateamento/IMG_1181.JPG" /></a>
+	    </div>
+
+	  </div>
+	
+	</div>
+
+	<a class="next browse right"></a>
+	</div>
+	<br>
+
+	<script>
+			Shadowbox.init({
+					displayCounter: true
+			});
+				iniciaTransicao();
+			</script>
+			
+	<script>
+	
+	$("div.scrollable").scrollable();
+	</script>
+
+</div>
+{% endblock %}	
+
+{% block footer %}
+{% endblock %}

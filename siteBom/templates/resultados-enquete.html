@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %}Enquetes - {{ enquete.pergunta}}{% endblock %}
+{% block conteudo %}
+	<h3>Resultados  Enquete</h3>
+
+<div id="detalhe-enquete">
+	<h4>{{ enquete.pergunta }}</h4>
+	
+	<ul>
+	{% for opcao in enquete.escolha_set.all %}
+	    <li>{{ opcao.escolha }} ({{ opcao.votos }} voto{{ opcao.votos|pluralize }})</li>
+	{% endfor %}
+	</ul>
+</div>
+	<a class="relacionado" href="/enquetes/"
+	title="Ver outras enquetes">&laquo; Outras enquetes</a>
+{% endblock %}

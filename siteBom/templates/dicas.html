@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %}Dicas - {% endblock %}
+{% block conteudo %}
+	<h3>Dicas</h3>
+
+{% if dicas.object_list|length > 0 %}
+<div id="lista-enquetes">
+    <ul>
+    {% for dica in dicas.object_list %}
+        <li><a href="{{dica.get_absolute_url}}">{{ dica.titulo }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+<center>
+<div class="paginacao">
+	{% if dicas.has_previous %}
+	 <a href="?pagina={{ dicas.previous_page_number }}">&laquo; Anteriores</a>
+       {% endif %}
+       <span class="pagina-atual">
+           Página {{ dicas.number }} de {{ dicas.paginator.num_pages }}
+       </span>
+       {% if dicas.has_next %}
+       <a href="?pagina={{dicas.next_page_number }}">Próximos &raquo;</a>
+       {% endif %}
+</div>
+</center>
+{% else %}
+    <p>Nenhuma dica foi encontrada.</p>
+{% endif %}
+{% endblock %}

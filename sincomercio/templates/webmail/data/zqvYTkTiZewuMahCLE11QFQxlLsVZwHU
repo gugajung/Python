@@ -1,0 +1,72 @@
+Return-Path: <josi@stelladoro.com.br>
+Delivered-To: eliane@predilecta.com.br
+Received: from mail.predilecta.com.br (localhost [127.0.0.1])
+	by mail.predilecta.com.br (Postfix) with ESMTP id 6A1BC1A0D8A
+	for <eliane@predilecta.com.br>; Mon,  5 Dec 2011 11:37:41 -0200 (BRST)
+X-Virus-Scanned: amavisd-new at predilecta.com.br
+Received: from mail.predilecta.com.br ([127.0.0.1])
+	by mail.predilecta.com.br (mail.predilecta.com.br [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 5fUcHvJrGBPj for <eliane@predilecta.com.br>;
+	Mon,  5 Dec 2011 11:37:38 -0200 (BRST)
+Received: from mx.stelladoro.com.br (mx.stelladoro.com.br [201.90.195.130])
+	by mail.predilecta.com.br (Postfix) with ESMTP id 8C0621A0D8B
+	for <eliane@predilecta.com.br>; Mon,  5 Dec 2011 11:37:38 -0200 (BRST)
+Received: by mx.stelladoro.com.br (Postfix, from userid 1003)
+	id 13FD518D7E3; Mon,  5 Dec 2011 11:33:18 -0200 (BRST)
+Received: from PAULO (unknown [201.90.195.131])
+	by mx.stelladoro.com.br (Postfix) with ESMTP id E380718D787
+	for <eliane@predilecta.com.br>; Mon,  5 Dec 2011 11:33:02 -0200 (BRST)
+From: "Josi - Stella doro" <josi@stelladoro.com.br>
+To: <eliane@predilecta.com.br>
+References: <61932.200.205.54.11.1323089565.squirrel@webmail.predilecta.com.br>
+In-Reply-To: <61932.200.205.54.11.1323089565.squirrel@webmail.predilecta.com.br>
+Subject: RES: depositos a classificar
+Date: Mon, 5 Dec 2011 11:29:05 -0200
+Message-ID: <003101ccb351$dc2559e0$94700da0$@stelladoro.com.br>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AQHX1pHG1SMXcu3vjII5oE5JLOzhLJW29lbQ
+Content-Language: pt-br
+
+Bom dia!
+
+Os valores abaixo n=C3=A3o conseguimos descobrir de quem s=C3=A3o.
+
+Josi
+
+-----Mensagem original-----
+De: eliane@predilecta.com.br [mailto:eliane@predilecta.com.br]=20
+Enviada em: segunda-feira, 5 de dezembro de 2011 10:53
+Para: josi@stelladoro.com.br
+Assunto: depositos a classificar
+
+Josi, este t=C3=ADtulos est=C3=A3o na contabilidade como dep=C3=B3sitos =
+a classificar.
+Voce sabe informar a que duplicatas/clientes se referem e se ser=C3=A3o =
+baixados?
+Grata/Eliane.
+
+
+rs_sea_tit_acr: 	Por Cliente
+Estab	Esp=C3=A9cie	S=C3=A9rie	T=C3=ADtulo	/P	Cliente	Cliente	Vl
+Original	Saldo	Moeda	Portador	Carteira	Emiss=C3=A3o	Vencto
+300	AI		dni0614001	1	1	STELLA
+MATRI	1.155,84	1.155,84	Real	33001	SIM	31/3/2011	31/3/2011
+300	AI		dni0517003	1	1	STELLA
+MATRI	2.794,44	2.794,44	Real	34101	SIM	11/4/2011	11/4/2011
+300	AI		dni0517002	1	1	STELLA
+MATRI	140,02	140,02	Real	34101	SIM	24/2/2011	24/2/2011
+300	AI		dni0705001	1	1	STELLA
+MATRI	1.645,28	1.645,28	Real	34101	SIM	10/5/2011	10/5/2011
+300	AI		dni0923001	1	1	STELLA
+MATRI	400	400	Real	34101	SIM	22/7/2011	22/7/2011
+Estab: 	300
+
+
+
+
+
+

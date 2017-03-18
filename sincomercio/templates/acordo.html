@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+{% block tituloPagina %} - Acordo Coletivo{% endblock %}
+
+{% block conteudo %}
+<!-- 	<h2>Acordos Coletivos e Calendários</h2> -->
+		<div class="linksuteis"><h2>Convenção Coletiva do Comércio</h2></div>
+	<hr class="divisoria"/>
+    <h4  style="margin:3px; margin-left: 231px">Convenções e Acordos</h4>
+    
+    <div class="lista-links">
+    	
+    	
+    	{% for acordo in acordo %}
+    		
+    		<a href="{{MEDIA_URL}}{{ acordo.arquivo }}">{{acordo.descricao}}</a></br>
+    	
+    	
+    	
+    	{% empty %}
+ 		<div align="center"><small>Nenhum acordo foi encontrado.</small></div>
+
+
+    	{% endfor %}
+    </div>
+    <br>
+    <a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+{% endblock %}

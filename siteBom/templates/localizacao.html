@@ -1,0 +1,17 @@
+ {% extends 'index.html' %}
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+{% block tituloPagina %}Localização - {% endblock %}
+
+{% block conteudo %}
+<h3>Localização</h3>
+
+<div id="mapa">
+	<iframe width="425" height="350" frameborder="0" scrolling="no"
+		marginheight="0" marginwidth="0"
+		src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Prudente+de+Moraes,+830,+Centro,+Mat%C3%A3o+-+S%C3%A3o+Paulo,+Brasil&amp;sll=37.0625,-95.677068&amp;sspn=37.871902,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Prudente+de+Moraes,+830+-+Centro,+Mat%C3%A3o+-+S%C3%A3o+Paulo,+15990-010,+Brasil&amp;t=h&amp;z=14&amp;ll=-21.602443,-48.362655&amp;output=embed"></iframe>
+	<br />
+	<small><a
+		href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=Rua+Prudente+de+Moraes,+830,+Centro,+Mat%C3%A3o+-+S%C3%A3o+Paulo,+Brasil&amp;sll=37.0625,-95.677068&amp;sspn=37.871902,93.076172&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Prudente+de+Moraes,+830+-+Centro,+Mat%C3%A3o+-+S%C3%A3o+Paulo,+15990-010,+Brasil&amp;t=h&amp;z=14&amp;ll=-21.602443,-48.362655"
+		style="color: #0000FF; text-align: left">Exibir mapa ampliado</a></small>
+</div>
+{% endblock %}

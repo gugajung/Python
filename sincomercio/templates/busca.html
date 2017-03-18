@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+{% block tituloPagina %} - Busca {% endblock %}
+
+{% block conteudo %}
+<div class="linksuteis"><h2>Busca</h2></div>
+<hr class="divisoria"/>
+<div id="DivBusca">
+	{% if q %}
+		<div align="center" id="textoBusca"><span>Resultados encontrados com o termo: <strong>{{ q }}</strong></span></div>
+			</br>
+			{% if lista_noticias|length > 0 %}
+				<table border="0" width="590px" cellspacing="0" cellpadding="3" class="table-list">
+					<tr>
+						<td><h3><strong>Notícia</strong></h3></td>
+						<td><h3><strong>Publicada em</strong></h3></td>
+					</tr>	
+					{% for noticia in lista_noticias %}
+						<tr>
+							<td><a href="{{noticia.get_absolute_url}}">{{ noticia.titulo }}</a></td>
+							<td>{{ noticia.data }}</td>
+						</tr>
+					{% endfor %}
+					</table>
+					
+					<div class="paginacao" align="center">
+						{% if noticias.has_previous %}
+						 <a href="?busca={{q}}&pagina={{ noticias.previous_page_number }}">&laquo; Anteriores</a>
+				        {% endif %}
+				        <span class="pagina-atual">
+				            Página {{ noticias.number }} de {{ noticias.paginator.num_pages }}
+				        </span>
+				        {% if noticias.has_next %}
+				        <a href="?busca={{q}}&pagina={{noticias.next_page_number }}">Próximos &raquo;</a>
+				        {% endif %}
+					</div>	
+			{% else %}
+					<div align="center" id="textoBusca"><span>Desculpe, mas nada foi encontrado com o termo: <strong>{{ q }}</strong></span></div>
+			{% endif %}
+	{% else %}
+					<div align="center" id="textoBusca"><span>Não é possível realizar a busca com o campo vazio!</span></div>
+	{% endif %}
+</div>
+
+{% endblock %}

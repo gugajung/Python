@@ -1,0 +1,860 @@
+body {
+	background: black;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: white;
+	font-family: Arial;
+}
+
+a {
+	text-decoration: underline;
+	border: 0;
+	color: white;
+}
+
+p {
+	margin: 0;
+	color: white;
+	font-family: Arial;
+}
+
+img {
+	border: 0;
+}
+
+#moldura {
+	margin: 0 auto;
+	width: 1000px;
+	text-align: left;
+}
+
+#moldura #fundo {
+	background: url(/testes/django/matao4x4/media/img/fundo2.png) no-repeat;
+	width: 1000px;
+	height: 1100px;
+}
+
+#moldura #topo {
+	background: url(/testes/django/matao4x4/media/img/topo4.png) no-repeat top center;
+	width: 1000px;
+	height: 311px;
+}
+
+#moldura #topo #slideshow {
+	width: 685px;
+	height: 242px;
+	margin-left: 300px;
+	position: relative;
+	top: 2px;
+	border: 7px solid #ccc;
+}
+
+.banner {
+	width: 685px;
+	height: 242px;
+}
+
+#moldura #topo #menu ul {
+	height:80px;
+	padding:0 0 0 8px;
+}
+
+#moldura #topo #menu ul li {
+	float:left; 
+	list-style:none;
+}
+
+#moldura #topo #menu ul li a {
+	display:block; 
+	height:53px;
+	font-size:20px;
+	text-decoration:none;
+	font-weight:bolder;
+	font-style:italic;
+	padding-top:14px;
+	padding-top:11px\9;
+	
+	/*color:black;
+	
+	background-repeat:no-repeat;
+	text-align:center;
+	text-indent: -99999px;
+	position: relative;
+	top: -4px;
+	top: -3px\9;
+	left: -5px;
+	left: -15px\9;*/
+	padding-left: 11;
+}
+
+#moldura #topo #menu ul li.home {
+	height:51px; 
+	width: 179px; 
+	width:181px\9;
+	position:relative; 
+	left: -16px;
+	left:-42px\9;
+	top: -17px\9;
+	top: -14px;
+	margin-left: 15px;
+	margin-left: -18px\9;
+}
+
+#moldura #topo #menu ul li.empresa {
+	height: 51px; 
+	width: 107px; 
+	position:relative;
+	top: -14px;
+	left: -15px\9;
+	margin-left: -9px;
+	margin-left: -2px\9;
+}
+
+#moldura #topo #menu ul li.equipe {
+	height:51px; 
+	width: 100px;
+	width: 110px\9;
+	position:relative; 
+	left:9px;
+	left: -9px\9;
+	top: -14px;
+	padding-left: 13;
+	padding-left: 0px\9;
+}
+
+#moldura #topo #menu ul li.expedicoes {
+	height:51px; 
+	width: 152px;
+	position:relative; 
+	left:16px;
+	left:-12px\9;
+	top: -14px;
+	margin-top:	-10px;
+	
+}
+
+#moldura #topo #menu ul li.dicas {
+	height:51px; 
+	width: 117px;
+	width: 150px\9;
+	position:relative; 
+	left: 18px;
+	left:-12px\9;
+	top: -14px;
+}
+
+#moldura #topo #menu ul li.aconteceu {
+	height:51px; 
+	width: 119px;
+	width: 150px\9;
+	position:relative; 
+	left: 32px;
+	left:-26px\9;
+	top: -14px;
+}
+
+#moldura #topo #menu ul li.contato {
+	height:51px; 
+	width:120px;
+	position:relative; 
+	left: 59px;
+	left: 0px\9;
+	top: -14px;	
+	padding-left: 7;
+	margin-left: -15px\9;
+	margin-top: 2px\9;
+}
+
+#moldura #veiculos .bloco {
+	margin-left: 15px;
+	position: relative;
+	top: 36px;
+	top: 22px\9;
+}
+
+.titulo {
+	background: url(/testes/django/matao4x4/media/img/barralaranja.png) no-repeat;
+	width: 815px;
+	height: 14px;
+	position: relative;
+	top: 55px;
+}
+
+.titulo p {
+	color: white;
+	font-family: Arial;
+	margin: 0;
+	font-style: italic;
+	font-weight: bold;
+	position: relative;	
+	bottom: 42px;
+}
+
+.titulo p.tipo {
+	font-size: 35px;
+	left: 10px;
+}
+
+a{
+	text-decoration: none;
+}
+
+.titulo p.maiseventos {
+	font-size: 25px;
+	left: 519px;
+	bottom: 74px;
+	width: 275px;
+}
+
+#moldura #eventos .titulo p.busca {
+	width: -56px;
+}
+
+.bloco{
+	background: url(/testes/django/matao4x4/media/img/bloco3.png) no-repeat;
+		background: url(/testes/django/matao4x4/media/img/blocoeventos.png) no-repeat\9;
+	width: 815px;
+	height: 486px;
+	margin: 0 auto;	
+}
+
+#moldura #acessorios .bloco {
+	margin-top: 55px;
+	margin-left: 15px;
+}
+
+#moldura #acessorios .titulo {
+	top: 45px;
+}
+
+#moldura #acessorios .titulo p.busca{
+	left: 440px;
+	width: 175px;
+}
+
+#blocoItAcessorios td{
+	text-align: center;
+	font-size: 13px;
+
+}
+
+#blocoItAcessorios p {
+	width: 227px;
+	position: relative;
+	top: -10px;
+}
+
+#topoborda {
+	background: url(/testes/django/matao4x4/media/img/bordatopo.png) no-repeat;
+	height: 22px;
+	width: 230px;
+}
+
+#meioborda {
+	background: url(/testes/django/matao4x4/media/img/bordacorpo.png) repeat-y;
+	height: 125px;
+	width: 230px;
+}
+#rodapeborda {
+	background: url(/testes/django/matao4x4/media/img/bordabaixo.png) no-repeat;
+	height: 22px;
+	width: 230px;
+}
+
+
+#evDestaque {
+	margin-left: 15px;
+	float: left;
+	width: 320px;
+	margin-top:15px;
+}
+
+#evDestaque .blocoEv #topo {
+	background: url(/testes/django/matao4x4/media/img/bordatopo-evento.png) no-repeat;
+	height: 23px;
+	width: 315px;	
+}
+
+#evDestaque .blocoEv img {
+	margin-left: 8px;
+	margin-top: -12px;
+	float: left;
+}
+
+#evDestaque .blocoEv div.text {
+	float: right;
+	width: 200px;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+	margin-top: -5px;
+	text-align: center;
+	margin-right: -325px;
+}
+
+#evDestaque .blocoEv div.text p.descE {
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#evDestaque .blocoEv #meio {
+	background: url(/testes/django/matao4x4/media/img/bordacorpo-evento.png) repeat-y;
+	width: 315px;
+	height: 359px;
+	width: 655px\9;
+}
+
+#evDestaque .blocoEv #rodape {
+	background: url(/testes/django/matao4x4/media/img/bordarodape-evento.png) no-repeat;
+	width: 315px;
+	height: 23px;
+}
+
+#content {
+	width: 807px;
+	float: left;
+	margin-top: 35px;
+	margin-left: 5px;
+	position: relative;
+	z-index: 5px;
+	top: -22px\9;
+}
+
+#content2 {
+	width: 807px;
+	float: left;
+	margin-left: 5px;
+	position: relative;
+	z-index: 5px;
+}
+
+#content-1 {
+	width: 807px;
+	float: left;
+/*	margin-top: 8px;*/
+margin-top:68px;
+	margin-left: 5px;
+}
+
+#moldura #eventos .bloco2 {
+	background: url(/testes/django/matao4x4/media/img/blocoeventos.png) no-repeat;
+	height: 529px;
+	margin-left: 15px;
+	margin-top: 53px;
+}
+
+#moldura #conteudo #texto #content #paginator {
+	position: absolute;
+}
+
+#paginator2{
+	margin-top:-41px;
+	margin-left: 337px;
+}
+
+
+#moldura #eventos .titulo {
+	top: 65px;
+}
+
+#moldura #conteudo .bloco {
+	background: url(/testes/django/matao4x4/media/img/blococonteudo.png) no-repeat;
+	height: 894px;
+	width: 815px;
+	position: relative;
+	left: -77px;
+	left: 8px\9;
+	top: 30px;
+}
+
+#moldura #acessorios .bloco {
+	margin-top: 45px;
+	margin-left: 15px;
+}
+
+#moldura #conteudo .titulo {
+	top: 45px;
+}
+
+#moldura #conteudo .texto {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+#moldura #conteudo img.static {
+	margin-top: 5px;
+	margin-left: 45px;
+}
+
+
+
+#moldura #conteudo #contato #formContato {
+	position: relative;
+	margin-left: 20px;
+	top: 15px; 
+	color: white;
+	font-family: Arial;
+}
+
+#fail {
+	color: #ff0f0f;
+	font-family: Arial;
+	font-size: 16px;
+	border: 2px #f50000 solid;
+	background: #ff9797;
+	height: 45px;
+	position: relative;
+	top: 45px;
+	width: 800px;
+	margin-left: 6px;
+}
+
+#fail p {
+	text-align: center;
+	position: relative;
+	top: 13px;
+}
+
+#sucesso {
+	color: #2f8b47;
+	font-family: Arial;
+	font-size: 16px;
+	border: 2px #2d9f4a solid;
+	background: #47cf6a;
+	height: 45px;
+	position: relative;
+	top: 45px;
+	width: 800px;
+	margin-left: 6px;	
+}
+
+#sucesso p {
+	text-align: center;
+	position: relative;
+	top: 13px;
+	font-weight: bold;
+}
+
+
+#moldura #anunciantes {
+	float: right;
+	width: 165px;
+	margin-top: -1061px;
+}
+
+
+#BuscarEventos {
+	float: right;
+	margin-top: -108px;
+	margin-right: 25px;
+}
+
+#Buscar {
+	margin-left: 622px;
+	margin-top: -100px;
+}
+
+#AcBuscar {
+	margin-left: 622px;
+	margin-top: -100px;
+}
+
+
+.select {
+	position: absolute;
+	width: 158px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+	height: 21px;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	right: 35px;
+	font: 12px/21px arial,sans-serif;
+}
+
+#BuscarEventos input {
+	width: 192px;
+	height: 27px;
+	font-weight: bold;
+	font-size: 16px;
+	display: block;
+	position: absolute;
+    right: 45px;
+}
+
+#moldura #anunciantes a{
+	left: 0;
+	top: 0;
+	border: 0;
+}
+
+#moldura #anunciantes img {
+	margin-bottom: 15px;
+	margin-bottom: 10px\9;
+}
+
+#moldura #rodape {
+	background: url(/testes/django/matao4x4/media/img/rodape.png);
+	width: 1000px;
+	height: 34px;
+}
+
+#moldura #rodape p {
+	font-size: 17px;
+	position: relative;
+	top: 7px;
+	left: 15px;
+}
+
+#voltar {
+	margin-top: 45px;
+	margin-left: 14px;
+	z-index: 10;
+	position: relative;
+}
+
+#voltar a {
+	color: white;
+	text-decoration: underline;
+	font-size: 14px;
+	font-weight: bolder;
+}
+
+#voltar2 {
+	margin-top: 60px;
+	margin-left: 14px;
+	z-index: 10;
+	position: relative;
+}
+
+#voltar2 a {
+	color: white;
+	text-decoration: underline;
+	font-size: 14px;
+	font-weight: bolder;
+}
+
+
+#fotomaior {
+	width: 300px;
+	height: 250px;
+	border: 2px solid #ccc;
+	margin-left: 25px;
+	margin-top: 15px;
+}
+
+#descricao {
+	width: 445px;
+	float: right;
+	margin-top: -255px;
+	margin-right: 15px;
+}
+
+#galeria {
+	margin-top: 15px;
+	margin-left: 90px;
+/*	width: 640px;*/
+	overflow: auto;
+	border: 2px solid #fff;
+	position: absolute;
+	padding-bottom: 8px;
+	padding-right: 8px;
+	margin-right: 80px;
+}
+
+#galeria img {
+	margin-top: 8px;
+	margin-left: 8px;
+}
+
+
+#contatoAcessorio {
+	margin-top: 15px;
+	margin-left: 5px; 
+}
+
+#contatoAcessorio form{
+	margin-top: 10px;
+}
+
+#contatoAcessorio input.buttons {
+	margin-left: 5px;
+	border: 1px solid #ccc;
+}
+
+
+#eventos #blocoEvD {
+	float: left;
+	width: 400px;
+	margin-left: 10px;
+}
+
+#eventos #blocoEvD .topo {
+	background: url(/testes/django/matao4x4/media/img/bordatopoev.png) no-repeat;
+	width: 180px;
+	height: 22px;
+}
+
+#eventos #blocoEvD .rodape {
+	background: url(/testes/django/matao4x4/media/img/bordarodapeev.png) no-repeat;
+	width: 180px;
+	height: 22px;
+}
+
+#eventos #blocoEvD .corpo {
+	background: url(/testes/django/matao4x4/media/img/bordacorpoev.png) repeat-y;
+	width: 180px;
+}
+
+#eventos #blocoEvD .text {
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+	margin-top: -15px;
+	text-align: center;
+	float: right;
+	margin-right: 10px;
+	width: 100px;
+}
+
+
+#eventos #blocoEvD .blocox {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	
+}
+
+#eventos #blocoEvD img {
+	margin-left: 5px;
+	margin-top: -18px;
+	margin-bottom: -15px;
+}
+
+ul.listaevento{
+	list-style: none;
+	margin-left: -10px;
+}
+
+small.result{
+	margin-left: 15px;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+    #content-1 {
+    	margin-top: 69px;
+    } 
+}
+
+
+#eventos #blocoEvD img {
+margin-top: -32px\9;
+margin-bottom: 0\9;
+}
+
+#eventos #blocoEvD {
+width: 400px\9;
+}
+
+
+#content-1{
+margin-top: 8px\9;
+}
+
+#eventos #blocoEvD .text {
+width: 104px\9;
+margin-top: -70px\9;
+}
+
+#content {
+margin-top: -29px\9;
+}
+
+#moldura #acessorios .bloco {
+ margin-top: 45px\9;
+}
+
+#moldura #eventos .bloco {
+	margin-top: 8px\9;
+}
+
+#news {
+	background: url(/testes/django/matao4x4/media/img/newsletterbox.jpg) no-repeat;
+	width: 160px;
+	height: 158px;
+	text-align: center;
+}
+
+#news small {
+	color: black;
+	margin-left: 60px;
+}
+
+#news input {
+	width: 120px;
+	display: block;
+	margin-left: 20px;
+	background: url(/testes/django/matao4x4/media/img/inputnews.png) no-repeat;
+	border: 0;
+	height: 27px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+#news input.botao {
+	margin-top: 5px;
+	background: none #ccc;
+	border: 1px solid;
+	width: 80px;
+	margin-left: 40px;
+	height: 25px;
+}
+
+#formNewsletter {
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+#formNewsletter input {
+	border: 0;
+}
+
+@-moz-document url-prefix() {
+	#veiculos p.tipo{
+		bottom: 34px;
+	}
+	#veiculos p.busca {
+		bottom: 86px;	
+	}
+	#veiculos .select {
+		bottom: 20px;
+	}
+	#conteudo .bloco .titulo p.tipo {
+		bottom: 40px;
+	}
+}
+
+#equipe,#expedicao,#dicas{
+	margin-top: 40px;
+	margin-left: 10px;
+}
+
+#expedicaoeventos{
+	
+}
+
+.tituloEvento {
+	background: url(/testes/django/matao4x4/media/img/barralaranja.png) no-repeat;
+	width: 816px;
+	height: 14px;
+	position: relative;
+	top: 55px;
+	margin-left: -8px;
+}
+
+.tituloEvento p {
+	color: white;
+	font-family: Arial;
+	margin: 0;
+	font-style: italic;
+	font-weight: bold;
+	position: relative;	
+	bottom: 28px;
+}
+
+.tituloEvento p.tipo {
+	font-size: 35px;
+	left: 10px;
+}
+
+#moldura #outroseventos .bloco {
+	background: url(/testes/django/matao4x4/media/img/blococonteudo.png) no-repeat;
+	height: 894px;
+	width: 815px;
+	position: relative;
+	left: -77px;
+	left: 8px	9;
+	top: 30px;
+	margin-left: 90px\9;
+}
+
+#outroseventos #blocoEvD {
+	float: left;
+	width: 800px;
+	margin-left: 10px;
+	margin-top: 32px;
+}
+
+#outroseventos #blocoEvD .topo {
+	background: url(/testes/django/matao4x4/media/img/bordatopoev.png) no-repeat;
+	width: 180px;
+	height: 22px;
+}
+
+#outroseventos #blocoEvD .rodape {
+	background: url(/testes/django/matao4x4/media/img/bordarodapeev.png) no-repeat;
+	width: 180px;
+	height: 22px;
+}
+
+#outroseventos #blocoEvD .corpo {
+	background: url(/testes/django/matao4x4/media/img/bordacorpoev.png) repeat-y;
+	width: 180px;
+}
+
+#outroseventos #blocoEvD .text {
+	font-size: 12px;
+	font-weight: bold;
+	font-style: italic;
+	margin-top: -15px;
+	margin-top: -62px\9;
+	text-align: center;
+	float: right;
+	margin-right: 10px;
+	width: 100px;
+}
+
+
+#outroseventos #blocoEvD .blocox {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	
+}
+
+#outroseventos #blocoEvD img {
+	margin-left: 5px;
+	margin-top: -18px;
+	margin-bottom: -15px;
+}
+
+#teste{
+	border: 2px solid red;
+	height: 200px;
+	width:300px;
+	margin-left: 420px;
+}
+
+#eventosant{
+margin-left: 541px;
+margin-top:-44px;
+}
+
+#eventosant a{
+	font-size: 25px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#tituloaconteceu{
+	padding-bottom: 10px;
+	margin-left: 10px;
+}
+
+#todoaconteceu{
+	margin-top:20px;
+	margin-left: 10px;
+}

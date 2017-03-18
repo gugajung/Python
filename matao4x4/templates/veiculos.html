@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+{% block conteudo %}
+
+
+<div id="conteudo">
+	<div class="bloco">
+		<div class="titulo">
+			<p class="tipo">
+				Veículos
+			</p>
+		</div>
+		<div id="texto">
+			<div id="voltar">
+				<a href="{% url views.index %}">Voltar para página inicial</a>
+			</div>
+			<div id="content" style="margin-top: -15px">
+			<table id="blocoItAcessorios" cellspacing="25">
+				<tr class="itemAcessorio">
+			{% for veiculo in veiculos %}
+						<td>
+							<div id="topoborda"></div>
+							<div id="meioborda">
+								<p><b>{{veiculo.modelo|slice:":25"}}...</b></p>
+								<a href="{% url matao4x4.views.visualizarVe veiculo.id %}" target="_parent"><img src="{{MEDIA_URL}}{{veiculo.obterFoto}}" width="150" height="125" /></a>
+							</div>
+							<div id="rodapeborda"></div>
+						</td>
+					{% if forloop.counter|divisibleby:"3" %}
+						</tr>
+						<tr class="itemveiculo">
+					{% endif %}
+			{% endfor %}
+			</table>
+			</div>
+			<div id="paginator">
+					{% if veiculosLista.has_previous %}
+						<a href="?page={{ veiculosLista.previous_page_number }}"><img class="anterior" src="{{MEDIA_URL}}img/anterior.png" width="35" height="35"/></a>
+					{% endif %}
+					    
+					<small>Página {{ veiculosLista.number }} de {{ veiculosLista.paginator.num_pages }}.</small>
+						
+					{% if veiculosLista.has_next %}
+						<a href="?page={{ veiculosLista.next_page_number }}"><img class="proximo" src="{{MEDIA_URL}}img/proximo.png" width="35" height="35"/></a>
+					{% endif %}
+			</div>	
+		</div>
+	</div>
+</div>
+{% endblock %} 

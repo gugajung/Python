@@ -1,0 +1,69 @@
+#accordion{
+	margin: 10px;
+}
+#accordion .ui-accordion-header{
+	width: 94%;
+	padding: 5px 15px;
+	margin: 4px;
+	background: #034DA2;
+}
+#accordion .ui-accordion-header:hover{
+	background: #06d;
+}
+#accordion .ui-accordion-header a{
+	text-decoration: none;
+	color: #fff;
+}
+#accordion .ui-accordion-content{
+	padding: 5px 25px;
+}
+#accordion .ui-accordion-content label .verde{
+	color: #0a3;
+}
+#accordion .ui-accordion-content label .vermelho{
+	color: #f00;
+}
+#accordion .ui-accordion-content label .amarelo{
+	color: #DAA520;
+}
+
+#accordion .ui-accordion-content table tfoot tr, #accordion .ui-accordion-content table tbody tr{
+	border: 2px solid #034DA2;
+	border-bottom: 2px solid #d9d9d9;
+}
+#accordion .ui-accordion-content table{
+	margin-top: 10px;
+	width: 100%;
+	border: 2px solid #034DA2;
+}
+#accordion .ui-accordion-content table tr td{
+	padding: 4px 0;
+	font-weight: normal;
+}
+#accordion .ui-accordion-content table tr th{
+	text-align: left;
+	padding-left: 5px;
+	background: #034DA2;
+	color: #fff;
+}
+#accordion .ui-accordion-content table tr td{
+	padding-left: 10px;
+}
+#accordion .ui-accordion-content table tfoot, #accordion .ui-accordion-content table tbody{
+	border: 2px solid #034DA2;
+	border-top: 2px solid #034DA2;
+	font-weight: bold;
+}
+#accordion .ui-accordion-content table tfoot .ultimo{
+	border-bottom: 2px solid #034DA2;
+}
+#accordion .ui-accordion-content table .dados-pedido-feito .texto, #accordion .ui-accordion-content table .dados-pedido-feito .valor,#accordion .ui-accordion-content table .dados-pedido-feito .texto-frete{
+	font-weight: bold;
+}
+#accordion .ui-accordion-content table .dados-pedido-feito .texto{
+	text-align: right;
+}
+#accordion .ui-accordion-content table .dados-pedido-feito .valor{
+	color: #f00;
+}
+

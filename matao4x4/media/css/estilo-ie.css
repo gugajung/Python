@@ -1,0 +1,167 @@
+body {
+	background: black;
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma;
+	overflow-x: hidden;
+	text-align: center;
+}
+
+img {
+	border: 0;
+}
+
+
+#moldura {
+	margin: 0 auto;
+	width: 1000px;
+	text-align: left;
+}
+
+#moldura #topo #slideshow {
+	height: 256px;
+}
+
+
+#moldura #conteudo .bloco {
+	top: 60px;
+	background: url(/media/img/blococonteudo.png) no-repeat;
+}
+
+#moldura #conteudo img.static {
+	margin-top: 5px;
+}
+
+
+#contatoAcessorio {
+	margin-top: 0;
+}
+
+#moldura #topo #menu ul li a {
+	top: 0px;
+}
+
+#moldura #topo #menu ul li.home {
+	left: -33px;
+}
+
+#moldura #topo #menu ul li.empresa {
+	left: -23px;
+}
+
+#moldura #topo #menu ul li.oficina {
+	left: -15px;
+}
+
+#moldura #topo #menu ul li.lavajato {
+	left: 0px;
+	width: 160px;
+}
+
+#moldura #topo #menu ul li.localizacao {
+	left: -23px;
+	width: 180px;
+}
+
+#moldura #topo #menu ul li.contato {
+	top: -17px;
+	left: -15px;	
+	width: 97px;
+}
+
+#moldura #conteudo #empresa .bloco {
+	margin-top: -810px;
+}
+
+#moldura #conteudo #oficina .bloco {
+	margin-top: -765px;
+}
+
+#moldura #conteudo #lavajato .bloco {
+	margin-top: -745px;
+}
+
+#moldura #conteudo #localizacao .bloco {
+	margin-top: -546px;
+}
+
+#moldura #conteudo .texto {
+	top: 70px;
+}
+
+#moldura #conteudo img {
+	top: 70px;
+}
+
+#moldura #conteudo .bloco {
+	left: 15px;	
+}
+
+#moldura #eventos .bloco {
+	background: url(/media/img/blocoeventos.png) no-repeat;
+	margin-top: 5px;
+}
+
+#conteudo {
+	margin-top: -30px;
+}
+
+#content {
+	margin-top: 30px;
+}
+
+#evDestaque .blocoEv div.text {
+	margin-top: 0;
+	width: 180px;
+	float: right;
+	margin-right: 10px;
+}
+
+#eventos #blocoEvD .text {
+	margin-top: -65px;
+	
+}
+
+#voltar {
+	margin-top: 20px;
+}
+
+#news input {
+	margin-left: 0px;
+	background: no-repeat;
+}
+
+#news small {
+	margin-left: 40px;
+}
+
+#news div.InputTeste {
+	background: url(/media/img/inputnews.png) no-repeat;
+	width: 120px;
+	height: 27px;
+}
+
+#news div.InputTeste:hover, div.InputTeste:focus {
+	background-position: -261px top;
+}
+
+#news div.InputTeste input {
+	border: 0;
+	height: 24px;
+	padding: 5px;
+	width: 115px;
+	border-color: transparent;
+}
+
+#moldura #fundo {
+	margin-top: -65px;
+}
+
+#moldura #topo #slideshow {
+	width: 699px;
+}
+
+.banner {
+	width: 685px;
+	height: 243px;
+}

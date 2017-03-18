@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+
+
+<div id="molduraconteudo">
+	<h2>Contato</h2>
+</div>
+	<br>
+		Caso tenha alguma dúvida ou sugestão sobre nossos serviços entre em contato através do formulário abaixo ou ligue para (16) 3384-2045
+. E teremos prazer em atendê-lo.
+	<br><br>
+	{% if mensagem %}
+	
+	<p style="color: #0e76d2;font-weight: bold">{{ mensagem }}</p>
+	
+	{% endif %}
+	
+	<br><br>
+	<div id="formulariocadastro">
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<table cellspacing="5" cellpadding="0">			
+				<tr>
+					 <td>Nome: </td>
+					<td> {{ form.nome.errors }}
+					{{ form.nome }} </td>
+				</tr>
+				
+				<tr>
+				<td>E-mail </td>
+				<td> {{ form.email.errors }}
+				{{ form.email }} </td>
+				</tr>
+				
+				<tr>
+					<td>Telefone:</td>
+					<td> {{ form.telefone.errors }}
+					{{ form.telefone }} 
+				</td>
+				</tr>
+				
+				<tr>
+					<td>Assunto: </td>
+					<td> {{ form.assunto.errors }}
+					{{ form.assunto }} </td>
+				</tr>
+				
+				<tr>
+					<td>Mensagem:</td>
+					<td> {{ form.mensagem.errors }}
+					{{ form.mensagem }} </td>
+				</tr>
+			</table>
+			
+				<input type="submit" value="Enviar" id="enviar"/>
+				<input type="reset" name="limpar" value="Limpar" id="limpar" />
+		
+		</form>
+	</font>
+	</div>
+
+<img src="{{MEDIA_URL}}img/email-marketing.jpg" style="margin-left: 450px; margin-top: -250px;  "/>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+{% block tituloPagina %} - Campanhas {% endblock %}
+
+{% block conteudo %}
+<div class="linksuteis"><h2>Campanhas</h2></div>
+<hr class="divisoria"/>
+	
+	
+	{% if campanhas.object_list|length <= 0 %}
+		<center>
+			<font size="2">Nenhuma campanha foi encontrada.</font>
+		</center>
+	{% else %}
+	<table border="0" width="96%" cellspacing="0" cellpadding="0" class="table-list">
+	<tr>
+		<td width="200"><h3>Título</h3></td>
+		<td><h3>Descrição</h3></td>
+		<td><h3>Publicada</h3></td>
+	</tr>	
+	{% for campanha in campanhas.object_list %}
+		<tr>
+			<td><a href="{{ campanha.get_absolute_url }}">{{ campanha.titulo }}</a></td>
+			<td>{{ campanha.descricao|slice:":70" }}..</td>
+			<td>{{ campanha.data }}</td>
+		</tr>
+	{% endfor %}
+	</table>
+	<center>
+	<div class="paginacao">
+		{% if campanhas.has_previous %}
+		 <a href="?pagina={{ campanhas.previous_page_number }}">&laquo; Anteriores</a>
+        {% endif %}
+        <span class="pagina-atual">
+            Página {{ campanhas.number }} de {{ campanhas.paginator.num_pages }}
+        </span>
+        {% if campanhas.has_next %}
+        <a href="?pagina={{campanhas.next_page_number }}">Próximos &raquo;</a>
+        {% endif %}
+	</div>
+	</center>
+	{% endif %}
+<div>
+<br />
+<a href="javascript:history.back(-1)" class="link-voltar">&laquo; Voltar</a>
+</div>
+{% endblock %}
